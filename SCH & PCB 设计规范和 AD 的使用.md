@@ -1,3 +1,5 @@
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+
 # SCH & PCB 设计规范和 AD 的使用（SCH-&-PCB-rules-and-AD`s-usages）
 
 ***p.s 温馨提示：点个 star 收藏一下回头慢慢看；或者下(白)载(嫖)下来，在 Typora 中阅读；或者在  [本文知乎地址](https://zhuanlan.zhihu.com/p/356679916)  阅读；整理不易，请多支持。***
