@@ -116,6 +116,20 @@
 
 （这条目前对于我个人是空白的，以后慢慢积累补上）。
 
+## 1.75 元件原理图和封装的准备
+
+法一：淘宝大法。淘宝上有很多卖封装的，也不贵，买一次一劳永逸真的划算，如 源创客 的等。
+
+法二：开源大法。如 [issus/altium-library](https://github.com/issus/altium-library)、[KitSprout/AltiumDesigner_PcbLibrary](https://github.com/KitSprout/AltiumDesigner_PcbLibrary) 等等。
+
+法三：原厂大法。选定大厂的芯片后，一些大厂官网会直接提供该芯片对应的原理图和 PCB 封装，如 ST 等大厂官网对应 IC 页中寻找提供的 PCB 封装进行下载，具体 [如何利用 Ultra Librarian 生成 Altium designer 器件封装](https://blog.csdn.net/XiaoQingCaiGeGe/article/details/83864576)。
+
+法四：经销商大法。如在贸泽电子官网搜索芯片，会提供芯片原理图、PCB 封装和 3D 模型。
+
+法五：以上方法都没有，是特殊的器件，可以自制。对于原理图，一般元件的引脚和其划分不会特别复杂，应该很快就能画好；对于PCB 封装，常见的可用 AD 的 IPC 自动创建常用封装工具，先选择封装类型，再根据手册设置各种长宽参数，自动生成PCB封装以供使用，不常见的那只能最后的最后才自己画啦，按照芯片手册提供的封装规格，尺寸的单位看准了。
+
+至于 3D 模型，简单的可在 AD 的 PCB 库中的元件上添加 3D 实体（通常在机械1层）自己画，复杂的可用去 “[IC封装网](http://www.iclib.com)” 等网站下载。[找3D模型和导入的一个教程](http://bbs.21dianyuan.com/forum.php?mod=viewthread&tid=174773)。
+
 ## 2 SCH 绘制规范和 AD 使用
 
 个人规范，仅供参考。
@@ -155,21 +169,15 @@
 
 5.  原理图画好后该给各个元件建立唯一编号。打开“工具”->“注解”，点 Reset All ，再点“更新更改列表”，最后执行“接受更改”。
 
-6.  对于没有 PCB 封装的元件：
-
-    -   常见的可用 IPC 自动创建常用封装工具，先选择封装类型，再根据手册设置各种长宽参数，自动生成PCB封装以供使用。
-    -   不常见的去 ST 等大厂官网对应 IC 页中寻找提供的 PCB 封装进行下载。
-    -   至于 3D 模型，简单的可在 AD 的 PCB 库中的元件上添加 3D 实体（通常在机械1层）自己画，复杂的可用去“IC封装网”（http://www.iclib.com）等网站下载。[找3D模型和导入的一个教程](http://bbs.21dianyuan.com/forum.php?mod=viewthread&tid=174773)。
-
 7.  对原理图进行编译和查错。依次点 “工程”->“Compile Document” 和 “工程”->“Compile PCB Project”。没错后即可导入PCB。
 
 ## 3 PCB 绘制规范和 AD 使用
 
 ### 板层标识定义
 
-Top Overlay为丝印层
-Top Solder为开窗层
-Keep-out Layer为板边界
+-   Top Overlay 为丝印层
+-   Top Solder 为开窗层
+-   Keep-out Layer 为板边界
 
 ![image-5](assets/image-5.png)
 
