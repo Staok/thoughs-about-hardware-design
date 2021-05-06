@@ -22,6 +22,8 @@
 
 ## 0.5 其他优秀的参考文章
 
+（永远的 TODO）以下基本都是作者还没有看到的（看过之后的都会把精髓写在本文）。
+
 - [PCB 基本布线规范与设计原则 by Hank](https://uinika.gitee.io/Electronics/PCB/)
 
 - 基本数模电学习和查询推荐《新概念模拟电路》——西安交通大学电工电子中心，杨建国。
@@ -32,8 +34,8 @@
 
   本地收集的文章：
 
-  - 《PCB小知识》系列文章，路径：【3 硬件、电路】\【PCB设计规范】\PCB小知识。
-  - 有关高速PCB的独立文章，路径：【3 硬件、电路】\【PCB设计规范】\高速PCB。
+  - 《PCB小知识》系列文章，路径：【3 硬件、电路】\【PCB设计规范】\ PCB小知识。
+  - 有关高速PCB的独立文章，路径：【3 硬件、电路】\【PCB设计规范】\ 高速PCB。
   - 
 
 - ADI 智库文章：《PCB设计秘籍》、《高速电路设计指南》（这个主要针对高速数模转换器件的PCB技巧）、《非隔离式开关电源的PCB布局考虑》、《Power技术问题解答》（这个针对常用 LDO 和 DCDC 的常见问题做梳理）、《电源设计基础知识精选》（对电源方方面面的内容做大梳理）等，具体文章免费在下面链接下载：[ADI电子书-您绝对值得拥有的电子书 | 教育 | 亚德诺半导体 (analog.com)](https://www.analog.com/cn/education/landing-pages/002/chinese-ebook.html)，或者在 微信里添加 “ADI智库” 小程序，在小程序里面搜索这些文章的名称，即可下载。
@@ -44,7 +46,24 @@
 
 - 网上传开的华为的硬件规范。
 
--   
+- ..
+
+AD 的更多丰富技巧和高速布线：
+
+- 综合类（高级技巧）：
+  - AD官方：[Altium Designer 全套最权威教学|【官方PCB设计培训】|Altium 战疫免费云公益课堂 | 共27节|AD20|PCB Layout_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1D7411T7Pr)；
+  - 凡亿：[凡亿教育的个人空间 - 哔哩哔哩 ( ゜- ゜)つロ 乾杯~ Bilibili](https://space.bilibili.com/11979252/channel/detail?cid=77461)；
+  - ..
+- 高速板设计（蛇形线 和 Active route）（看过之后都详细记下来）：
+  - AD官方：[【官方培训】Altium Designer 高速DDR3模块全流程实战PCB设计 | AD20 教程 | 共5节|PCB Layout_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1oy4y1v7z1)；
+  - AD官方：[DDR存储器布局布线设计思路解析_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1x441187Bd)；
+  - 凡亿：[【PCB自动布线】 6层PCB高速ActiveRoute自动布线 速度就是快 Altium Designer 20_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1SE411n7os)；
+  - 文章：[AD19如何使用强大的自动布线功能 - 哔哩哔哩专栏 (bilibili.com)](https://www.bilibili.com/read/cv3479922/)；
+  - 文章：[(32条消息) Altium Designer 的ActiveRoute使用_MrZhanghx的博客-CSDN博客](https://blog.csdn.net/qq_34885615/article/details/77965021)；
+  - `./额外文档/高速布线 教程/AD18中ActiveRoute使用.pdf`。
+  - ..
+
+2T 移动硬盘里面的更多比较全的技巧视频 `【电子 学习】\【Altium.Designer】视频+教材\Altium 技巧经验 较多`。
 
 ## 1 最基本的电路检查项和器件选型
 
@@ -69,14 +88,10 @@
 ### 电源
 
 -   确定入、出的压、流范围，纹波，温度特性。
-
--    保护机制完善程度考虑（参考上一小节）。
-
+-   保护机制完善程度考虑（参考上一小节）。
 -   布局布线考虑。
+-   合理的设计和明确电源轨。
 
--   电源轨示意：
-
-    ![电源布局1](assets/电源布局1.png)
 
 ### 模块分离
 
@@ -88,7 +103,7 @@
     -   高电压区域 与 低电压区域。
     -   干扰源 与 敏感元件。
 
-### "地"的类型
+### "地"的类型-地平面分割
 
 要划分这些“地”，防止互相干扰，每一个“地”单独划分区域，单独覆铜；一般方法是单点接地，都连接到电源地上，参考上面“电源”中配图。
 
@@ -98,6 +113,13 @@
 -   负载地（外接的电机等大负载进行隔离）
 -   外接传感器地（外接模块地隔离，或者共模电感隔离）
 -   机壳地，外壳地
+-   以下为接地的考虑：
+
+- ![电源布局1](assets/电源布局1.png)
+
+  ![串联单点+并联单点](assets/串联单点+并联单点.png)
+
+更多参考文档：./额外文档/单点接地和多点接地剖析.doc 。
 
 ### 电源完整性的测量
 
@@ -167,15 +189,15 @@
 
 法一：淘宝大法。淘宝上有很多卖封装的，也不贵，买一次一劳永逸真的划算，如 源创客 的等。
 
-法二：开源大法。如 [issus/altium-library](https://github.com/issus/altium-library)、[KitSprout/AltiumDesigner_PcbLibrary](https://github.com/KitSprout/AltiumDesigner_PcbLibrary) 等等。
+法二：开源大法。如 [issus/altium-library](https://github.com/issus/altium-library)、[KitSprout/AltiumDesigner_PcbLibrary](https://github.com/KitSprout/AltiumDesigner_PcbLibrary) 、嘉立创的元件库 [嘉立创SMT (JLC_SMT) - Gitee.com](https://gitee.com/JLC_SMT) 等等。
 
 法三：原厂大法。选定大厂的芯片后，一些大厂官网会直接提供该芯片对应的原理图和 PCB 封装，如 ST 等大厂官网对应 IC 页中寻找提供的 PCB 封装进行下载，具体 [如何利用 Ultra Librarian 生成 Altium designer 器件封装](https://blog.csdn.net/XiaoQingCaiGeGe/article/details/83864576)。
 
-法四：经销商/三方大法。如在贸泽电子官网搜索芯片，会提供 https://componentsearchengine.com/ 网址所提供的芯片原理图、PCB 封装和 3D 模型文件，利用 Library Loader 软件（官网下载）或者针对 AD 的 Altium Library Loader 软件对器件模型文件转换成 Altium 软件格式的库文件。还有 立创商城，搜索器件后可以得到 立创 EDA 的器件原理图和封装，导出到 Altium 即可。
+法四：经销商/三方大法。如在(1)贸泽电子官网搜索芯片，会提供 https://componentsearchengine.com/ 网址所提供的芯片原理图、PCB 封装和 3D 模型文件，利用 Library Loader 软件（官网下载）或者针对 AD 的 Altium Library Loader 软件对器件模型文件转换成 Altium 软件格式的库文件。还有 (2)立创商城，搜索器件后可以得到 立创 EDA 的器件原理图和封装，导出到 Altium 即可，[如何将嘉立创的原理图封装导入到AD20?](https://www.bilibili.com/video/BV1of4y1S7oi)。
 
 法五：以上方法都没有，是特殊的器件，可以自制。对于原理图，一般元件的引脚和其划分不会特别复杂，应该很快就能画好；对于PCB 封装，常见的可用 AD 的 IPC 自动创建常用封装工具，先选择封装类型，再根据手册设置各种长宽参数，自动生成PCB封装以供使用，不常见的那只能最后的最后才自己画啦，按照芯片手册提供的封装规格，尺寸的单位看准了。
 
-至于 3D 模型若没有，简单的可在 AD 的 PCB 库中的元件上添加 3D 实体（通常在机械1层）自己画，复杂的可去 “[IC封装网](http://www.iclib.com)” 等网站下载。[找3D模型和导入的一个教程](http://bbs.21dianyuan.com/forum.php?mod=viewthread&tid=174773)。
+至于 3D 模型若没有，简单的可在 AD 的 PCB 库中的元件上添加 3D 实体（通常在机械1层）自己画，复杂的可去 “[IC封装网](http://www.iclib.com)”、"[3dcontentcentral](www.3dcontentcentral.cn)" 等网站下载。[找3D模型和导入的一个教程](http://bbs.21dianyuan.com/forum.php?mod=viewthread&tid=174773)。
 
 ## 2 SCH 绘制规范和 AD 使用
 
@@ -289,16 +311,6 @@
 -   键盘上边数字“3”为显示 3D 视图，数字“2”还原。
 -   3D 视图中依次点“v”、“b”->翻转板。
 
-### PCB 布线技巧
-
--   多跟线一块走：先选中多跟线，点“交互式布多跟线”，再点任一个线，就并排走了。
-
--   蛇形线参考：[参考链接](https://wenku.baidu.com/view/7962833ceefdc8d376ee3254.html)
-
-    先走好线，然后等长线都加到一个网络，按T R，选择最长线确定，移动鼠标拖蛇形线。
-
-    快捷键：“1、2”改弧度，“3、4”改间距，“，、。”改绕长，在左下角导航选“PCB”窗口，可见加入网络的要等长的线及其各自的长度。
-
 ### 最基本的 PCB 绘制过程
 
 要全程符合“PCB 布局布线规范”章节内容。
@@ -358,6 +370,14 @@
    -   对于两层板而言：先走电源线，再走信号线；对于四层板而言：摆好器件，先划分好内电层区域，再走电源线，再走信号线。
    -   电源线足够粗，功率走线必要时考虑开窗加锡。功率走线可以用覆铜来布线，然后原地复制粘贴一个再换成开窗层，得到整块覆铜的开窗。
    -   走信号线时，模拟信号、高速信号和时钟线优先布线。电流和地路径不形成环。
+
+   AD 10 的等长线/蛇形线设计：
+
+   - 画法参考文档`./额外文档/AD10 蛇形等长线的画法和规则设定.pdf`；
+   - 先走好线，然后等长线都加到一个网络，按T R，选择最长线确定，移动鼠标拖蛇形线。
+   - 快捷键：“1、2”改弧度，“3、4”改间距，“，、。”改绕长，在左下角导航选“PCB”窗口，可见加入网络的要等长的线及其各自的长度。
+
+   多跟线一块走：先选中多跟线，点“交互式布多跟线”，再点任一个线，就并排走了。
 
    更多布线规则请参考“4 PCB 布局布线规范”章节的内容。
 
@@ -435,27 +455,100 @@
   - 按住 xxx，鼠标在板子器件上移动，会显示器件轮廓。
   - 切换三种布线模式（忽略，避开，推挤）：Shift+r。
   - 把选中的器件排列到框里："Tools"，"Component Placement"，".. Within Rectangle"；或者设置个快捷键。
-  - 覆铜：选择好网络、移除死铜、移除小于比如10mil的铜片和选择 "Pour Over Same Net .."；移动覆铜后，要右键选 "Polygon Actions" 的 "Repour All"。
+  - 覆铜：选择好网络、移除死铜、移除小于比如 10mil 的铜片和选择 "Pour Over Same Net .."；移动覆铜后，要右键选 "Polygon Actions" 的 "Repour All"。覆铜的属性栏里面的 Actions 里面有重新覆铜、设置网络（再手动点一根要连接的网络的线）、前置/后置和修改（手动画线微调边缘）等。
   - 挖掉一块覆铜：选 Polygon Pour Cutout 工具，在已经覆铜的区域画个框，然后重新覆铜 "Repour All"。
   - 批量放过地过孔：给覆铜添加或者围绕某个线添加，选 Tools 的 Via Stitching/Shielding，在里面设置孔连接的网络、孔分布和孔大小等信息，可以选择给整个板面均匀加接地孔（孔间距可以打一些防止孔过多了），也可以选择给信号线的周围围绕着加接地孔，比较方便。
   - 只能选择某种类型要素而其他元素不能被选中，方便只修改某一类元素而防止误碰其他要素：点工具栏的 Selection Filter，哪一项打开哪一项就能被选中，反之不能被选中；一般在覆铜后可以把覆铜 Polygons 关闭使能选中。
   - 调节 PCB 线高亮时候与背景对比的程度：点右下角 Panels，点进 View Configuration，在 View Options 栏中下面调节 Mask and dim，还可以调节 Object Visibility，可以把 覆铜 Polygons 的亮度调低，以区分覆铜和走线、焊盘。
+  - 板子镂空：先围绕要镂空的区域画 Keep-out-layer 闭合曲线，然后工具栏选择 Designer，Board Shape，Define Board Cutout，然后围绕刚才画的镂空区域的 Keep-out-layer 闭合曲线 画一圈。
   - ..
   
 - 器件原理图库绘制的技巧：
   - 引脚名字上要加横线表示低有效：绘制器件原理图库，在名字的每一个字符中间加 " \ " 符号即可。
   - 快速添加各个引脚名：在一个器件原理图库的界面，其属性的 "Pin" 标签中，下面有笔形状的 "编辑" 按钮，点进去可以以表格形式编辑当前器件各个引脚属性。
   - ..
+
+更多 AD20 快捷键参考`./额外文档/AD20常用快捷键总结（北冥有鱼）.xlsx`。
+
+### 通用 AD 规范-今后尽量适用
+
+- 导入 AD20 软件配置文件，参考 "7 AD 导入导出配置文件" 章节。
+- 统一的标题栏：每一页原理图都使用 A4 大小，标题栏使用模板文件`./PCB LOGO-画法集合-PCB工具-规则文件/标题栏模板/A4 - 瞰百易.SchDot`，将其复制到 AD20 安装目录下的 `/Altium/AD20/Documents/Templates`，然后在 SCH 界面的属性栏的 Page Options 的 Formatting And Size 中选 Template，下拉选择 "A4 - 瞰百易" 选项，在属性栏的 参数页面加上 标题、作者、版本号等等信息。
+- 统一的设计模式：原理图都使用 "层次原理图设计" 的模式。
+- 导入 AD20 的 PCB Rules 规则配置文件，参考 "7 AD 导入导出配置文件" 章节。针对线宽的规则可以做依不同 Class 设置不同线宽规则，并在 Rules 界面的左下角设置优先级（手动布线时低优先级不起作用）；针对高速线的规则要依 Class 单独设置规则，详见下面的 "等长线/蛇形线设计" 小节。
+- 
+- 
+- 准备焊接实物 PCB 的准备：AD20 中 PCB 界面右下角 Panels 里面打开 PCB List 栏，选 View All Objects，再选 Components，即列出所有器件并按照 Comment 排列，可以选中所有一个值的阻/容器件然后器件会高亮显示，并且 PCB List 栏的下面会显示被选中元件的数量，接着焊接这一值的阻/容器件，然后换下一波相同值的器件，以此类推。使用钢网和加热台快速手工贴片：[如何快速高质量手工PCB贴片](https://www.bilibili.com/video/BV1V5411b7Wa)。
 - ..
 
 ### 层次原理图设计
 
 顶层以框图形式，方便原理图各个子系统部分模块、固定和规范化，也方便从顶层快速了解整个原理图工程。通常先把各个子系统的局部电路原理图画好，放置好端口 Port，最后在顶层做框图把各个模块连接。以下介绍的是自下而上的画，若是架构设计人员可以自上而下设计。
 
-1. 一个模块只用一页原理图，画好各个子系统电路模块原理图，并添加好 全局的 Net Label，然后再添加各个模块对外连接的 Port，并填好 Port 的网络标号名字（可以与 Net Label 重名），输入输出类型；
-2. 新建一个顶层原理图文件，在其中 点工具栏 Design，点 Creat Sheet Symbol Form Sheet，选择一个子原理图模块，放置 Sheet Symbol，其中的 Port 和  Sheet 框图的大小均可调整，然后连线。
+1. 一个模块只用一页原理图，画好各个子系统电路模块原理图，并添加好  Net Label（局域级别有效），然后再添加各个模块对外连接的 Port，并填好 Port 的网络标号名字（可以与 Net Label 重名），输入输出类型；
+2. 新建一个顶层原理图文件，在其中 点工具栏 Design，点 Creat Sheet Symbol Form Sheet，选择一个子原理图模块，放置 Sheet Symbol，其中的 Port 和  Sheet 框图的大小均可调整，然后连线；如果子原理图模块更新了端口，在 Top 层的 Sheet Symbol 上右击，选择 Sheet Symbol Actions 里面的 Sync.. 同步即可。
 
+在所有原理图都是平级的时候（即没有顶层 Top 原理图 SCH 的时候）：当单独使用 Port 或 Net Lable 时候，这两个都是全局作用的；当同时使用的时候，Port 是全局作用的，Net Lable 是局域级别作用的（即所在 SCH 页内）；从电源符号那一栏中拖出的（有 GND、VCC 等各种电源符号）的网络标号总是全局作用的，因为其名字都带 Port。但是当原理图有分层的时候，Port （包括电源符号的 Port）也变成局域级别作用，仅当在上级原理图中用线连接后才会连接。
 
+### 布局复制
+
+针对多个一样的模块，PCB 中器件摆放/布局都一样化。
+
+1. 先布局好一套模块，另外几套模块的位置可以乱，先放着；
+2. 打开 Panels 中的 PCB List，选择 View Selected Objects，再选 Components，再把上面布局好的一套模块的所有器件选中，这时 PCB List 中会显示所有被选中的器件信息表，找到表中的 X1 和 Y1，右击选择 Switch to edit mode，然后选中 X1 和 Y1 复制，然后选中另外一套模块的所有器件，在其 X1 和 Y1 上粘贴即可，这时两套是重叠的，不要取消刚才的选中状态，进行整体平移到两套不重叠，然后选中第一套模块的所有器件，在 PCB List 中复制所有的 Rotation，然后选中第二套模块的所有器件，在其 Rotation 栏粘贴即可。
+
+### 总线连接
+
+看图自学。
+
+Sheet 2 SCH 图：
+
+<img src="assets/总线连接 Sheet2 SCH.png" alt="总线连接 Sheet2 SCH" style="zoom:50%;" />
+
+Sheet 3 SCH 图：
+
+<img src="assets/总线连接 Sheet3 SCH.png" alt="总线连接 Sheet3 SCH" style="zoom:50%;" />
+
+Top SCH 图：
+
+<img src="assets/总线连接 Top SCH.png" alt="总线连接 Top SCH" style="zoom: 67%;" />
+
+PCB 效果：
+
+![总线连接 PCB 效果](assets/总线连接 PCB 效果.png)
+
+### 差分走线设计
+
+这里的步骤以 嘉立创 提供的计算工具和下单助手提供的阻抗生产选项为准。下面以 USB 差分走线（阻抗一般为 90 Ω）为例。
+
+1. 嘉立创提供的阻抗计算工具；
+
+   <img src="assets/嘉立创 阻抗计算.png" alt="嘉立创 阻抗计算" style="zoom: 67%;" />
+
+2. 嘉立创下单助手的 工艺信息 一栏选择 "需要阻抗"，并选择层压结构（一般为第一个 JLC7628）；
+
+   ![嘉立创 层压结构](assets/嘉立创 层压结构.png)
+
+3. 在 PCB 的 规则 Rules 中，点进 DiffPairsRouting 栏里，改差分走线的 最小间隙和优选间隙 为步骤1中指定的（7 mil），最小宽度、优选宽度和最大宽度 改为步骤1中指定的（9.72 mil），
+
+4. 在 SCH 或 PCB 中添加差分对，[一个详细步骤文章](https://www.sohu.com/a/152779501_744981)，[另一个详细步骤文章](http://www.360doc.com/content/17/0705/10/33246491_668901190.shtml)，然后在 PCB 页面中打开 panels 的 PCB 栏，在其中选择 Differential Pairs Editor，可以看到差分对的名称以及其具体的每一个差分线。
+
+5. 在 PCB 界面中选择 "交互式差分对走线" 进行走线。
+
+### 等长线/蛇形线设计
+
+这里是针对 AD20 的操作。
+
+1. PCB 界面的右下角 Panels 按钮里面打开 PCB 栏，左边 PCB 栏中显示 Nets，在 Net Classes 栏里面添加要等长的线的 Class 命和线；
+2. 然后在 Rules 里面，High Speed 里面的 Matched Lengths 上右击新建一个规则，进去在 Where The Object Matches 栏里面的 第一个选 Net Class，第二个选 要等长的线的 class，然后在下面设置 Tolerance，容忍等长的误差，最好填小一点如 3 mil。
+3. PCB 界面 工具栏 选择 Interactively Tune Trace Lengths 工具，从最短的线开始画线进行等长变化的区域；快捷键：“1、2”改弧度，“3、4”改间距，“，、。”改绕长，在左下角导航选 “PCB” 窗口，可见加入网络的要等长的线及其各自的长度；走线等长变化的区域可以调整，直接对等长变化区域选中的矩形框的四周拖拽，改变等长区域；删除等长，直接选中线的等长变化区域再按 del。
+
+### 添加 LOGO 图案
+
+两个方法，推荐用第二种。
+
+1. PCB Logo Creator 生成丝印图案的方法，具体教程 pdf 和所需软件在 `./\PCB LOGO-画法集合-PCB工具-规则文件/创建 PCB Logo 图形/PCB Logo Creator 生成丝印图案的方法.zip` 里面。
+2. LOGO 字体 添加 PCB 图案的方法，具体教程和所需软件在 `./\PCB LOGO-画法集合-PCB工具-规则文件/创建 PCB Logo 图形/LOGO 字体 添加 PCB 图案的方法.zip` 。[AD20 添加字体logo 视频教程 - 北冥有鱼](https://www.bilibili.com/video/BV1kC4y1a7bM)。
 
 ## 4 PCB 布局布线规范
 
@@ -485,6 +578,8 @@
    -   弱电电源线——0.5过孔，0.8外径，1A电流；
    -   大电流(多个)——1过孔，1.5外径，1.5~4A电流；
    -   大电流（多个）——1.5过孔，2外径，2~5A电流。
+
+   PCB走线与电流关系更多参考文档：./额外文档/PCB走线与电流关系.pdf 。
 
 5. 去耦电容（旁路电容）尽量靠近 IC 等器件的电源输入端，滤波电容可以放置在芯片的背面，靠近芯片的电源和地引脚。
 
@@ -563,17 +658,22 @@
 
 ## 5 AD 导出 BOM 表
 
-用时再学：https://jingyan.baidu.com/article/0eb457e501efda42f0a9056a.html
+AD10 的教程：[Altium Designer（AD）软件导出BOM文件操作步骤-百度经验 (baidu.com)](https://jingyan.baidu.com/article/0eb457e501efda42f0a9056a.html)；
+
+AD20 的教程（推荐使用，还包含自定义 BOM 表模板）：[AD20如何自定义BOM模板?Altium Designer20 实用技巧系列教程（五）_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1FZ4y1M71U)，其中 BOM 模板文件在 `./PCB LOGO-画法集合-PCB工具-规则文件/AD20 BOM模板 北冥有鱼` 里面，这个模板导出的 BOM 表比较常用、整齐，还包含描述、封装、单位价格（可以在导出 Excel 表格后再填入单价，表中的总价格会自动计算；表格最底部有一栏 PCB ，可以填入价格）等，比较实用。注，视频中的模板的位置，在不同版本 AD20 不同，如果按照视频找不到，那么就应该在 `/Altium/AD20/Documents/Templates/` 目录下。
 
 ## 6 AD 导出 Gerber 和 钻孔文件
 
-用时再学：https://www.bilibili.com/video/BV1n4411L7c9
+用时再学：
 
-## 7 AD 导出配置文件
+- [【AD小教程】导出Gerber文件和钻孔文件_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1n4411L7c9)
+- [【完结】第26课 Altium Designer20(AD20)+VESC6.4实战教程：调整丝印输出Geber文件并投板（北冥有鱼）完结撒花_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1ea4y1Y7Mx)
 
-AD 软件的设置和 PCB Rule 设置，两个配置文件的导入和导出，参考本文件夹这里“.\PCB LOGO和画法集合\AD 软件设置和PCB规则Rules配置文件\”。
+## 7 AD 导入导出配置文件
 
-## 7 使用 KeyShot 10 渲染三维模型
+AD 软件的设置和 PCB Rule 设置，两个配置文件的导入和导出，参考本文件夹这里 `./PCB LOGO-画法集合-PCB工具-规则文件/AD 软件设置和 PCB 规则 Rules 配置文件/`。
+
+## 8 使用 KeyShot 10 渲染三维模型
 
 B站等有很多教程视频，以下只经验之谈。
 
