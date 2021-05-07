@@ -119,7 +119,7 @@ AD 的更多丰富技巧和高速布线：
 
   ![串联单点+并联单点](assets/串联单点+并联单点.png)
 
-更多参考文档：./额外文档/单点接地和多点接地剖析.doc 。
+更多参考文档`./额外文档/单点接地和多点接地剖析.doc`。
 
 ### 电源完整性的测量
 
@@ -193,7 +193,7 @@ AD 的更多丰富技巧和高速布线：
 
 法三：原厂大法。选定大厂的芯片后，一些大厂官网会直接提供该芯片对应的原理图和 PCB 封装，如 ST 等大厂官网对应 IC 页中寻找提供的 PCB 封装进行下载，具体 [如何利用 Ultra Librarian 生成 Altium designer 器件封装](https://blog.csdn.net/XiaoQingCaiGeGe/article/details/83864576)。
 
-法四：经销商/三方大法。如在(1)贸泽电子官网搜索芯片，会提供 https://componentsearchengine.com/ 网址所提供的芯片原理图、PCB 封装和 3D 模型文件，利用 Library Loader 软件（官网下载）或者针对 AD 的 Altium Library Loader 软件对器件模型文件转换成 Altium 软件格式的库文件。还有 (2)立创商城，搜索器件后可以得到 立创 EDA 的器件原理图和封装，导出到 Altium 即可，[如何将嘉立创的原理图封装导入到AD20?](https://www.bilibili.com/video/BV1of4y1S7oi)。
+法四：经销商/三方大法。如在 (1)贸泽电子 官网搜索芯片，会提供 https://componentsearchengine.com/ 网址所提供的芯片原理图、PCB 封装和 3D 模型文件，利用 Library Loader 软件（官网下载）或者针对 AD 的 Altium Library Loader 软件对器件模型文件转换成 Altium 软件格式的库文件。还有 (2)立创商城，搜索器件后可以得到 立创 EDA 的器件原理图和封装，导出到 Altium 即可，[如何将嘉立创的原理图封装导入到AD20?](https://www.bilibili.com/video/BV1of4y1S7oi)。
 
 法五：以上方法都没有，是特殊的器件，可以自制。对于原理图，一般元件的引脚和其划分不会特别复杂，应该很快就能画好；对于PCB 封装，常见的可用 AD 的 IPC 自动创建常用封装工具，先选择封装类型，再根据手册设置各种长宽参数，自动生成PCB封装以供使用，不常见的那只能最后的最后才自己画啦，按照芯片手册提供的封装规格，尺寸的单位看准了。
 
@@ -418,13 +418,13 @@ AD 的更多丰富技巧和高速布线：
 
 可点击“生成PCB封装库”，把当前 PCB 里面所有器件的封装单独做一个 PCB 封装库。
 
-缩减PCB文件体积：[参考网址](https://jingyan.baidu.com/article/5d6edee2e97ccb99eadeecf4.html)
+缩减PCB文件体积 [Altium Designer PCB文件太大怎么办-百度经验 (baidu.com)](https://jingyan.baidu.com/article/5d6edee2e97ccb99eadeecf4.html)。
 
-更多常用技巧都总结在我创建的“PCB实验-画板技巧综合.PcbDoc”里。
+更多常用技巧都总结在`./PCB LOGO-画法集合-PCB工具-规则文件/PCB实验-画板技巧综合.PcbDoc`里。
 
 ## 3.5 AD20 SCH & PCB 常用设置
 
-没有说到的都与上面 "2 SCH 绘制规范和 AD 使用" 章节中的一样；
+这里没有说到的都与上面 "2 SCH 绘制规范和 AD 使用" 章节中的一样。
 
 ### AD 20 软件设置
 
