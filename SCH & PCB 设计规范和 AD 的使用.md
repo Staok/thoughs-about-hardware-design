@@ -46,6 +46,8 @@
 
 - 网上传开的华为的硬件规范。
 
+- [华为内部硬件开发设计流程 (qq.com)](https://mp.weixin.qq.com/s/8GRIrdKN4gmoB7gNsvI-qg)。
+
 - ..
 
 AD 的更多丰富技巧和高速布线：
@@ -197,7 +199,13 @@ AD 的更多丰富技巧和高速布线：
 
 法五：以上方法都没有，是特殊的器件，可以自制。对于原理图，一般元件的引脚和其划分不会特别复杂，应该很快就能画好；对于PCB 封装，常见的可用 AD 的 IPC 自动创建常用封装工具，先选择封装类型，再根据手册设置各种长宽参数，自动生成PCB封装以供使用，不常见的那只能最后的最后才自己画啦，按照芯片手册提供的封装规格，尺寸的单位看准了。
 
-至于 3D 模型若没有，简单的可在 AD 的 PCB 库中的元件上添加 3D 实体（通常在机械1层）自己画，复杂的可去 “[IC封装网](http://www.iclib.com)”、"[3dcontentcentral](www.3dcontentcentral.cn)" 等网站下载。[找3D模型和导入的一个教程](http://bbs.21dianyuan.com/forum.php?mod=viewthread&tid=174773)。
+至于 3D 模型若没有，简单的可在 AD 的 PCB 库中的元件上添加 3D 实体（通常在机械1层）自己画，复杂的可去
+
+- [找3D模型和导入的一个教程](http://bbs.21dianyuan.com/forum.php?mod=viewthread&tid=174773)；
+- [IC封装网-行业IPC标准化的元件库及PCB封装库资源下载平台 (iclib.com)](https://www.iclib.com/)；
+- [3D ContentCentral - 免费 3D CAD 模型、2D 工程图和供应商目录](https://www.3dcontentcentral.cn/default.aspx)；
+
+等网站下载。
 
 ## 2 SCH 绘制规范和 AD 使用
 
@@ -547,8 +555,8 @@ PCB 效果：
 
 两个方法，推荐用第二种。
 
-1. PCB Logo Creator 生成丝印图案的方法，具体教程 pdf 和所需软件在 `./\PCB LOGO-画法集合-PCB工具-规则文件/创建 PCB Logo 图形/PCB Logo Creator 生成丝印图案的方法.zip` 里面。
-2. LOGO 字体 添加 PCB 图案的方法，具体教程和所需软件在 `./\PCB LOGO-画法集合-PCB工具-规则文件/创建 PCB Logo 图形/LOGO 字体 添加 PCB 图案的方法.zip` 。[AD20 添加字体logo 视频教程 - 北冥有鱼](https://www.bilibili.com/video/BV1kC4y1a7bM)。
+1. PCB Logo Creator 生成丝印图案的方法，具体教程 pdf 和所需软件在 `./PCB LOGO-画法集合-PCB工具-规则文件/创建 PCB Logo 图形/PCB Logo Creator 生成丝印图案的方法.zip` 里面。
+2. LOGO 字体 添加 PCB 图案的方法，具体教程和所需软件在 `./PCB LOGO-画法集合-PCB工具-规则文件/创建 PCB Logo 图形/LOGO 字体 添加 PCB 图案的方法.zip` 。[AD20 添加字体logo 视频教程 - 北冥有鱼](https://www.bilibili.com/video/BV1kC4y1a7bM)。
 
 ## 4 PCB 布局布线规范
 
