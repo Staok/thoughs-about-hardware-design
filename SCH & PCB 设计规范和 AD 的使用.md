@@ -2,7 +2,7 @@
 
 # SCH & PCB 设计规范和 AD 的使用（SCH-&-PCB-rules-and-AD`s-usages）
 
-***p.s 温馨提示：点个 star 收藏一下回头慢慢看；或者下(白)载(嫖)下来，在 Typora 中阅读；或者在  [本文知乎地址](https://zhuanlan.zhihu.com/p/356679916)  阅读；整理不易，请多支持。***
+***p.s 温馨提示：点个 star 收藏一下回头慢慢看；或者下(白)载(嫖)下来，在 Typora 中阅读；或者在 [本文知乎地址](https://zhuanlan.zhihu.com/p/356679916) 阅读；整理不易，请多支持。***
 
 编辑整理 by [Staok](https://github.com/Staok)，始于 2020.7 且无终稿。转载请注明作者及出处。
 
@@ -67,6 +67,33 @@ AD 的更多丰富技巧和高速布线：
 
 2T 移动硬盘里面的更多比较全的技巧视频 `【电子 学习】\【Altium.Designer】视频+教材\Altium 技巧经验 较多`。
 
+## 0.51 电子类网站收集
+
+综合类：
+
+- [电子发烧友网：领先的电子工程师技术社区，为工程师创造价值 (elecfans.com)](http://www.elecfans.com/)；
+- [电子工程师的在线课堂_Moore8摩尔吧](https://www.moore8.com/)
+- [OpenEdv-开源电子网-正点原子论坛](http://www.openedv.com/forum.php)；
+- [一个专注于智能硬件、嵌入式系统、物联网、电子产品设计美学的独立博客 - 吴川斌的博客 (mr-wu.cn)](https://www.mr-wu.cn/)；
+- [38度发烧友论坛-38Hot Volt-Nuts 仪表 基准 工具 万用表 示波器 焊台 电烙铁 电钻电子爱好者专业论坛 - Powered by Discuz!](http://bbs.38hot.net/)，对一些仪器仪表、电源基准等研究很深；
+
+开源电子项目分享类/资源类：
+
+- [All projects | Hackaday.io](https://hackaday.io/projects)；
+- [硬件设计，立创EDA开源硬件平台，硬件工程师的电路家园。 (oshwhub.com)](https://oshwhub.com/)，开源 PCB 项目分享；
+- [电路方案-电路城 (cirmall.com)](https://www.cirmall.com/circuits/)；
+- [eesites [电子森林\] (eetree.cn)](https://www.eetree.cn/wiki/)；
+- [Projects | CircuitMaker](https://circuitmaker.com/Projects)，硬件版 github；
+- [逆天PCB论坛-逆天电子论坛-电子工程师俱乐部-中国PCB论坛-PCB封装库-全球最大硬件开源网 - Powered by NTpcb](http://bbs.ntpcb.com/)，内容丰富；
+- [GitHub](https://github.com/)；
+
+教程类（活到老学到老）：
+
+- [德州仪器（TI）官方视频课程培训 - 21ic电子网](https://edu.21ic.com/)；
+- [学堂在线 - 精品在线课程学习平台 (xuetangx.com)](https://www.xuetangx.com/)；
+- [网易公开课 (163.com)](https://open.163.com/)；
+- [哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/)，把 B 站放在这里有什么不对的吗；
+
 ## 1 最基本的电路检查项和器件选型
 
 ### 关于电路模块化
@@ -76,16 +103,27 @@ AD 的更多丰富技巧和高速布线：
 -   电路原理图必须要模块化，便于以后的开发可以直接参考或复制之前已经设计的固定下来的功能模块。
 -   电路板实体的模块化（接口形式可以是 插接键 或者 邮票孔 ），要视具体应用而定：如果电路板要抗震、要空间集成度高（即占用空间紧张）、要低噪声（即精密设计），那么就不宜用电路板实体的模块化，那么此时直接用原理图模块化的形式（可以借鉴或复制之前设计的模块化的原理图）进行原理图层面的框图连接，然后所有器件画在一个板子上，PCB也直接借鉴之前的设计，这样就实现比较高效的设计。
 
+另外要注意的：
+
+- 标准化、通用化和可靠性设计高于功能设计；
+- 接口要考虑到电平兼容，比如 TTL 和 CMOS 两大电平标准；
+- 设计系统要尽量利用硬件资源和外设资源，减少 cpu 负担。
+
 ### 保护机制
 
 -   过压，欠压，防反接，软起动。
 -   过流，过温。
 -   瞬态抑制，静电保护，浪涌保护，EMC/EMI，RC消火花。
--   通讯接口、驱动 I/O 保护：加缓冲，加隔离。
+-   通讯接口、驱动 I/O 保护：加缓冲，加隔离（信号隔离+电源隔离）。
 -   共模、差模干扰抑制。
 -   共阻抗地干扰抑制（高频）。
 
 更多请参考 [Staok/protection-circuits: 对保护电路中的过流、过压、软起动、防反接、通讯和信号隔离、电平转换、防共地干扰、TVS瞬态抑制、共模抑制和电磁兼容做一个大总结 (github.com)](https://github.com/Staok/protection-circuits)。
+
+关于隔离：
+
+- 电源隔离：常为使用变压器的磁路形式隔离（如金升阳等的电源模块）
+- 信号隔离：常有缓冲/中继（74 系列的244、245 等等）、光耦隔离和磁隔离（如 I2C、SPI 专用的磁隔离芯片）等等；要注意的是信号的隔离往往是两个单独的电路回路之间的信号连接，所以如果用光耦进行信号隔离，那么光耦两边的电源连接应该用两边对应的单独电路回路里面的电源，而不是公用一个地或者电源，这样起不到隔离效果。
 
 ### 电源
 
@@ -145,7 +183,7 @@ AD 的更多丰富技巧和高速布线：
 
 - 目前三类 MOS 开关管：硅基（Si），碳化硅（SiC），氮化镓（GaN），目前英飞凌（Infineon）能提供很广泛的 MOS 选型和对应的预驱 IC，官网有不少选型指导手册。下图是三类 MOS 的适用范围：
 
-  ![Infineon image wide bandgap semiconductors Si-Sic-GaN](assets/Wide Bandgap Semiconductors (SiCGaN).jpg)
+  ![Infineon image wide bandgap semiconductors Si-Sic-GaN](assets/Wide-Bandgap-Semiconductors-(SiCGaN).jpg)
 
 总结目前适用范围：
 
@@ -157,19 +195,44 @@ AD 的更多丰富技巧和高速布线：
 
 更多阅读：
 
-- [Wide Bandgap Semiconductors (SiC/GaN)](https://www.infineon.com/cms/en/product/wide-band-gap-semiconductors-sic-gan/)
-- [体验三类 MOS： CoolMOS™ 7- CoolSiC™ - CoolGaN™ 和互补的EiceDRIVER™ IC.pdf](https://www.infineon.com/dgdl/Infineon-Experience_the_difference_in_power_CoolMOS_CoolSiC_CoolGaN-ProductSelectionGuide-v01_00-CN.pdf?fileId=5546d46262b31d2e0162b59d5869079c)
-- [英飞凌功率器件选型](https://www.infineon.com/cms/cn/product/power/)
-- [德州仪器（TI）的 NexFET MOS 选型（CSD 系列）](https://www.ti.com/power-management/mosfets/overview.html)
+- [Wide Bandgap Semiconductors (SiC/GaN)](https://www.infineon.com/cms/en/product/wide-band-gap-semiconductors-sic-gan/)。
 
-### 运放
+- [体验三类 MOS： CoolMOS™ 7- CoolSiC™ - CoolGaN™ 和互补的EiceDRIVER™ IC.pdf](https://www.infineon.com/dgdl/Infineon-Experience_the_difference_in_power_CoolMOS_CoolSiC_CoolGaN-ProductSelectionGuide-v01_00-CN.pdf?fileId=5546d46262b31d2e0162b59d5869079c)。
+
+- [英飞凌功率器件选型](https://www.infineon.com/cms/cn/product/power/)。
+
+- [德州仪器（TI）的 NexFET MOS 选型（CSD 系列）](https://www.ti.com/power-management/mosfets/overview.html)。
+
+- 谨防买到假货 MOS 管，识别经验现有两点（真实趟过雷的），一点是如下图识别丝印大小（左边两个真品，右边两个赝品），另一点是真货 MOS 的边缘是圆角，而方角的可能是假货，也不是绝对，需要进一步测量验证，比如加 Vgs，然后测量 Rds，假货肯定 内阻不正常 / 最大承受电流很低 等等。
+
+  <img src="assets/谨防买到假货MOS管.bmp" alt="谨防买到假货 MOS 管" style="zoom:50%;" />
+
+### 运放芯片
 
 括号内为最廉价运放的典型值。
 
--   输入、输出电压范围（供电是否必须双电源，输出是否轨到轨），带宽/摆率/电压转换速率SR（0.5V/us），开环差模增益（Aod，100dB或105）/频率响应/伯德图/频带宽（-3dB的f），放大倍数温漂。
--   差模输入阻抗（rid，大于2MΩ），共模输入阻抗，共模抑制比（KCMR，大于80dB）。
+-   输入、输出电压范围（供电是否必须双电源，输出是否轨到轨），带宽/摆率/电压转换速率（SR，0.5V/us），开环差模增益（Aod，100dB）/频率响应/伯德图/频带宽（-3dB的频率，0.5~2MHz），放大倍数温漂。
+-   差模输入阻抗（Rid，大于2MΩ），共模输入阻抗，共模抑制比（KCMR，大于80dB）。
 -    输入失调电压（Uio，小于2mV），输入失调电流（Iio，0.2~2uA），输入偏置电流（Iib，0.3~7uA），它们的温漂。
 -   功耗（80mW）。
+
+### 开关电源芯片
+
+即 DC-DC 的 BUCK、BOOST、BUCK-BOOST 等。
+
+- 拓扑形式，频率，是否集成开关管。
+- 输入、输出的电压、电流范围。输出是否可调。
+- 是否带 comp 环路补偿端。
+- 静态功耗。
+
+### 线性电源芯片
+
+即 LDO。
+
+- 输入、输出的电压、电流范围。输出是否可调。
+- 根据不同功率选用不同封装的具体型号（如 78 系类有 m、l 系列等，1117 系列有 sot-223、sot-89 等系列）。
+- 静态功耗（如 HT7333 最低 1uA）。
+- 输出噪声。
 
 ### MCU / MPU
 
@@ -185,17 +248,89 @@ AD 的更多丰富技巧和高速布线：
 
 硬件测试（或称可靠性检验）的指标条目、每个项目的测试步骤和测试报告等规范化。
 
-（这条目前对于我个人是空白的，以后慢慢积累补上）。
+（这条目前对于我个人是空白比较多的，以后慢慢积累）。
 
-## 1.75 元件原理图和封装的准备
+### 电源的测试项
 
-法一：淘宝大法。淘宝上有很多卖封装的，也不贵，买一次一劳永逸真的划算，如 源创客 的等。
+包括开关电源和线性电源。
 
-法二：开源大法。如 [issus/altium-library](https://github.com/issus/altium-library)、[KitSprout/AltiumDesigner_PcbLibrary](https://github.com/KitSprout/AltiumDesigner_PcbLibrary) 、嘉立创的元件库 [嘉立创SMT (JLC_SMT) - Gitee.com](https://gitee.com/JLC_SMT) 等等。
+1. 输入输出参数；
+2. 效率；
+3. 输出启动过冲；
+4. 输出关机过冲；
+5. 上升时间；
+6. 纹波/噪声；
+7. 短路保护（过流保护）；
+8. 温升；
+9. 温度考核试验（高低温环节循环测试）；
+10. 电压裕量；
+11. 电流裕量；
+12. 外观。
+13. 最后加上我个人要求的保护完善程度：防反接，输入、输出的电压、电流过大保护，EMC合格，防电子干扰等等。
 
-法三：原厂大法。选定大厂的芯片后，一些大厂官网会直接提供该芯片对应的原理图和 PCB 封装，如 ST 等大厂官网对应 IC 页中寻找提供的 PCB 封装进行下载，具体 [如何利用 Ultra Librarian 生成 Altium designer 器件封装](https://blog.csdn.net/XiaoQingCaiGeGe/article/details/83864576)。
+## 1.51 元件手册的准备
 
-法四：经销商/三方大法。如在 (1)贸泽电子 官网搜索芯片，会提供 https://componentsearchengine.com/ 网址所提供的芯片原理图、PCB 封装和 3D 模型文件，利用 Library Loader 软件（官网下载）或者针对 AD 的 Altium Library Loader 软件对器件模型文件转换成 Altium 软件格式的库文件。还有 (2)立创商城，搜索器件后可以得到 立创 EDA 的器件原理图和封装，导出到 Altium 即可，[如何将嘉立创的原理图封装导入到AD20?](https://www.bilibili.com/video/BV1of4y1S7oi)。
+在画原理图和 PCB 之前应该先把所有用到的器件的手册准备好。找器件手册的地方主要有以下几个方法：
+
+1. 芯片所在官网。有的芯片的官网进去太慢或者不提供手册，就略过此法。
+   1. TI [模拟 | 嵌入式处理 | 半导体公司 | 德州仪器 TI.com.cn](https://www.ti.com.cn/)；
+   2. ADI [ADI | 混合信号和数字信号处理IC | 亚德诺半导体 (analog.com)](https://www.analog.com/cn/index.html)；
+   3. NXP [恩智浦半导体官方网站 | 主页 (nxp.com.cn)](https://www.nxp.com.cn/)；
+   4. Infineon [英飞凌——半导体与系统解决方案 - Infineon Technologies](https://www.infineon.com/cms/cn/)；
+   5. ST [首页 - STMicroelectronics](https://www.st.com/content/st_com/zh.html)；
+   6. MPS [MPS | Monolithic Power Systems 芯源系统有限公司](https://www.monolithicpower.cn/)；
+   7. ON [半导体和集成电路器件 (onsemi.cn)](https://www.onsemi.cn/)；
+   8. 等等等等；
+2. 大型商城。
+   1. 立创商城 [立创商城_电子元器件采购网上商城_领先的现货元器件交易平台-嘉立创电子商城 (szlcsc.com)](https://www.szlcsc.com/)，直接搜芯片型号，型号比较全，可以下载到手册和封装。
+   2. 云汉芯城 [云汉芯城ICKey.cn_电子元器件采购_BOM配单_SMT贴片_PCB打样](https://www.ickey.cn/)；
+   3. 等；
+3. 芯片手册搜索网。
+   1. [ALLDATASHEET.COM - Datasheet search site for Electronic Components and Semiconductors and other semiconductors.](https://www.alldatasheet.com/)；
+   2. [netCOMPONENTS 电子元器件查询](https://www.netcomponents.com/zh/)；
+   3. 以下网站的收录型号相对较少；
+   4. [半导小芯-芯片查询工具_芯片替代查询_数据手册查询_规格书查询_datasheet查询_IC查询 (semiee.com)](http://www.semiee.com/)；
+   5. 丝印反查 [芯片丝印反查网 - IC芯片丝印,IC芯片代码,IC芯片印字,IC芯片顶标,SMD code,marking code,top mark (smdmark.com)](http://www.smdmark.com/m/)；
+   6. [Datasheet,Datasheet下载,电子元器件查询网-datasheet5.com](https://www.datasheet5.com/)；
+   7. [datasheet-PDF中文资料大全-电子产品世界 (eepw.com.cn)](http://datasheet.eepw.com.cn/)；
+   8. [EasyDatasheet | 次世代元器件搜索引擎](https://easydatasheet.cn/)；
+   9. 等；
+
+## 1.52 元件原理图和封装的准备
+
+法一：淘宝大法，针对基础器件库。淘宝上有很多卖封装的，也不贵，买一次一劳永逸真的划算，如 源创客 的等。
+
+法二：开源大法，扩充器件库。如 [issus/altium-library](https://github.com/issus/altium-library)、[KitSprout/AltiumDesigner_PcbLibrary](https://github.com/KitSprout/AltiumDesigner_PcbLibrary) 、嘉立创的元件库 [嘉立创SMT (JLC_SMT) - Gitee.com](https://gitee.com/JLC_SMT) 等等。
+
+法三：原厂大法，针对性下载。选定大厂的芯片后，一些大厂官网会直接提供该芯片对应的原理图和 PCB 封装，如 TI 等大厂官网对应 IC 页中寻找提供的 PCB 封装进行下载。
+
+举例：如在 TI 搜索器件 CSD18540Q5B [CSD18540Q5B 数据表, 产品信息与支持 | TI.com.cn](https://www.ti.com.cn/product/cn/CSD18540Q5B?keyMatch=CSD&tisearch=search-everything#design-development##cad-cae-symbols) ，在页面下面找到 CAD/CAE 符号 一栏，其下有下载一栏，点进去会跳转到 Ultra Librarian For TI 网站中的封装选择页面，再点击 Choose CAD Formats & Download 按钮，在下一个页面中在 Choose CAD Format(s) 中选择 Altium Designer，然后在 Symbol Pin Ordering 选择 Functional ，再点击 Submit 即可下载封装数据文件，接下来在 AD 软件中使用该封装数据生成封装文件，步骤参考 [Ultra Librarian Altium Designer Import](https://app.ultralibrarian.com/content/help/?altium_designer.htm)。
+
+其他芯片大厂（如 ST 等）的具体芯片型号封装的获取步骤类似。
+
+法四：经销商/三方大法，针对性下载。如在：
+
+1. 在 [Component Search Engine: Free Symbols, footprints, & 3D models](https://componentsearchengine.com/) 搜索器件并下载封装。
+
+   还可以在 AD 软件（AD 17 及以上版本）内安装 Altium Library Loader 组件来脱离网页直接搜索器件并下载器件原理图和封装，如下图所示：
+
+   - 安装和使用的步骤 [Altium Designer PCB Library - FREE - Footprints - Symbols - 3D Models (samacsys.com)](https://www.samacsys.com/altium-designer-library-instructions/)；
+
+   - 下载地址 [Altium Designer Loader Download (componentsearchengine.com)](https://componentsearchengine.com/library/altium)；
+
+   - 桌面版本下载地址 [电子元件搜索引擎 - 免费获取原理图符号、PCB封装和3D模型 (componentsearchengine.com)](https://componentsearchengine.com/learn-more)（在这个网页里翻到最下边可以看到下载按钮）；
+
+   - FAQ（比如遇到安装不成功等问题看这里） [Altium Library Loader FAQ (samacsys.com)](https://www.samacsys.com/altiumll-faq/)。
+
+     上面所述的 Altium Library Loader 软件安装包 已经离线在 `/额外文档/LibraryLoaderSetup2v49.msi.zip`。
+
+   ![Altium Library Loader](assets/Altium-Library-Loader.png)
+
+   另外，在 贸泽电子 搜索器件并点击下载封装后会跳转到 Component Search Engine 网站，下载步骤同理。
+
+2. 立创商城自己维护的库，在[立创商城](https://www.szlcsc.com/)搜索器件后可以得到 立创 EDA 的器件原理图和封装，导出到 Altium 即可，具体步骤参考 [如何将嘉立创的原理图封装导入到AD20?](https://www.bilibili.com/video/BV1of4y1S7oi)。
+
+3. 在 Ultra Librarian 搜索并下载封装 [Free Altium PCB Library Online for Footprints & 3D Models | Ultra Librarian](https://www.ultralibrarian.com/solutions/cad-vendors/altium)，需要注册。如果下载到的封装数据是 CAD File（.bxl）类型的，那么通过 UltraLibrarian 软件 生成 AD 封装步骤参考[使用ULIB+Altium Designer绘制元件原理图及封装_dodwind的博客-CSDN博客](https://blog.csdn.net/dodwind/article/details/87954700)， [利用UltraLibrarian生成Altium designer原理图、PCB封装_fpga_start博客-CSDN博客](https://blog.csdn.net/m0_58064525/article/details/117607455)，[Ultra Librarian下载与安装使用教程_chengoes-CSDN博客](https://blog.csdn.net/chengoes/article/details/115440856)，[UltraLibrarian 软件下载链接](http://webench.ti.com/cad/ULib.zip)。
 
 法五：以上方法都没有，是特殊的器件，可以自制。对于原理图，一般元件的引脚和其划分不会特别复杂，应该很快就能画好；对于PCB 封装，常见的可用 AD 的 IPC 自动创建常用封装工具，先选择封装类型，再根据手册设置各种长宽参数，自动生成PCB封装以供使用，不常见的那只能最后的最后才自己画啦，按照芯片手册提供的封装规格，尺寸的单位看准了。
 
@@ -203,7 +338,7 @@ AD 的更多丰富技巧和高速布线：
 
 - [找3D模型和导入的一个教程](http://bbs.21dianyuan.com/forum.php?mod=viewthread&tid=174773)；
 - [IC封装网-行业IPC标准化的元件库及PCB封装库资源下载平台 (iclib.com)](https://www.iclib.com/)；
-- [3D ContentCentral - 免费 3D CAD 模型、2D 工程图和供应商目录](https://www.3dcontentcentral.cn/default.aspx)；
+- [3D ContentCentral - 免费 3D CAD 模型、2D 工程图和供应商目录](https://www.3dcontentcentral.cn/)；
 
 等网站下载。
 
@@ -229,29 +364,29 @@ AD 的更多丰富技巧和高速布线：
 
    原理图第一页的 目录 规范示意：
 
-   <img src="assets/原理图第一页的 目录 规范示意.png" alt="原理图第一页的 目录 规范示意.png"  />
+   <img src="assets/原理图第一页的-目录-规范示意.png" alt="原理图第一页的 目录 规范示意.png"  />
 
-   <img src="assets/原理图第一页的 目录 规范示意_2.png" alt="原理图第一页的 目录 规范示意_2" style="zoom: 90%;" />
+   <img src="assets/原理图第一页的-目录-规范示意-2.png" alt="原理图第一页的 目录 规范示意 2" style="zoom: 90%;" />
 
    原理图第一页的 历史版本 规范示意：
 
-   <img src="assets/原理图第一页的 历史版本 规范示意.png" alt="原理图第一页的 历史版本 规范示意" style="zoom:110%;" />
+   <img src="assets/原理图第一页的-历史版本-规范示意.png" alt="原理图第一页的 历史版本 规范示意" style="zoom:110%;" />
 
-   <img src="assets/原理图第一页的 历史版本 规范示意 2.png" alt="原理图第一页的 历史版本 规范示意 2" style="zoom: 80%;" />
+   <img src="assets/原理图第一页的-历史版本-规范示意-2.png" alt="原理图第一页的 历史版本 规范示意 2" style="zoom: 80%;" />
 
    原理图第一页的 目录 和 历史版本 和 说明 兼有，示意：
 
-   ![原理图第一页的 目录 和 历史版本 兼有，示意](assets/原理图第一页的 目录 和 历史版本 兼有，示意.png)
+   ![原理图第一页的 目录 和 历史版本 兼有，示意](assets/原理图第一页的-目录-和-历史版本-兼有的示意.png)
 
    原理图第二页的 框图 示意：
 
-   <img src="assets/原理图第二页的 框图 示意.png" alt="原理图第二页的 框图 示意" style="zoom: 80%;" />
+   <img src="assets/原理图第二页的-框图-示意.png" alt="原理图第二页的 框图 示意" style="zoom: 80%;" />
 
-   <img src="assets/原理图第二页的 框图 示意 2.png" alt="原理图第二页的 框图 示意 2" style="zoom:67%;" />
+   <img src="assets/原理图第二页的-框图-示意-2.png" alt="原理图第二页的 框图 示意 2" style="zoom:67%;" />
 
    原理图第三页的 电源轨框图 示意：
 
-   ![原理图第三页的 电源轨框图 示意](assets/原理图第三页的 电源轨框图 示意.png)
+   ![原理图第三页的 电源轨框图 示意](assets/原理图第三页的-电源轨框图-示意.png)
 
 2.  对于每一页SCH（这里仅为示例，没有用 层次原理图设计模式，详看同名章节）：
 
@@ -280,13 +415,15 @@ AD 的更多丰富技巧和高速布线：
 
 7. 网络标识的命名规范，基于 "器件名（或器件类型） _ IO性质（数字还是ADC） _ IO名（管脚名）"。中间常用于 MCU 的网络命名，其他非 MCU 器件非必须。例如，"MCU _  IO _ KEY1"、"TPS5450 _ SW"、"DRV _ EN _ BUCK  "等，如下图示意。
 
-   ![网络标识的命名规范 示意](assets/网络标识的命名规范 示意.png)
+   ![网络标识的命名规范 示意](assets/网络标识的命名规范-示意.png)
 
 8. 初次研制阶段，可多用 0 欧电阻、磁珠和跳线帽等，留出可以可测试、可断开和可配置的地方，方便逐个电源域、逐个模块的测试电流、功能裁剪等。比如加在电源出口，初次上电前可以先断开，不给后面的的电路供电，上电后测量电压和纹波，合理后，即可再接上，或者可以在此缺口直接测量电流。
 
-9. 原理图画好后该给各个元件建立唯一编号。打开“工具”->“注解”，点 Reset All ，再点“更新更改列表”，最后执行“接受更改”。
+9. 原理图中接口件，旁边放上实物图，图片设置为内嵌型。
 
-10. 对原理图进行编译和查错。依次点 “工程”->“Compile Document” 和 “工程”->“Compile PCB Project”。没错后即可导入PCB。
+10. 原理图画好后该给各个元件建立唯一编号。打开“工具”->“注解”，点 Reset All ，再点“更新更改列表”，最后执行“接受更改”。
+
+11. 对原理图进行编译和查错。依次点 “工程”->“Compile Document” 和 “工程”->“Compile PCB Project”。没错后即可导入PCB。
 
 ## 3 PCB 绘制规范和 AD 使用
 
@@ -318,10 +455,11 @@ AD 的更多丰富技巧和高速布线：
 -   Shift+g：PCB 左上角状态栏是否固定不动。
 -   键盘上边数字“3”为显示 3D 视图，数字“2”还原。
 -   3D 视图中依次点“v”、“b”->翻转板。
+-   按 L 按键，在视图选项中隐藏相关元素，比如隐藏覆铜（Polygons）。
 
 ### 最基本的 PCB 绘制过程
 
-要全程符合“PCB 布局布线规范”章节内容。
+要全程符合“PCB 布局布线规范”章节内容。如果有双屏幕的话，在画 PCB 的时候我一般会把原理图视图放在左屏（在 AD 软件中将原理图标签拖过去就是），PCB 视图放在右屏，或者相反，这样双屏左右对照着看和画，不用来回切。
 
 1.  先定义PCB规则。点开“设计”->“规则”，主要设置线宽范围，元件最小间距，焊盘的开窗范围，默认过孔尺寸，覆铜类型为直接连接等。
 
@@ -460,19 +598,20 @@ AD 的更多丰富技巧和高速布线：
   - 多个相似器件的批量修改，如所有电容的 Designator 修改为 "C?"，或者统一修改封装等等：右击一个器件，点 "Find Similar"，把 Symbol Refrence 选为 same，或者其他选为 same，然后点 Apply，会高亮出所有相似器件，然后鼠标在空白处按住左键拖动框选所有相似器件，便可以在属性栏中批量修改属性，调出属性栏可以按 F11。或者手动单独多选要批量修改的多个器件，然后在属性栏中可以批量修改。PCB 中同理，可用于批量修改封装、修改焊盘/过孔等等，只是在 "Find Similar" 步骤中点 Apply 后相似器件会自动都被选中，直接在属性栏批量修改即可。
   - ..
 - PCB 中的：
-  - 按住 xxx，鼠标在板子器件上移动，会显示器件轮廓。
+  - 按住 xxx（暂时不知道），鼠标在板子器件上移动，会显示器件轮廓。
+  - 隐藏覆铜：按 L 按键，在视图选项（View Options）中选择关闭覆铜（Polygons）显示。
   - 切换三种布线模式（忽略，避开，推挤）：Shift+r。
   - 把选中的器件排列到框里："Tools"，"Component Placement"，".. Within Rectangle"；或者设置个快捷键。
-  - 覆铜：选择好网络、移除死铜、移除小于比如 10mil 的铜片和选择 "Pour Over Same Net .."；移动覆铜后，要右键选 "Polygon Actions" 的 "Repour All"。覆铜的属性栏里面的 Actions 里面有重新覆铜、设置网络（再手动点一根要连接的网络的线）、前置/后置和修改（手动画线微调边缘）等。
+  - 覆铜：选择好网络、选择移除死铜、设定移除小于比如 10mil 的铜片和选择 "Pour Over Same Net .."；移动覆铜后，要右键选 "Polygon Actions" 的 "Repour All"。覆铜的属性栏里面的 Actions 里面有重新覆铜、设置网络（再手动点一根要连接的网络的线）、前置/后置和修改（手动画线微调边缘）等。
   - 挖掉一块覆铜：选 Polygon Pour Cutout 工具，在已经覆铜的区域画个框，然后重新覆铜 "Repour All"。
-  - 批量放过地过孔：给覆铜添加或者围绕某个线添加，选 Tools 的 Via Stitching/Shielding，在里面设置孔连接的网络、孔分布和孔大小等信息，可以选择给整个板面均匀加接地孔（孔间距可以打一些防止孔过多了），也可以选择给信号线的周围围绕着加接地孔，比较方便。
+  - 批量放过地孔：给覆铜添加或者围绕某个线添加，选 Tools 的 Via Stitching/Shielding，在里面设置孔连接的网络、孔分布和孔大小等信息，可以选择给整个板面均匀加接地孔（孔间距可以打一些防止孔过多了），也可以选择给信号线的周围围绕着加接地孔，比较方便。
   - 只能选择某种类型要素而其他元素不能被选中，方便只修改某一类元素而防止误碰其他要素：点工具栏的 Selection Filter，哪一项打开哪一项就能被选中，反之不能被选中；一般在覆铜后可以把覆铜 Polygons 关闭使能选中。
   - 调节 PCB 线高亮时候与背景对比的程度：点右下角 Panels，点进 View Configuration，在 View Options 栏中下面调节 Mask and dim，还可以调节 Object Visibility，可以把 覆铜 Polygons 的亮度调低，以区分覆铜和走线、焊盘。
   - 板子镂空：先围绕要镂空的区域画 Keep-out-layer 闭合曲线，然后工具栏选择 Designer，Board Shape，Define Board Cutout，然后围绕刚才画的镂空区域的 Keep-out-layer 闭合曲线 画一圈。
   - ..
   
 - 器件原理图库绘制的技巧：
-  - 引脚名字上要加横线表示低有效：绘制器件原理图库，在名字的每一个字符中间加 " \ " 符号即可。
+  - 引脚名字上要加横线表示低有效：绘制器件原理图库，在名字的每一个字符中间加 " \ " 字符即可。
   - 快速添加各个引脚名：在一个器件原理图库的界面，其属性的 "Pin" 标签中，下面有笔形状的 "编辑" 按钮，点进去可以以表格形式编辑当前器件各个引脚属性。
   - ..
 
@@ -511,19 +650,19 @@ AD 的更多丰富技巧和高速布线：
 
 Sheet 2 SCH 图：
 
-<img src="assets/总线连接 Sheet2 SCH.png" alt="总线连接 Sheet2 SCH" style="zoom:50%;" />
+<img src="assets/总线连接-Sheet2-SCH.png" alt="总线连接 Sheet2 SCH" style="zoom:50%;" />
 
 Sheet 3 SCH 图：
 
-<img src="assets/总线连接 Sheet3 SCH.png" alt="总线连接 Sheet3 SCH" style="zoom:50%;" />
+<img src="assets/总线连接-Sheet3-SCH.png" alt="总线连接 Sheet3 SCH" style="zoom:50%;" />
 
 Top SCH 图：
 
-<img src="assets/总线连接 Top SCH.png" alt="总线连接 Top SCH" style="zoom: 67%;" />
+<img src="assets/总线连接-Top-SCH.png" alt="总线连接 Top SCH" style="zoom: 67%;" />
 
 PCB 效果：
 
-![总线连接 PCB 效果](assets/总线连接 PCB 效果.png)
+![总线连接 PCB 效果](assets/总线连接-PCB-效果.png)
 
 ### 差分走线设计
 
@@ -531,11 +670,11 @@ PCB 效果：
 
 1. 嘉立创提供的阻抗计算工具；
 
-   <img src="assets/嘉立创 阻抗计算.png" alt="嘉立创 阻抗计算" style="zoom: 67%;" />
+   <img src="assets/嘉立创-阻抗计算.png" alt="嘉立创 阻抗计算" style="zoom: 67%;" />
 
 2. 嘉立创下单助手的 工艺信息 一栏选择 "需要阻抗"，并选择层压结构（一般为第一个 JLC7628）；
 
-   ![嘉立创 层压结构](assets/嘉立创 层压结构.png)
+   ![嘉立创 层压结构](assets/嘉立创-层压结构.png)
 
 3. 在 PCB 的 规则 Rules 中，点进 DiffPairsRouting 栏里，改差分走线的 最小间隙和优选间隙 为步骤1中指定的（7 mil），最小宽度、优选宽度和最大宽度 改为步骤1中指定的（9.72 mil），
 
@@ -663,6 +802,19 @@ PCB 效果：
 2.  电源完整性（PI）分析。
 3.  阻抗匹配的内容，也需要遵守，属于原理图设计部分：高频电路源与目的之间的阻抗匹配非常重要，错误的匹配会带来信号反馈和阻尼振荡。过量地射频能量则会导致 EMI问题。此时，需要考虑采用信号端接；滤波器选型的阻抗失配准则：对低阻抗噪声源，滤波器需为高阻抗（大的串联电感）；对高阻抗噪声源，滤波器就需为低阻抗（大的并联电容）；降低敏感线路的输入阻抗有效减少引入干扰的可能性；LC滤波器 在低输出阻抗电源和高阻抗数字电路之间，需要LC滤波器，以保证回路的阻抗匹配；降低敏感线路的输入阻抗。
 4.  对于高频电路，需要考虑元件之间的分布参数的影响。
+
+### PCB 检查项
+
+![图片](assets/PCB-检查项-0.jpg)
+
+[上图图源](https://mp.weixin.qq.com/s/fMdGVFTkOGlQgdq-yfnngA)。
+
+## 4.5 PCB 检查工具
+
+自动化 PCB 检查工具。
+
+- [华秋 DFM](https://dfm.elecfans.com/)：一键分析导入的 PCB 文件，检查项有板子尺寸、孔、线、间距、孤铜等等，排除生产难点、设计缺陷，给出优化建议，结合各种生产因素，自动计算或反算阻抗等等，比较有用。
+- etc.
 
 ## 5 AD 导出 BOM 表
 
