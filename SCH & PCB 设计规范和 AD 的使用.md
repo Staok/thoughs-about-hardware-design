@@ -608,6 +608,8 @@ AD 的更多丰富技巧和高速布线：
   - 只能选择某种类型要素而其他元素不能被选中，方便只修改某一类元素而防止误碰其他要素：点工具栏的 Selection Filter，哪一项打开哪一项就能被选中，反之不能被选中；一般在覆铜后可以把覆铜 Polygons 关闭使能选中。
   - 调节 PCB 线高亮时候与背景对比的程度：点右下角 Panels，点进 View Configuration，在 View Options 栏中下面调节 Mask and dim，还可以调节 Object Visibility，可以把 覆铜 Polygons 的亮度调低，以区分覆铜和走线、焊盘。
   - 板子镂空：先围绕要镂空的区域画 Keep-out-layer 闭合曲线，然后工具栏选择 Designer，Board Shape，Define Board Cutout，然后围绕刚才画的镂空区域的 Keep-out-layer 闭合曲线 画一圈。
+  - 2D 和 3D 视图切换，使用 2 和 3 按键时视图不会同步，使用 Ctrl + Alt +2/3 视图是同步的（暂时不知如何解决使用 2/3 按键是同步视图的）。
+  - 过孔盖油。如果发给 PCB 厂家 PCB 文件，可以选择过孔盖油然后由厂家设置，如果不想泄露 PCB 文件而发的是 Gerber 文件，则必须要先设置过孔盖油，否则发过去是默认的，默认过孔是不盖油的。选择全部过孔，打开属性栏 -> 勾选两个 Tented。详见 Altium AD20过孔盖油，通过设计规则实现过孔盖油，简便实用不会造成遗漏出错_Mark_md的博客-CSDN博客](https://blog.csdn.net/Mark_md/article/details/118542699)。
   - ..
   
 - 器件原理图库绘制的技巧：
