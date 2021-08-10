@@ -651,7 +651,7 @@ AD 的更多丰富技巧和高速布线：
 
 ### 总线连接
 
-看图自学。
+看图自学。以下原理图源文件在`\PCB LOGO-画法集合-PCB工具-规则文件\多层次原理图 总线连接 示例`里。
 
 Sheet 2 SCH 图：
 
@@ -660,6 +660,14 @@ Sheet 2 SCH 图：
 Sheet 3 SCH 图：
 
 <img src="assets/总线连接-Sheet3-SCH.png" alt="总线连接 Sheet3 SCH" style="zoom:50%;" />
+
+Sheet 1 SCH 图：
+
+<img src="assets/总线连接-Sheet1-SCH.png" alt="总线连接 Sheet1 SCH" style="zoom:50%;" />
+
+Sheet 4 SCH 图：
+
+<img src="assets/总线连接-Sheet4-SCH.png" alt="总线连接 Sheet4 SCH" style="zoom:50%;" />
 
 Top SCH 图：
 
