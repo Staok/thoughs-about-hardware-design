@@ -314,7 +314,7 @@ AD 的更多丰富技巧和高速布线：
 
    另外，在 贸泽电子 搜索器件并点击下载封装后会跳转到 Component Search Engine 网站，下载步骤同理。
 
-2. 立创商城自己维护的库，在[立创商城](https://www.szlcsc.com/)搜索器件后可以得到 立创 EDA 的器件原理图和封装，导出到 Altium 即可，具体步骤参考[立创EDA元件转换为AD库封装(Altium Designer)_Mark_md的博客-CSDN博客](https://blog.csdn.net/Mark_md/article/details/116041756)，[如何将嘉立创的原理图封装导入到AD20?](https://www.bilibili.com/video/BV1of4y1S7oi)，需要注册登录。
+2. 立创商城自己维护的库，在[立创商城](https://www.szlcsc.com/)搜索器件后可以得到 立创 EDA 的器件原理图和封装，导出到 Altium 即可，具体步骤参考[立创EDA元件转换为AD库封装(Altium Designer)_Mark_md的博客-CSDN博客](https://blog.csdn.net/Mark_md/article/details/116041756)，[如何将嘉立创的原理图封装导入到AD20?](https://www.bilibili.com/video/BV1of4y1S7oi)，需要注册登录。注：网页端的 “立创 EDA” 导出器件的 AD 格式为 SCH 和 PCB 的文件格式（SchDoc、PcbDoc）而非库文件格式，PCB 文件里面的封装可以直接复制到自己新建的 PCB 库里面，但是 SCH 文件不能复制到自己新建的 SCH 库里面，对于 SCH，可以点击 Design->Make Sch Library 即可生成 SCH 库文件，打开新生成的 SCH 库文件，里面的器件的每个 端口 均可编辑且可以复制到 自己的 SCH 库里面为画原理图而调用；若立创 EDA 导出的原理图文件内包含该器件的多个 Part，这时点击 Make Sch Library 只能生成其中一个 Part 的原理图库，但一样的，只需分别将每个 Part 都 “Make Sch Library” 一次，然后分别复制到自己新建的原理图库的器件的各个 Part 页里面即可（文字描述有些局限，意会吧）。
 
 3. 在 Ultra Librarian 搜索并下载封装 [Free Altium PCB Library Online for Footprints & 3D Models | Ultra Librarian](https://www.ultralibrarian.com/solutions/cad-vendors/altium)，需要注册。如果下载到的封装数据是 CAD File（.bxl）类型的，那么通过 UltraLibrarian 软件 生成 AD 封装步骤参考[使用ULIB+Altium Designer绘制元件原理图及封装_dodwind的博客-CSDN博客](https://blog.csdn.net/dodwind/article/details/87954700)， [利用UltraLibrarian生成Altium designer原理图、PCB封装_fpga_start博客-CSDN博客](https://blog.csdn.net/m0_58064525/article/details/117607455)，[Ultra Librarian下载与安装使用教程_chengoes-CSDN博客](https://blog.csdn.net/chengoes/article/details/115440856)，[UltraLibrarian 软件下载链接](http://webench.ti.com/cad/ULib.zip)。
 
@@ -629,6 +629,7 @@ AD 的更多丰富技巧和高速布线：
   - 隐藏覆铜：按 L 按键，在视图选项（View Options）中选择关闭覆铜（Polygons）显示；在视图选项（View Options）中还可以关闭 3D 模型显示，等更多选择。
   - 切换三种布线模式（忽略，避开，推挤）：Shift+r。
   - 把选中的器件排列到框里："Tools"，"Component Placement"，".. Within Rectangle"；或者设置个快捷键，可以设置为 Shift+Q。
+  - 隐藏线或线类：点右下角的 Panels 里面，打开 PCB 面板，选择线或网络，右击选择 “Connections（连接）” 里面的隐藏即可。
   - 覆铜：选择好网络、选择移除死铜、设定移除小于比如 10mil 的铜片和选择 "Pour Over Same Net .."；移动覆铜后，要右键选 "Polygon Actions" 的 "Repour All"。覆铜的属性栏里面的 Actions 里面有重新覆铜、设置网络（再手动点一根要连接的网络的线）、前置/后置和修改（手动画线微调边缘）等。
   - 挖掉一块覆铜：选 Polygon Pour Cutout 工具，在已经覆铜的区域画个框，然后重新覆铜 "Repour All"。
   - 批量放过地孔：给覆铜添加或者围绕某个线添加，选 Tools 的 Via Stitching/Shielding，在里面设置孔连接的网络、孔分布和孔大小等信息，可以选择给整个板面均匀加接地孔（孔间距可以打一些防止孔过多了），也可以选择给信号线的周围围绕着加接地孔，比较方便。
@@ -681,10 +682,16 @@ AD 的更多丰富技巧和高速布线：
 
 ### 布局复制
 
+**手动按照坐标来布局复制**
+
 针对多个一样的模块，PCB 中器件摆放/布局都一样化。
 
 1. 先布局好一套模块，另外几套模块的位置可以乱，先放着；
 2. 打开 Panels 中的 PCB List，选择 View Selected Objects，再选 Components，再把上面布局好的一套模块的所有器件选中，这时 PCB List 中会显示所有被选中的器件信息表，找到表中的 X1 和 Y1，右击选择 Switch to edit mode，然后选中 X1 和 Y1 复制，然后选中另外一套模块的所有器件，在其 X1 和 Y1 上粘贴即可，这时两套是重叠的，不要取消刚才的选中状态，进行整体平移到两套不重叠，然后选中第一套模块的所有器件，在 PCB List 中复制所有的 Rotation，然后选中第二套模块的所有器件，在其 Rotation 栏粘贴即可。
+
+**按照多个相同 Sheet Symble 的自动布局复制**
+
+这种根据多个同样的 Sheet Symble，只要布局好其中一个，其它相同 Sheet Symble 的元件都自动布局复制。其方法在 `\PCB LOGO-画法集合-PCB工具-规则文件\多个相同 Sheet Symble 布局复制\Altium Designer 多个相同电路快速布局.pdf`文件里。
 
 ### 总线连接
 
@@ -715,6 +722,14 @@ Top SCH 图：
 PCB 效果：
 
 ![总线连接 PCB 效果](assets/总线连接-PCB-效果.png)
+
+### AD Variant 设置 NC 器件
+
+AD Variant 设置用于在画好的原理图中设置一些不焊接的元器件，比较常用到。
+
+其方法记录在`\PCB LOGO-画法集合-PCB工具-规则文件\AD Variant 设置\AltiumDesigner20装配变量Variant使用说明 .pdf`文件里。
+
+另一个详细的网络文章教程：[(1条消息) 硬件工程师必备技能之Variant_地主家也没有余粮啊的博客-CSDN博客](https://blog.csdn.net/weixin_39153808/article/details/119704800)。
 
 ### 差分走线设计
 
@@ -781,7 +796,7 @@ PCB 中走差分线对要保证等长、等距和过孔数量一致，要尽量�
 
 5. 大电流、高功率的走线及其经过的器件应尽量按照能量流动的"好走"的路线布局和布线，尽量减少拐弯和跨层，让其一马平川的流动。
 
-   线宽和电流能力关系表：（参考：过 2A 至少要 40mil 线宽）
+   线宽和电流能力关系表：（参考：过 2A 至少要 30~40mil 线宽）
 
    <img src="assets/image-6.jpg" alt="image-6" style="zoom:116%;" />
 
@@ -903,7 +918,7 @@ PCB 中走差分线对要保证等长、等距和过孔数量一致，要尽量�
 
 1. 画 PCB 的基本规范要首先知道：按照信号流向走线、走线尽量短、电容尽量靠近要滤波的端口、走线宽度足够设计电流通过（或开窗加锡）、电流路径尽量一马平川而减少过孔和拐弯，还有本规范的其它相关规范内容；
 2. 了解 BUCK、BOOST 或正激、反激等之类电源拓扑的运行原理；
-3. 了解电源的主要参数（本规范里 “1 最基本设计理念和器件选型” 章的 “电源” 小节），再完整实践几次，从绘制 SCH、PCB 再到焊接、测量主要参数和调试。
+3. 了解电源的主要参数（本规范里 “1 最基本设计理念和器件选型” 章的 “电源” 小节）。电源类芯片的数据手册一般均有 PCB 布局布线参考图，在空间允许的范围内还是尽量参照该参考图。需要完整实践几次，从绘制 SCH、PCB 再到焊接、测量主要参数和调试。
 
 ### EMC 电磁兼容设计
 
@@ -1054,7 +1069,7 @@ PCB 中走差分线对要保证等长、等距和过孔数量一致，要尽量�
 
 AD10 的教程：[Altium Designer（AD）软件导出BOM文件操作步骤-百度经验 (baidu.com)](https://jingyan.baidu.com/article/0eb457e501efda42f0a9056a.html)；
 
-AD20 的教程（推荐使用，还包含自定义 BOM 表模板）：[AD20如何自定义BOM模板?Altium Designer20 实用技巧系列教程（五）_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1FZ4y1M71U)，其中 BOM 模板文件在 `./PCB LOGO-画法集合-PCB工具-规则文件/AD20 BOM模板 北冥有鱼` 里面，这个模板导出的 BOM 表比较常用、整齐，还包含描述、封装、单位价格（可以在导出 Excel 表格后再填入单价，表中的总价格会自动计算；表格最底部有一栏 PCB ，可以填入价格）等，比较实用。注，视频中的模板的位置，在不同版本 AD20 不同，如果按照视频找不到，那么就应该在 `/Altium/AD20/Documents/Templates/` 目录下。
+AD20 的教程（推荐使用，还包含自定义 BOM 表模板）：[AD20如何自定义BOM模板?Altium Designer20 实用技巧系列教程（五）_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1FZ4y1M71U)，其中 BOM 模板文件在 `./PCB LOGO-画法集合-PCB工具-规则文件/AD20 BOM模板/` 里面，这个模板导出的 BOM 表比较常用、整齐，还包含描述、封装、单位价格（可以在导出 Excel 表格后再填入单价，表中的总价格会自动计算；表格最底部有一栏 PCB ，可以填入价格）等，比较实用。注，视频中的模板的位置，在不同版本 AD20 不同，如果按照视频找不到，那么就应该在 `/Altium/AD20/Documents/Templates/` 目录下。
 
 ## 6 AD 导出 Gerber 和 钻孔文件
 
