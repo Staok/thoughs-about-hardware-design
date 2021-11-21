@@ -945,7 +945,7 @@ PCB 中走差分线对要保证等长、等距和过孔数量一致，要尽量�
 
 详见如下：
 
-- [protection-circuits/EMI EMC 理论和设计要点 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/EMI EMC 理论和设计要点)。
+- [[protection-circuits/EMC 理论和设计要点 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/EMC 理论和设计要点)](https://github.com/Staok/protection-circuits/tree/master/EMI EMC 理论和设计要点)。
 - [protection-circuits/TVS管 ESD器件选型 接口保护选型 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/TVS管 ESD器件选型 接口保护选型)。
 
 ### "地"的类型 / 地平面分割
