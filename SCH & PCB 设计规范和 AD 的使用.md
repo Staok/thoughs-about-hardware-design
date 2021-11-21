@@ -181,7 +181,7 @@ AD 的更多丰富技巧和高速布线：
 
 - [德州仪器（TI）的 NexFET MOS 选型（CSD 系列）](https://www.ti.com/power-management/mosfets/overview.html)。
 
-- 谨防买到假货 MOS 管，识别经验现有两点（真实趟过雷的），一点是如下图识别丝印大小（左边两个真品，右边两个赝品），另一点是真货 MOS 的边缘是圆角，而方角的可能是假货，也不是绝对，需要进一步测量验证，比如加 Vgs，然后测量 Rds，假货肯定 内阻不正常 / 最大承受电流很低 等等。
+- 谨防买到假货 MOS 管！识别经验现有两点（真实趟过雷的），一点是如下图识别丝印大小（左边两个真品，右边两个赝品），另一点是真货 MOS 的边缘是圆角，而方角的可能是假货，也不是绝对，需要进一步测量验证，比如加 Vgs，然后测量 Rds，假货肯定有 内阻不正常 / 最大承受电流很低 等等问题。
 
   <img src="assets/谨防买到假货MOS管.bmp" alt="谨防买到假货 MOS 管" style="zoom:50%;" />
 
@@ -226,11 +226,11 @@ AD 的更多丰富技巧和高速布线：
 
 ### MCU / MPU
 
-[ARM & SOC 系列快速鸟瞰——ARM 内核各系列介绍和各大厂的选型总结](https://github.com/Staok/ARM-Linux-Study/blob/main/ARM%20%26%20Linux%20%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E3%80%90%E4%B8%BB%E7%BA%BF%E5%89%A7%E6%83%85%20%E7%95%AA%E5%A4%9601%E3%80%91ARM%20%E7%B3%BB%E5%88%97%E5%BF%AB%E9%80%9F%E9%B8%9F%E7%9E%B0.md)。
+[ARM & SOC 系列快速鸟瞰——ARM 内核各系列介绍和各大厂的选型总结](https://github.com/Staok/ARM-Linux-Study/blob/main/ARM%20%26%20Linux%20%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E3%80%90%E4%B8%BB%E7%BA%BF%E5%89%A7%E6%83%85%20%E7%95%AA%E5%A4%9601%E3%80%91ARM%20%E7%B3%BB%E5%88%97%E5%BF%AB%E9%80%9F%E9%B8%9F%E7%9E%B0.md)（Github 地址），[PCIe接口及其衍生接口大总结 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/388272103)（知乎地址）。
 
--   内核架构，RAM，ROM，I/O数量，通讯接口（UART，SPI，I2C，CAN，USB，SDIO等），其他特色外设，抗扰能力。
+-   内核架构，RAM，ROM，I/O数量，通讯接口（UART，SPI，I2C，CAN，USB，SDIO，PCIe，HDMI等），其他特色外设，低功耗模式，抗扰能力。
 -   官方手册、工具链是否齐全，官方是否提供 EVK 开发板及其 BSP 底层支持包。
--   最小系统：供电电源，时钟（晶振等），复位（RC + 开关，内部看门狗，专用看门狗芯片等），SRAM（可选），FLASH（可选）。
+-   最小系统：电源轨需求（电源树），时钟（晶振），复位（RC + 开关，内部看门狗，专用看门狗芯片等），RAM（SRAM、(LP)DDR2/3/4 SDRAM），FLASH（SPI FLASH、eMMC/Nor/NAND）。
 -   功耗，价格，封装大小，供货周期。
 -   如无必要，勿增实体！
 
@@ -804,6 +804,8 @@ PCB 中走差分线对要保证等长、等距和过孔数量一致，要尽量�
 
    线宽和电流能力关系表：（参考：过 2A 至少要 30~40mil 线宽）
 
+   ![线宽和电流能力关系表](assets/线宽和电流能力关系表.png)
+
    <img src="assets/image-6.jpg" alt="image-6" style="zoom:116%;" />
 
    ![image-6-1](assets/image-6-1.png)
@@ -918,6 +920,15 @@ PCB 中走差分线对要保证等长、等距和过孔数量一致，要尽量�
 
 26. 小型化是产品开发的必经之路，挑战极限才有竞争力。
 
+### PCB 计算小工具 / 辅助设计小软件
+
+详见`PCB LOGO-画法集合-PCB工具-规则文件\SCH&PCB 设计、计算和检查的工具和软件\`里，包括：
+
+- 电路计算Excel表格合集！非常丰富。
+- PCB 过孔电流计算器。
+- ProPCB PCB设计助手。
+- 一键删除AD的History文件和Previews文件和ProjectLogs文件.bat（放到 AD PCB 工程文件夹内，双击运行一次可以清理除了工程以外的临时文件）。
+
 ### 电源规范设计
 
 电源规范。基本规则分为三大块，都搞明白了就自然的知道怎么画了：
@@ -971,9 +982,9 @@ PCB 中走差分线对要保证等长、等距和过孔数量一致，要尽量�
     -   高电压区域 与 低电压区域。
     -   干扰源 与 敏感元件。
 
-### 信号完整性
+### 信号完整性 X
 
-开始触及知识的盲区了。
+本节为PCB领域专业，本文作者不涉及。
 
 信号完整性（SI）分析。考虑传输延迟（蛇形线），反射（阻抗匹配，线长不要是1/4波长的整数倍），串扰（元件和导线的磁场相互垂直、平行线相互远离（3W原则）、信号线间用地平面隔离等）等等。
 
@@ -983,7 +994,9 @@ PCB 中走差分线对要保证等长、等距和过孔数量一致，要尽量�
 
 
 
-### 电源完整性
+### 电源完整性 X
+
+本节为PCB领域专业，本文作者不涉及。
 
 电源完整性（PI）分析。
 
@@ -996,7 +1009,9 @@ PCB 中走差分线对要保证等长、等距和过孔数量一致，要尽量�
 -   环路增益的测量。
 -   滤波器件（电容/磁珠等）性能参数的测量。
 
-### 高频 / 射频
+### 高频 / 射频 X
+
+本节为PCB领域专业，本文作者不涉及。
 
 对于高频电路，需要考虑元件之间的分布参数的影响。
 
@@ -1064,7 +1079,26 @@ PCB 中走差分线对要保证等长、等距和过孔数量一致，要尽量�
 > 2. 遵循同向。
 > 3. LOGO和版本号等。
 
-## 4.5 PCB 检查工具
+## 4.3 大厂在线/离线电路仿真工具
+
+### 这里还有待总结TI/ADI等等的！！
+
+
+
+### 村田-设计辅助软件 SimSurfing
+
+[设计辅助软件 SimSurfing | 设计辅助工具 | 村田制作所 (murata.com)](https://www.murata.com/zh-cn/tool/simsurfing)。具有在线版和离线版。
+
+具有的工具和功能：
+
+![村田-设计辅助软件 SimSurfing](assets/村田-设计辅助软件 SimSurfing.png)
+
+使用教学视频：
+
+- [设计支持工具 SimSurfing - SimSurfing - 视频資料库 | 村田制作所 (murata.com)](https://video.murata.com/zh-cn/detail/videos/simsurfing/video/5288510174001)。
+- [电源噪声查不出来？不用上板子，滤波器仿真就能搞定 (bilibili.com)](https://www.bilibili.com/medialist/play/watchlater/BV12v411r798)。
+
+## 4.6 PCB 自动化检查工具
 
 自动化 PCB 检查工具。
 
