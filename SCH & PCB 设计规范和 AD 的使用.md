@@ -582,47 +582,11 @@ AD 的更多丰富技巧和高速布线：
 - ...
 - SCH 中的：
   - 多个相似器件的批量修改，如所有电容的 Designator 修改为 "C?"，或者统一修改封装等等：右击一个器件，点 "Find Similar"，把 Symbol Refrence 选为 same，或者其他选为 same，然后点 Apply，会高亮出所有相似器件，然后鼠标在空白处按住左键拖动框选所有相似器件，便可以在属性栏中批量修改属性，调出属性栏可以按 F11。或者手动单独多选要批量修改的多个器件，然后在属性栏中可以批量修改。PCB 中同理，可用于批量修改封装、修改焊盘/过孔等等，只是在 "Find Similar" 步骤中点 Apply 后相似器件会自动都被选中，直接在属性栏批量修改即可。
-  
+
   - 按住 shift 拖动一个元件，可以拖出一个复制元件。
-  
+
   - 原理图编译和查看错误：AD 20 是实时查错的，右下角点 Panels 打开 Message 即可看到，重新编译点 Project 里面的 Validate ... 即可。
-  
-  - 原理图中添加 线组（Net Class）和 差分对（Diff Pair）（尽量在原理图中将线分组完成，而不是在 PCB 中手动挨个添加，因为从原理图更新 PCB 时原来在 PCB 单独添加的线组会被清除），并在原理图中对电源线线宽规则、数据线线宽规则和差分线对均设置完成。
-  
-    - 添加线组（Net Class）和规则：
-  
-      （首先确保 工具栏—>Project—>Project Options—>Class Generation 里面的 Gentrate Net classes 勾选，这样设置才能原理图产生线组 Class，软件默认勾选）
-  
-      Place 中选择（空白处右击选择 Place 或者 原理图界面软件上方工具栏选择 Place 或者在原理图上方的工具栏里面）Directives 里面的 Blanket，包围要添加一个线组的所有线（可以画成不规则形状，关键要在只剩最后一处连接的时候右击完成放置）；再在上述位置找到 Parameter Set，选择后 TAB 键修改参数，在里面 add 一个 Net Class 参数，并写上线组名，可以选择是否显示该参数，推荐 Label 名修改为 “Class _ <线组名>”，然后放置并连接到 Blanket 上面；再添加一个 Parameter Set，add 一个 Rule 参数，选择线宽项，设置线宽，最后放置并连接到 Blanket 上面。如下图所示，这样就将这一组线命名为 “I2S _ LINE” 并设置了线宽规则。然后从原理图更新到 PCB 即可。
-  
-    <img src="assets/添加线组2.png" alt="添加线组2" style="zoom:50%;" />
-  
-    如果要设置线组的线不在一块并且也不好用 不规则形状的 Blanket 全部包围住，那么就将这些线的线标单独拿到一块空白区域，然后围住即可。
-  
-    <img src="assets/添加线组.png" alt="添加线组" style="zoom:50%;" />
-  
-    - 在 PCB 中查看线组：
-      1. 在 PCB 界面，右下角 Panels 点开 “PCB”，左侧即可看到 “PCB” 栏，里面即可看到线组。
-      2. 在 PCB 界面，上方软件工具栏选择 Design 里面的 Classes 栏，里面即可看到线组。
-  
-    - 添加差分对（Diff Pair）：
-  
-      每一对差分对的线标有要求，前缀必须相同，后缀必须为 “_ P” 和 “_ N”，软件才会识别。
-  
-      如下图设置。执行原理图更新到 PCB 操作。在 PCB 视图 中的 左边 “PCB” 栏里上面选择 “Differential Pairs Editor” 即可看见刚刚添加的差分对。也可以不画 Blanket 而在线上直接添加 Differential Pair 标识符，要写好差分对名称。
-  
-      ![添加差分线对](assets/添加差分线对.png)
-  
-      可以同时添加多组差分对，如下图所示，只要线标名字按照要求即可识别。
-  
-      ![同时添加多组差分对](assets/同时添加多组差分对.png)
-  
-    - 差分线对走线：
-  
-      在 PCB 视图中，工具栏选择 Interactive Differential Pair Routing 在差分线对上走线即可，走完之后还可以用 Interactive Diff Pair Length Tuning 确保差分线等长。
-  
-      更多差分线的规则设置看“差分走线设计”小节。
-  
+
   - ..
 - PCB 中的：
   - 按住 xxx（暂时不知道），鼠标在板子器件上移动，会显示器件轮廓。
@@ -639,7 +603,8 @@ AD 的更多丰富技巧和高速布线：
   - 调节 PCB 线高亮时候与背景对比的程度：点右下角 Panels，点进 View Configuration，在 View Options 栏中下面调节 Mask and dim，还可以调节 Object Visibility，可以把 覆铜 Polygons 的亮度调低，以区分覆铜和走线、焊盘。
   - 板子镂空：先围绕要镂空的区域画 Keep-out-layer 闭合曲线，然后工具栏选择 Designer，Board Shape，Define Board Cutout，然后围绕刚才画的镂空区域的 Keep-out-layer 闭合曲线 画一圈。
   - 2D 和 3D 视图切换，使用 2 和 3 按键时视图不会同步，使用 Ctrl + Alt +2/3 视图是同步的（暂时不知如何解决使用 2/3 按键是同步视图的）。
-  - 过孔盖油。如果发给 PCB 厂家 PCB 文件，可以选择过孔盖油然后由厂家设置，如果不想泄露 PCB 文件而发的是 Gerber 文件，则必须要先设置过孔盖油，否则发过去是默认的，默认过孔是不盖油的。选择全部过孔，打开属性栏 -> 勾选两个 Tented。详见 Altium AD20过孔盖油，通过设计规则实现过孔盖油，简便实用不会造成遗漏出错_Mark_md的博客-CSDN博客](https://blog.csdn.net/Mark_md/article/details/118542699)。
+  - 过孔盖油。如果发给 PCB 厂家 PCB 文件，可以选择过孔盖油然后由厂家设置，如果不想泄露 PCB 文件而发的是 Gerber 文件，则必须要先设置过孔盖油，否则发过去是默认的，默认过孔是不盖油的。选择全部过孔，打开属性栏 -> 勾选两个 Tented。详见 [Altium AD20过孔盖油，通过设计规则实现过孔盖油，简便实用不会造成遗漏出错_Mark_md的博客-CSDN博客](https://blog.csdn.net/Mark_md/article/details/118542699)。
+  - 多层板，我这里一般内电层（负片层）只用于地层而不是电源层。如果有电源层（或者大面积连接电源网络的覆铜），其边缘要内缩 1 ~ 2mm（40mil 以上）（20H 原则）。对于内电层可以设置让其自动内缩 详见 [Altium AD20的四层板叠层管理、平面层20H内缩_Mark_md的博客-CSDN博客](https://blog.csdn.net/Mark_md/article/details/116455563)。
   - ..
   
 - 器件原理图库绘制的技巧：
@@ -658,7 +623,7 @@ AD 的更多丰富技巧和高速布线：
   - 对于电源模块，总是在输出处添加足够的 X5R/X7R 贴片陶瓷电容（可选：贴片固态电解电容 和 功率共模电感）和 TVS 管，输入处的滤波添加足，但是保护环节如 TVS 管为可选。在每个电源模块的输出处添加足够的滤波和保护，连起来的时候可以相互兼容，也不浪费。详参 “保护机制” 和 “EMC 电磁兼容设计” 等小节。
   - 对于带有总线或差分线对的数据输入\输出的模块，都在其数据输出处添加线组（Net Class）和差分对（Diff Pair），这样连起来时候可以相互兼容。
 - SCH 设计 -> SCH **检查** -> PCB 器件布局和**检查** -> PCB 布线 -> PCB **检查** -> PCB 板面信息完善 / 打板准备。
-  - SCH 设计的注意：原理图绘制完毕后紧接着添加 线组（Net Class）、差分对（Diff Pair）和其它如电源线等单独添加规则，这些都尽量在 SCH 中完成（尽量不要在 PCB 界面中另设置，PCB 界面中只专注与画 PCB），方法详看 “AD 20 快捷键 & 绘制技巧” 一节的 “SCH 中的” 部分。针对线宽的规则可以做依不同 线组（Net Class）设置不同线宽规则，并在 Rules 界面的左下角设置优先级（手动布线时低优先级不起作用）；针对高速线的规则要依 线组（Net Class）单独设置规则，详见下面的 "等长线/蛇形线设计" 小节；针对差分线要设置 差分对（Diff Pair）规则，详见下面的 “差分走线设计” 小节。
+  - SCH 设计的注意：原理图中添加 线组（Net Class）和 差分对（Diff Pair）（尽量在原理图中将线分组完成，而不是在 PCB 中手动挨个添加，因为从原理图更新 PCB 时原来在 PCB 单独添加的线组会被清除），并在原理图中对电源线线宽规则、数据线线宽规则和差分线对均设置完成。原理图绘制完毕后要紧接着添加 线组（Net Class）、差分对（Diff Pair）和其它如电源线等单独添加规则，这些都尽量在 SCH 中完成（尽量不要在 PCB 界面中另设置，PCB 界面中只专注与画 PCB），方法详看 “SCH 线组和差分对设置” 一节。针对线宽的规则可以做依不同 线组（Net Class）设置不同线宽规则（Parameter Set 添加到线或 Blanket 上，并在其内添加 Rules，在 Rules 界面的左下角设置优先级（手动布线时低优先级不起作用））；针对高速线的规则要依 线组（Net Class）单独设置规则，详见下面的 "等长线/蛇形线设计" 小节；针对差分线要设置 差分对（Diff Pair）规则，详见下面的 “差分走线设计” 小节。
   - PCB 设计的注意：主要元器件在 PCB 中放好后，锁住其位置。
   - PCB 设计的注意：本规范已经有 AD 的 PCB 的 规则（Rule）模板，新建 PCB 文件后导入即可，在 PCB 文件中导入 AD20 的 PCB Rules 规则配置文件，参考 "7 AD 导入导出配置文件" 章节（AD的 PCB规则（Rule），最主要的几个就是按照 PCB 厂家的最小加工能力来改参数，比如[嘉立创PCB工艺加工能力范围说明-嘉立创PCB打样专业工厂-线路板打样 (jlc.com)](https://www.jlc.com/portal/vtechnology.html)））。
 - SCH & PCB 的检查：
@@ -682,20 +647,19 @@ AD 的更多丰富技巧和高速布线：
 
 推荐将 AD 软件的线标适用范围改为“分层级的（Hierarchical）”，详看AD 20 软件设置小节。
 
-### 布局复制
+### SCH Variant 设置 NC 器件
 
-**手动按照坐标来布局复制**
+AD Variant 设置用于在画好的原理图中设置一些不焊接的元器件，即 NC 器件，比较常用到。
 
-针对多个一样的模块，PCB 中器件摆放/布局都一样化。
+1. 在 AD20 软件原理图界面，点击 Project -> Variants，打开 Variant Management 界面，其左下角 Add Variant，新的 Variant 这里规范命名为 “Variant of 实际打板”，确定并关闭后，工程目录会出现 Variants 目录，其下有 “Variant of 实际打板” 一项；
+2. 然后在原理图中，对要 NC 的元器件 右击，点击 Part Actions -> Variants，新界面里面 对器件 设置为 Not Fitted，即对其 NC 了；在此界面的下边还有对 Variants 进行设置的选项，比如 NC 标识的样式等等。
+3. 工程目录有 Variants 目录，其下有 “Variant of 实际打板” 一项，双击切换到此项，然后到某个原理图页面，其下方有 “Editor” 栏，其右边有 “U_<原理图名称>” 栏，单击，即可看到被 标记为 NC 的器件。
 
-1. 先布局好一套模块，另外几套模块的位置可以乱，先放着；
-2. 打开 Panels 中的 PCB List，选择 View Selected Objects，再选 Components，再把上面布局好的一套模块的所有器件选中，这时 PCB List 中会显示所有被选中的器件信息表，找到表中的 X1 和 Y1，右击选择 Switch to edit mode，然后选中 X1 和 Y1 复制，然后选中另外一套模块的所有器件，在其 X1 和 Y1 上粘贴即可，这时两套是重叠的，不要取消刚才的选中状态，进行整体平移到两套不重叠，然后选中第一套模块的所有器件，在 PCB List 中复制所有的 Rotation，然后选中第二套模块的所有器件，在其 Rotation 栏粘贴即可。
+其方法记录在`\PCB LOGO-画法集合-PCB工具-规则文件\AD Variant 设置\AltiumDesigner20装配变量Variant使用说明 .pdf`文件里。
 
-**按照多个相同 Sheet Symble 的自动布局复制**
+另一个详细的网络文章教程：[(1条消息) 硬件工程师必备技能之Variant_地主家也没有余粮啊的博客-CSDN博客](https://blog.csdn.net/weixin_39153808/article/details/119704800)。
 
-这种根据多个同样的 Sheet Symble，只要布局好其中一个，其它相同 Sheet Symble 的元件都自动布局复制。其方法在 `\PCB LOGO-画法集合-PCB工具-规则文件\多个相同 Sheet Symble 布局复制\Altium Designer 多个相同电路快速布局.pdf`文件里。
-
-### 总线连接
+### SCH 总线连接
 
 看图自学。以下原理图源文件在`\PCB LOGO-画法集合-PCB工具-规则文件\多层次原理图 总线连接 示例`里。
 
@@ -725,19 +689,59 @@ PCB 效果：
 
 ![总线连接 PCB 效果](assets/总线连接-PCB-效果.png)
 
-### AD Variant 设置 NC 器件
+### SCH 线组和差分对设置
 
-AD Variant 设置用于在画好的原理图中设置一些不焊接的元器件，即 NC 器件，比较常用到。
+原理图中添加 线组（Net Class）和 差分对（Diff Pair）（尽量在原理图中将线分组完成，而不是在 PCB 中手动挨个添加，因为从原理图更新 PCB 时原来在 PCB 单独添加的线组会被清除），并在原理图中对电源线线宽规则、数据线线宽规则和差分线对均设置完成。
 
-1. 在 AD20 软件原理图界面，点击 Project -> Variants，打开 Variant Management 界面，其左下角 Add Variant，新的 Variant 这里规范命名为 “Variant of 实际打板”，确定并关闭后，工程目录会出现 Variants 目录，其下有 “Variant of 实际打板” 一项；
-2. 然后在原理图中，对要 NC 的元器件 右击，点击 Part Actions -> Variants，新界面里面 对器件 设置为 Not Fitted，即对其 NC 了；在此界面的下边还有对 Variants 进行设置的选项，比如 NC 标识的样式等等。
-3. 工程目录有 Variants 目录，其下有 “Variant of 实际打板” 一项，双击切换到此项，然后到某个原理图页面，其下方有 “Editor” 栏，其右边有 “U_<原理图名称>” 栏，单击，即可看到被 标记为 NC 的器件。
+- 添加线组（Net Class）和规则：
 
-其方法记录在`\PCB LOGO-画法集合-PCB工具-规则文件\AD Variant 设置\AltiumDesigner20装配变量Variant使用说明 .pdf`文件里。
+  （首先确保 工具栏—>Project—>Project Options—>Class Generation 里面的 Gentrate Net classes 勾选，这样设置才能原理图产生线组 Class，软件默认勾选）
 
-另一个详细的网络文章教程：[(1条消息) 硬件工程师必备技能之Variant_地主家也没有余粮啊的博客-CSDN博客](https://blog.csdn.net/weixin_39153808/article/details/119704800)。
+  Place 中选择（空白处右击选择 Place 或者 原理图界面软件上方工具栏选择 Place 或者在原理图上方的工具栏里面）Directives 里面的 Blanket，包围要添加一个线组的所有线（可以画成不规则形状，关键要在只剩最后一处连接的时候右击完成放置）；再在上述位置找到 Parameter Set，选择后 TAB 键修改参数，在里面 add 一个 Net Class 参数，并写上线组名，可以选择是否显示该参数，推荐 Label 名修改为 “Class _ <线组名>”，然后放置并连接到 Blanket 上面；再添加一个 Parameter Set，add 一个 Rule 参数，选择线宽项，设置线宽，最后放置并连接到 Blanket 上面。如下图所示，这样就将这一组线命名为 “I2S _ LINE” 并设置了线宽规则。然后从原理图更新到 PCB 即可。
 
-### 差分走线设计
+<img src="assets/添加线组2.png" alt="添加线组2" style="zoom:50%;" />
+
+如果要设置线组的线不在一块并且也不好用 不规则形状的 Blanket 全部包围住，那么就将这些线的线标单独拿到一块空白区域，然后围住即可。
+
+<img src="assets/添加线组.png" alt="添加线组" style="zoom:50%;" />
+
+- 在 PCB 中查看线组：
+
+  1. 在 PCB 界面，右下角 Panels 点开 “PCB”，左侧即可看到 “PCB” 栏，里面即可看到线组。
+  2. 在 PCB 界面，上方软件工具栏选择 Design 里面的 Classes 栏，里面即可看到线组。
+
+- 添加差分对（Diff Pair）：
+
+  每一对差分对的线标有要求，前缀必须相同，后缀必须为 “_ P” 和 “_ N”，软件才会识别。
+
+  如下图设置。执行原理图更新到 PCB 操作。在 PCB 视图 中的 左边 “PCB” 栏里上面选择 “Differential Pairs Editor” 即可看见刚刚添加的差分对。也可以不画 Blanket 而在线上直接添加 Differential Pair 标识符，要写好差分对名称。
+
+  ![添加差分线对](assets/添加差分线对.png)
+
+  可以同时添加多组差分对，如下图所示，只要线标名字按照要求即可识别。
+
+  ![同时添加多组差分对](assets/同时添加多组差分对.png)
+
+- 差分线对走线：
+
+  在 PCB 视图中，工具栏选择 Interactive Differential Pair Routing 在差分线对上走线即可，走完之后还可以用 Interactive Diff Pair Length Tuning 确保差分线等长。
+
+  更多差分线的规则设置看“差分走线设计”小节。
+
+### PCB 布局复制
+
+**手动按照坐标来布局复制**
+
+针对多个一样的模块，PCB 中器件摆放/布局都一样化。
+
+1. 先布局好一套模块，另外几套模块的位置可以乱，先放着；
+2. 打开 Panels 中的 PCB List，选择 View Selected Objects，再选 Components，再把上面布局好的一套模块的所有器件选中，这时 PCB List 中会显示所有被选中的器件信息表，找到表中的 X1 和 Y1，右击选择 Switch to edit mode，然后选中 X1 和 Y1 复制，然后选中另外一套模块的所有器件，在其 X1 和 Y1 上粘贴即可，这时两套是重叠的，不要取消刚才的选中状态，进行整体平移到两套不重叠，然后选中第一套模块的所有器件，在 PCB List 中复制所有的 Rotation，然后选中第二套模块的所有器件，在其 Rotation 栏粘贴即可。
+
+**按照多个相同 Sheet Symble 的自动布局复制**
+
+这种根据多个同样的 Sheet Symble，只要布局好其中一个，其它相同 Sheet Symble 的元件都自动布局复制。其方法在 `\PCB LOGO-画法集合-PCB工具-规则文件\多个相同 Sheet Symble 布局复制\Altium Designer 多个相同电路快速布局.pdf`文件里。
+
+### PCB 差分走线设计
 
 **首先要原理图中添加差分线对：**
 
@@ -772,7 +776,7 @@ PCB 中走差分线对要保证等长、等距和过孔数量一致，要尽量�
 - 线路途径元件尽量使用表贴元件，线对尽量避免过孔，若需要过孔则一对差分线上的过孔数量要一致。
 - 
 
-### 等长线/蛇形线设计
+### PCB 等长线/蛇形线设计
 
 这里是针对 AD20 的操作。
 
@@ -781,7 +785,7 @@ PCB 中走差分线对要保证等长、等距和过孔数量一致，要尽量�
 3. PCB 界面 工具栏 选择 Interactively Tune Trace Lengths 工具，从最短的线开始画线进行等长变化的区域；鼠标开始拉蛇形线的时候，按下 TAB 键，打开属性窗口选择 本线组中最长的那根线，然后继续拉线，这样当等长的时候鼠标继续拉蛇形线也不会继续增加长度了。
 4. 快捷键：“1、2”改弧度，“3、4”改间距，“，、。”改绕长，在左下角导航选 “PCB” 窗口，可见加入网络的要等长的线及其各自的长度；走线等长变化的区域可以调整，直接对等长变化区域选中的矩形框的四周拖拽，改变等长区域；删除等长，直接选中线的等长变化区域再按 del。
 
-### 添加 LOGO 图案
+### PCB 添加 LOGO 图案
 
 两个方法，推荐用第二种。
 
@@ -802,7 +806,7 @@ PCB 中走差分线对要保证等长、等距和过孔数量一致，要尽量�
 
 5. 大电流、高功率的走线及其经过的器件应尽量按照能量流动的"好走"的路线布局和布线，尽量减少拐弯和跨层，让其一马平川的流动。
 
-   线宽和电流能力关系表：（参考：过 2A 至少要 30~40mil 线宽）
+   线宽和电流能力关系表：（参考：过 2A 至少要 30~40mil 线宽）（1mil = 2.54mm，1OZ  = 0.035mm ≈ 0.014mil）
 
    ![线宽和电流能力关系表](assets/线宽和电流能力关系表.png)
 
@@ -852,7 +856,7 @@ PCB 中走差分线对要保证等长、等距和过孔数量一致，要尽量�
 
     ![image-8](assets/image-8.png)
 
-3.  多层板：电源平面应相对于其相邻地平面内缩 5H-20H（H 为电源和地平面的距离，若内缩 20H 则可以将 70% 的电场限制在接地边沿内，内缩 1000H 则可以将 98% 的电场限制在内）。
+3.  多层板：电源平面应相对于其相邻地平面内缩 5H-20H（H 为电源和地平面的距离，若内缩 20H 则可以将 70% 的电场限制在接地边沿内，内缩 1000H 则可以将 98% 的电场限制在内）。内缩1~2mm（40mil 以上）。
 
     ![image-9](assets/image-9.png)
 
@@ -945,7 +949,7 @@ PCB 中走差分线对要保证等长、等距和过孔数量一致，要尽量�
 
 详见如下：
 
-- [[protection-circuits/EMC 理论和设计要点 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/EMC 理论和设计要点)](https://github.com/Staok/protection-circuits/tree/master/EMI EMC 理论和设计要点)。
+- [protection-circuits/EMC 理论和设计要点 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/EMC 理论和设计要点)。
 - [protection-circuits/TVS管 ESD器件选型 接口保护选型 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/TVS管 ESD器件选型 接口保护选型)。
 
 ### "地"的类型 / 地平面分割
