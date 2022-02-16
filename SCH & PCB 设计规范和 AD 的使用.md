@@ -19,51 +19,7 @@
 
 ------
 
-## 0.5 优秀参考
-
-（永远的 TODO）以下有些是作者还没有看到的（看过之后的都会把精髓写在本文）。
-
-- [PCB 基本布线规范与设计原则 by Hank](https://uinika.gitee.io/Electronics/PCB/)。
-
-- 基本数模电学习和查询推荐《新概念模拟电路》——西安交通大学电工电子中心，杨建国。
-
-- [《硬件系统工程师宝典》](https://book.douban.com/subject/26318343/)——EDA精品智汇馆，介绍了硬件系统设计概要、信号完整性、电源完整性、EMC/EMI、原理图和PCB设计详情等。
-
-- 本条是作者的备注：
-
-  本地收集的文章：
-
-  - 《PCB小知识》系列文章，路径：【3 硬件、电路】\【PCB设计规范】\ PCB小知识。
-  - 有关高速PCB的独立文章，路径：【3 硬件、电路】\【高级 PCB 设计 SI EMC 高速等】\ 高速PCB。
-  - 
-
-- ADI 智库文章：《PCB设计秘籍》、《高速电路设计指南》（这个主要针对高速数模转换器件的PCB技巧）、《非隔离式开关电源的PCB布局考虑》、《Power技术问题解答》（这个针对常用 LDO 和 DCDC 的常见问题做梳理）、《电源设计基础知识精选》（对电源方方面面的内容做大梳理）等，具体文章免费在下面链接下载：[ADI电子书-您绝对值得拥有的电子书 | 教育 | 亚德诺半导体 (analog.com)](https://www.analog.com/cn/education/landing-pages/002/chinese-ebook.html)，或者在 微信里添加 “ADI智库” 小程序，在小程序里面搜索这些文章的名称，即可下载。
-
-- MPS：PCB 布局指南：《电机驱动PCB布局指南》上、下篇、《低EMI DCDC变换器PCB设计》。
-
-- TI 的 有关电源的文章。
-
-- 网上传开的华为的硬件规范。[华为内部硬件开发设计流程 (qq.com)](https://mp.weixin.qq.com/s/8GRIrdKN4gmoB7gNsvI-qg)。
-
-- ..
-
-AD 的更多丰富技巧和高速布线：
-
-- 综合类（高级技巧）：
-  - AD官方：[Altium Designer 全套最权威教学|【官方PCB设计培训】|Altium 战疫免费云公益课堂 | 共27节|AD20|PCB Layout_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1D7411T7Pr)；
-  - 凡亿：[凡亿教育的个人空间 - 哔哩哔哩 ( ゜- ゜)つロ 乾杯~ Bilibili](https://space.bilibili.com/11979252/channel/detail?cid=77461)；
-  - ..
-- 高速板设计（蛇形线 和 Active route）：
-  - AD官方：[【官方培训】Altium Designer 高速DDR3模块全流程实战PCB设计 | AD20 教程 | 共5节|PCB Layout_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1oy4y1v7z1)；
-  - AD官方：[DDR存储器布局布线设计思路解析_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1x441187Bd)；
-  - 凡亿：[【PCB自动布线】 6层PCB高速ActiveRoute自动布线 速度就是快 Altium Designer 20_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1SE411n7os)；
-  - 文章：[AD19如何使用强大的自动布线功能 - 哔哩哔哩专栏 (bilibili.com)](https://www.bilibili.com/read/cv3479922/)；
-  - 文章：[Altium Designer 的ActiveRoute使用_MrZhanghx的博客-CSDN博客](https://blog.csdn.net/qq_34885615/article/details/77965021)；
-  - ..
-
-2T 移动硬盘里面的更多比较全的技巧视频 `【电子 学习】\【Altium.Designer】视频+教材\Altium 技巧经验 较多`。
-
-## 0.51 电子类网站收集
+## 0.5 电子类网站收集
 
 大厂官网：筛选器件型号的选型、获得器件手册+参考设计+设计要点等文档资料。
 
@@ -1475,7 +1431,7 @@ EMC 主要用到的器件有：TVS 瞬态抑制管（和 GDT 气体放电管）�
 
 包括：DC/DC 设计工具、AC/DC 设计工具 和 磁钢设计工具。
 
-### 村田-设计辅助软件 SimSurfing
+### 村田-设计辅助软件
 
 [设计辅助软件 SimSurfing | 设计辅助工具 | 村田制作所 (murata.com)](https://www.murata.com/zh-cn/tool/simsurfing)。具有在线版和离线版。
 
@@ -1534,3 +1490,51 @@ B站等有很多教程视频，以下只经验之谈。
 -   右边菜单 什么都不选 全局设置的情况下 有 照明和图像里面很多不错的效果可以调整
 -   材质和打光：https://www.bilibili.com/video/BV14W411d7Hx
 -   动画制作：https://www.bilibili.com/video/BV1T741177WU
+
+## 9 优秀参考
+
+以下有些是作者还没有看到的（有时间的话会看看，再之后都会把其精髓补充在本文）。
+
+- 超好书推荐，如下，比如《高速数字电路设计与安装技巧》这本里面对于信号阻抗匹配通过画图说明非常形象。
+
+  ![硬件类好书推荐0](assets/硬件类好书推荐0.jpg)
+
+- [PCB 基本布线规范与设计原则 by Hank](https://uinika.gitee.io/Electronics/PCB/)。
+
+- 基本数模电学习和查询推荐《新概念模拟电路》——西安交通大学电工电子中心，杨建国。
+
+- [《硬件系统工程师宝典》](https://book.douban.com/subject/26318343/)——EDA精品智汇馆，介绍了硬件系统设计概要、信号完整性、电源完整性、EMC/EMI、原理图和PCB设计详情等。
+
+- 本条是作者的备注：
+
+  本地收集的文章：
+
+  - 《PCB小知识》系列文章，路径：【3 硬件、电路】\【PCB设计规范】\ PCB小知识。
+  - 有关高速PCB的独立文章，路径：【3 硬件、电路】\【高级 PCB 设计 SI EMC 高速等】\ 高速PCB。
+  - 
+
+- ADI 智库文章：《PCB设计秘籍》、《高速电路设计指南》（这个主要针对高速数模转换器件的PCB技巧）、《非隔离式开关电源的PCB布局考虑》、《Power技术问题解答》（这个针对常用 LDO 和 DCDC 的常见问题做梳理）、《电源设计基础知识精选》（对电源方方面面的内容做大梳理）等，具体文章免费在下面链接下载：[ADI电子书-您绝对值得拥有的电子书 | 教育 | 亚德诺半导体 (analog.com)](https://www.analog.com/cn/education/landing-pages/002/chinese-ebook.html)，或者在 微信里添加 “ADI智库” 小程序，在小程序里面搜索这些文章的名称，即可下载。
+
+- MPS：PCB 布局指南：《电机驱动PCB布局指南》上、下篇、《低EMI DCDC变换器PCB设计》。
+
+- TI 的 有关电源的文章。
+
+- 网上传开的华为的硬件规范。[华为内部硬件开发设计流程 (qq.com)](https://mp.weixin.qq.com/s/8GRIrdKN4gmoB7gNsvI-qg)。
+
+- ..
+
+AD 的更多丰富技巧和高速布线：
+
+- 综合类（高级技巧）：
+  - AD官方：[Altium Designer 全套最权威教学|【官方PCB设计培训】|Altium 战疫免费云公益课堂 | 共27节|AD20|PCB Layout_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1D7411T7Pr)；
+  - 凡亿：[凡亿教育的个人空间 - 哔哩哔哩 ( ゜- ゜)つロ 乾杯~ Bilibili](https://space.bilibili.com/11979252/channel/detail?cid=77461)；
+  - ..
+- 高速板设计（蛇形线 和 Active route）：
+  - AD官方：[【官方培训】Altium Designer 高速DDR3模块全流程实战PCB设计 | AD20 教程 | 共5节|PCB Layout_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1oy4y1v7z1)；
+  - AD官方：[DDR存储器布局布线设计思路解析_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1x441187Bd)；
+  - 凡亿：[【PCB自动布线】 6层PCB高速ActiveRoute自动布线 速度就是快 Altium Designer 20_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1SE411n7os)；
+  - 文章：[AD19如何使用强大的自动布线功能 - 哔哩哔哩专栏 (bilibili.com)](https://www.bilibili.com/read/cv3479922/)；
+  - 文章：[Altium Designer 的ActiveRoute使用_MrZhanghx的博客-CSDN博客](https://blog.csdn.net/qq_34885615/article/details/77965021)；
+  - ..
+
+2T 移动硬盘里面的更多比较全的技巧视频 `【电子 学习】\【Altium.Designer】视频+教材\Altium 技巧经验 较多`。
