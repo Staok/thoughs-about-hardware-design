@@ -21,7 +21,7 @@
 
 ## 0.5 电子类网站收集
 
-大厂官网：筛选器件型号的选型、获得器件手册+参考设计+设计要点等文档资料。
+**大厂官网**（筛选器件型号的选型、获得器件手册+参考设计+设计要点等文档资料）
 
 - TI（德州仪器）：[模拟 | 嵌入式处理 | 半导体公司 | 德州仪器 TI.com.cn](https://www.ti.com.cn/)。
 - ADI（亚德诺）：[ADI | 混合信号和数字信号处理IC | 亚德诺半导体 (analog.com)](https://www.analog.com/cn/index.html)。
@@ -38,7 +38,7 @@
 - Powerint：[Homepage (CN) | Power Integrations, Inc.](https://www.powerint.cn/zh-hans/)。
 - Keysight：[资源 | 是德科技 (keysight.com)](https://www.keysight.com/cn/zh/resources.html)。
 
-综合类：
+**综合类网站、论坛**
 
 - [电子发烧友网：领先的电子工程师技术社区，为工程师创造价值 (elecfans.com)](http://www.elecfans.com/)。
 - [21IC电子网 - 电子工程师的优选网站](https://www.21ic.com/)。
@@ -50,23 +50,31 @@
 - [一个专注于智能硬件、嵌入式系统、物联网、电子产品设计美学的独立博客 - 吴川斌的博客 (mr-wu.cn)](https://www.mr-wu.cn/)。
 - 一个目录：[扩展获取信息/学习的渠道（以EE为例） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/379216586)。
 
-开源电子项目分享类/资源类（当作兴趣，交流爱好的社群）：
+**开源电子项目分享类/资源类**（当作兴趣，交流爱好的社群）
 
 - [All projects | Hackaday.io](https://hackaday.io/projects)。
 - [硬件设计，立创EDA开源硬件平台，硬件工程师的电路家园。 (oshwhub.com)](https://oshwhub.com/)，开源 PCB 项目分享。
 - [电路方案-电路城 (cirmall.com)](https://www.cirmall.com/circuits/)。
 - [eesites 电子森林 (eetree.cn)](https://www.eetree.cn/wiki/)。
-- [Projects | CircuitMaker](https://circuitmaker.com/Projects)，硬件版 github。
+- [Projects | CircuitMaker](https://circuitmaker.com/Projects)，硬件版 Github。
 - [逆天PCB论坛-逆天电子论坛-电子工程师俱乐部-中国PCB论坛-PCB封装库-全球最大硬件开源网 - Powered by NTpcb](http://bbs.ntpcb.com/)，内容丰富。
 - [GitHub](https://github.com/)。
 
-教程类（活到老学到老系列）：
+**教程类**（活到老学到老系列）
 
 - [德州仪器（TI）官方视频课程培训 - 21ic电子网](https://edu.21ic.com/)。
 - [学堂在线 - 精品在线课程学习平台 (xuetangx.com)](https://www.xuetangx.com/)。
 - [网易公开课 (163.com)](https://open.163.com/)。[中国大学MOOC(慕课)_国家精品课程在线学习平台 (icourse163.org)](https://www.icourse163.org/)。
 - PCB类：[逆天PCB论坛-逆天电子论坛-电子工程师俱乐部-中国PCB论坛-PCB封装库-全球最大硬件开源网 - Powered by NTpcb](http://bbs.ntpcb.com/)、[凡亿教育-凡亿PCB,实战教学PCB视频PCB培训，十天入门到精通多层高速PCB设计 (fany-online.com)](https://www.fany-online.com/)、[志博教育-电子工程师PCB开源社区 (zbpcb.com)](https://zbpcb.com/)。
 - [哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/)，把 B 站放在这里没什么不对吧。
+
+**大型电子器件商城**
+
+- 立创商城：[立创商城_电子元器件采购网上商城_领先的现货元器件交易平台-嘉立创电子商城 (szlcsc.com)](https://www.szlcsc.com/)。
+- 得捷电子（Digi-Key）：[得捷电子 中国 Digi-Key官网 | 供应商直授权电子元器件分销商 (digikey.cn)](https://www.digikey.cn/)。
+- 泽贸电子（Mouser Electronics）：[电子元件分销商 - Mouser Electronics](https://www.mouser.cn/)。
+- 云汉芯城：[云汉芯城ICKey.cn_电子元器件采购_BOM配单_SMT贴片_PCB打样](https://www.ickey.cn/)。
+- 淘宝（货源存疑望小心，便宜没好货），咸鱼（或可超廉价入拆机芯片盲盒）。
 
 ## 1 最基本的设计理念和器件选型
 
