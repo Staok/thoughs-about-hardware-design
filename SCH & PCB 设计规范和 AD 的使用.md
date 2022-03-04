@@ -42,10 +42,11 @@
 
 - [电子发烧友网：领先的电子工程师技术社区，为工程师创造价值 (elecfans.com)](http://www.elecfans.com/)。
 - [21IC电子网 - 电子工程师的优选网站](https://www.21ic.com/)。
-- [电子工程师的在线课堂_Moore8摩尔吧](https://www.moore8.com/)。
-- [OpenEdv-开源电子网-正点原子论坛](http://www.openedv.com/forum.php)。
+- [OpenEdv-开源电子网-正点原子论坛](http://www.openedv.com/forum.php)。[野火电子论坛 - Powered by Discuz! (firebbs.cn)](https://www.firebbs.cn/)。[硬汉嵌入式论坛 - Powered by Discuz! (armbbs.cn)](https://www.armbbs.cn/)。[硬石电子 - 社区 (ing10bbs.com)](http://ing10bbs.com/forum.php)。[意法半导体STM32/STM8技术社区 - 提供最新的ST资讯和技术交流 (stmcu.org.cn)](https://www.stmcu.org.cn/)。
 - [一个专注于智能硬件、嵌入式系统、物联网、电子产品设计美学的独立博客 - 吴川斌的博客 (mr-wu.cn)](https://www.mr-wu.cn/)。
+- [电子工程师的在线课堂_Moore8摩尔吧](https://www.moore8.com/)。
 - [38度发烧友论坛-38Hot Volt-Nuts 仪表 基准 工具 万用表 示波器 焊台 电烙铁 电钻电子爱好者专业论坛 - Powered by Discuz!](http://bbs.38hot.net/)，对一些仪器仪表、电源基准等研究很深。
+- [51黑电子论坛-单片机 电子制作DIY MCU 嵌入式技术学习 (51hei.com)](http://www.51hei.com/bbs/)。
 - [在家学习——硬十宝典【20200127】 (qq.com)](https://mp.weixin.qq.com/s/euqRYvnbErBKnHznklpqSA)。
 - [一个专注于智能硬件、嵌入式系统、物联网、电子产品设计美学的独立博客 - 吴川斌的博客 (mr-wu.cn)](https://www.mr-wu.cn/)。
 - 一个目录：[扩展获取信息/学习的渠道（以EE为例） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/379216586)。
@@ -55,9 +56,12 @@
 - [All projects | Hackaday.io](https://hackaday.io/projects)。
 - [硬件设计，立创EDA开源硬件平台，硬件工程师的电路家园。 (oshwhub.com)](https://oshwhub.com/)，开源 PCB 项目分享。
 - [电路方案-电路城 (cirmall.com)](https://www.cirmall.com/circuits/)。
+- [应用方案_ 电路图_ 开发板资料_ 应用设计_ 行业软件_电子工程师资料下载网站-电子芯吧客（www.icxbk.com）](https://www.icxbk.com/download.html)。
+- [融创芯城|融创电子社区|融创芯城电子工程师社区|电子技术论坛|电子技术问答 (digiic.com)](http://club.digiic.com/Home/Index)。
 - [eesites 电子森林 (eetree.cn)](https://www.eetree.cn/wiki/)。
 - [Projects | CircuitMaker](https://circuitmaker.com/Projects)，硬件版 Github。
 - [逆天PCB论坛-逆天电子论坛-电子工程师俱乐部-中国PCB论坛-PCB封装库-全球最大硬件开源网 - Powered by NTpcb](http://bbs.ntpcb.com/)，内容丰富。
+- [电子制作实验室网站欢迎您！ (xie-gang.com)](http://www.xie-gang.com/)。
 - [GitHub](https://github.com/)。
 
 **教程类**（活到老学到老系列）
@@ -65,8 +69,10 @@
 - [德州仪器（TI）官方视频课程培训 - 21ic电子网](https://edu.21ic.com/)。
 - [学堂在线 - 精品在线课程学习平台 (xuetangx.com)](https://www.xuetangx.com/)。
 - [网易公开课 (163.com)](https://open.163.com/)。[中国大学MOOC(慕课)_国家精品课程在线学习平台 (icourse163.org)](https://www.icourse163.org/)。
+- [培训资源-全国大学生电子设计竞赛培训网 (nuedc-training.com.cn)](https://www.nuedc-training.com.cn/index/video)。
 - PCB类：[逆天PCB论坛-逆天电子论坛-电子工程师俱乐部-中国PCB论坛-PCB封装库-全球最大硬件开源网 - Powered by NTpcb](http://bbs.ntpcb.com/)、[凡亿教育-凡亿PCB,实战教学PCB视频PCB培训，十天入门到精通多层高速PCB设计 (fany-online.com)](https://www.fany-online.com/)、[志博教育-电子工程师PCB开源社区 (zbpcb.com)](https://zbpcb.com/)。
 - [哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/)，把 B 站放在这里没什么不对吧。
+- [微雪课堂 (waveshare.net)](https://www.waveshare.net/study/portal.php)。[深圳百问网科技有限公司 (100ask.org)](http://www.100ask.org/)。
 
 **大型电子器件商城**
 
@@ -328,34 +334,44 @@
 在画原理图和 PCB 之前应该先把所有用到的器件的手册准备好。找器件手册的地方主要有以下几个方法：
 
 1. 芯片所在官网。有的芯片的官网进去太慢或者不提供手册，就略过此法。
-   1. TI [模拟 | 嵌入式处理 | 半导体公司 | 德州仪器 TI.com.cn](https://www.ti.com.cn/)；
-   2. ADI [ADI | 混合信号和数字信号处理IC | 亚德诺半导体 (analog.com)](https://www.analog.com/cn/index.html)；
-   3. NXP [恩智浦半导体官方网站 | 主页 (nxp.com.cn)](https://www.nxp.com.cn/)；
-   4. Infineon [英飞凌——半导体与系统解决方案 - Infineon Technologies](https://www.infineon.com/cms/cn/)；
-   5. ST [首页 - STMicroelectronics](https://www.st.com/content/st_com/zh.html)；
-   6. MPS [MPS | Monolithic Power Systems 芯源系统有限公司](https://www.monolithicpower.cn/)；
-   7. ON [半导体和集成电路器件 (onsemi.cn)](https://www.onsemi.cn/)；
-   8. 等等等等；
+   1. TI [模拟 | 嵌入式处理 | 半导体公司 | 德州仪器 TI.com.cn](https://www.ti.com.cn/)。
+   2. ADI [ADI | 混合信号和数字信号处理IC | 亚德诺半导体 (analog.com)](https://www.analog.com/cn/index.html)。
+   3. NXP [恩智浦半导体官方网站 | 主页 (nxp.com.cn)](https://www.nxp.com.cn/)。
+   4. Infineon [英飞凌——半导体与系统解决方案 - Infineon Technologies](https://www.infineon.com/cms/cn/)。
+   5. ST [首页 - STMicroelectronics](https://www.st.com/content/st_com/zh.html)。
+   6. MPS [MPS | Monolithic Power Systems 芯源系统有限公司](https://www.monolithicpower.cn/)。
+   7. ON [半导体和集成电路器件 (onsemi.cn)](https://www.onsemi.cn/)。
+   8. 等等等等，更多详见`0.5 电子类网站收集`小节。
 2. 大型商城。
    1. 立创商城 [立创商城_电子元器件采购网上商城_领先的现货元器件交易平台-嘉立创电子商城 (szlcsc.com)](https://www.szlcsc.com/)，直接搜芯片型号，型号比较全，可以下载到手册和封装。
-   2. 云汉芯城 [云汉芯城ICKey.cn_电子元器件采购_BOM配单_SMT贴片_PCB打样](https://www.ickey.cn/)；
-   3. 等；
+   2. 云汉芯城 [云汉芯城ICKey.cn_电子元器件采购_BOM配单_SMT贴片_PCB打样](https://www.ickey.cn/)。
+   3. 等，更多详见`0.5 电子类网站收集`小节。
 3. 芯片手册搜索网。
-   1. [ALLDATASHEET.COM - Datasheet search site for Electronic Components and Semiconductors and other semiconductors.](https://www.alldatasheet.com/)；
-   2. [netCOMPONENTS 电子元器件查询](https://www.netcomponents.com/zh/)；
-   3. 以下网站的收录型号相对较少；
-   4. [半导小芯-芯片查询工具_芯片替代查询_数据手册查询_规格书查询_datasheet查询_IC查询 (semiee.com)](http://www.semiee.com/)；
-   5. 丝印反查 [芯片丝印反查网 - IC芯片丝印,IC芯片代码,IC芯片印字,IC芯片顶标,SMD code,marking code,top mark (smdmark.com)](http://www.smdmark.com/m/)；
-   6. [Datasheet,Datasheet下载,电子元器件查询网-datasheet5.com](https://www.datasheet5.com/)；
-   7. [datasheet-PDF中文资料大全-电子产品世界 (eepw.com.cn)](http://datasheet.eepw.com.cn/)；
-   8. [EasyDatasheet | 次世代元器件搜索引擎](https://easydatasheet.cn/)；
-   9. 等；
+   1. [ALLDATASHEET.COM - Datasheet search site for Electronic Components and Semiconductors and other semiconductors.](https://www.alldatasheet.com/)。
+   
+   2. [netCOMPONENTS 电子元器件查询](https://www.netcomponents.com/zh/)。
+   
+   3. **搜索替代型号** [道合顺大数据infinigo官网-国产芯片替代查询,datasheet规格书下载,电子元器件IC交易网上商城](https://www.infinigo.com/)，一款专门做国产替代芯片查询的搜索引擎，输入芯片型号就可搜索出国产替代芯片型号。
+   
+      以下网站的收录型号相对较少。
+   
+   4. [半导小芯-芯片查询工具_芯片替代查询_数据手册查询_规格书查询_datasheet查询_IC查询 (semiee.com)](http://www.semiee.com/)。
+   
+   5. **丝印反查** [芯片丝印反查网 - IC芯片丝印,IC芯片代码,IC芯片印字,IC芯片顶标,SMD code,marking code,top mark (smdmark.com)](http://www.smdmark.com/m/)。
+   
+   6. [Datasheet,Datasheet下载,电子元器件查询网-datasheet5.com](https://www.datasheet5.com/)。
+   
+   7. [datasheet-PDF中文资料大全-电子产品世界 (eepw.com.cn)](http://datasheet.eepw.com.cn/)。
+   
+   8. [EasyDatasheet | 次世代元器件搜索引擎](https://easydatasheet.cn/)。
+   
+   9. 等。
 
 ## 1.52 元件原理图和封装的准备
 
 法一：淘宝大法，针对基础器件库。淘宝上有很多卖封装的，也不贵，买一次一劳永逸真的划算，如 源创客 的等。
 
-法二：开源大法，扩充器件库。如 [issus/altium-library](https://github.com/issus/altium-library)、[KitSprout/AltiumDesigner_PcbLibrary](https://github.com/KitSprout/AltiumDesigner_PcbLibrary) 、嘉立创的元件库 [嘉立创SMT (JLC_SMT) - Gitee.com](https://gitee.com/JLC_SMT) 等等。
+法二：开源大法，扩充器件库。如 [issus/altium-library](https://github.com/issus/altium-library)、[KitSprout/AltiumDesigner_PcbLibrary](https://github.com/KitSprout/AltiumDesigner_PcbLibrary) 、嘉立创的元件库 [嘉立创SMT (JLC_SMT) - Gitee.com](https://gitee.com/JLC_SMT)、[AD_SCH_2D_3D_Libraries: AD原理图库、2DPCB封装库、3DPCB封装库 (gitee.com)](https://gitee.com/mculover666/ad-sch-2d-3d-libraries) 等等。
 
 法三：原厂大法，针对性下载。选定大厂的芯片后，一些大厂官网会直接提供该芯片对应的原理图和 PCB 封装，如 TI 等大厂官网对应 IC 页中寻找提供的 PCB 封装进行下载。
 
@@ -383,7 +399,7 @@
 
    另外，在 贸泽电子 搜索器件并点击下载封装后会跳转到 Component Search Engine 网站，下载步骤同理。
 
-2. 立创商城自己维护的库，在[立创商城](https://www.szlcsc.com/)搜索器件后可以得到 立创 EDA 的器件原理图和封装，导出到 Altium 即可，具体步骤参考[立创EDA元件转换为AD库封装(Altium Designer)_Mark_md的博客-CSDN博客](https://blog.csdn.net/Mark_md/article/details/116041756)，[如何将嘉立创的原理图封装导入到AD20?](https://www.bilibili.com/video/BV1of4y1S7oi)，需要注册登录。注：网页端的 “立创 EDA” 导出器件的 AD 格式为 SCH 和 PCB 的文件格式（SchDoc、PcbDoc）而非库文件格式，PCB 文件里面的封装可以直接复制到自己新建的 PCB 库里面，但是 SCH 文件不能复制到自己新建的 SCH 库里面，对于 SCH，可以点击 Design->Make Sch Library 即可生成 SCH 库文件，打开新生成的 SCH 库文件，里面的器件的每个 端口 均可编辑且可以复制到 自己的 SCH 库里面为画原理图而调用；若立创 EDA 导出的原理图文件内包含该器件的多个 Part，这时点击 Make Sch Library 只能生成其中一个 Part 的原理图库，但一样的，只需分别将每个 Part 都 “Make Sch Library” 一次，然后分别复制到自己新建的原理图库的器件的各个 Part 页里面即可（文字描述有些局限，意会吧）。
+2. 电子器件商城。如立创商城自己维护的库，在[立创商城](https://www.szlcsc.com/)搜索器件后可以得到 立创 EDA 的器件原理图和封装，导出到 Altium 即可，具体步骤参考[立创EDA元件转换为AD库封装(Altium Designer)_Mark_md的博客-CSDN博客](https://blog.csdn.net/Mark_md/article/details/116041756)，[如何将嘉立创的原理图封装导入到AD20?](https://www.bilibili.com/video/BV1of4y1S7oi)，需要注册登录。注：网页端的 “立创 EDA” 导出器件的 AD 格式为 SCH 和 PCB 的文件格式（SchDoc、PcbDoc）而非库文件格式，PCB 文件里面的封装可以直接复制到自己新建的 PCB 库里面，但是 SCH 文件不能复制到自己新建的 SCH 库里面，对于 SCH，可以点击 Design->Make Sch Library 即可生成 SCH 库文件，打开新生成的 SCH 库文件，里面的器件的每个 端口 均可编辑且可以复制到 自己的 SCH 库里面为画原理图而调用；若立创 EDA 导出的原理图文件内包含该器件的多个 Part，这时点击 Make Sch Library 只能生成其中一个 Part 的原理图库，但一样的，只需分别将每个 Part 都 “Make Sch Library” 一次，然后分别复制到自己新建的原理图库的器件的各个 Part 页里面即可（文字描述有些局限，意会吧）。
 
 3. 在 Ultra Librarian 搜索并下载封装 [Free Altium PCB Library Online for Footprints & 3D Models | Ultra Librarian](https://www.ultralibrarian.com/solutions/cad-vendors/altium)，需要注册。如果下载到的封装数据是 CAD File（.bxl）类型的，那么通过 UltraLibrarian 软件 生成 AD 封装步骤参考[使用ULIB+Altium Designer绘制元件原理图及封装_dodwind的博客-CSDN博客](https://blog.csdn.net/dodwind/article/details/87954700)， [利用UltraLibrarian生成Altium designer原理图、PCB封装_fpga_start博客-CSDN博客](https://blog.csdn.net/m0_58064525/article/details/117607455)，[Ultra Librarian下载与安装使用教程_chengoes-CSDN博客](https://blog.csdn.net/chengoes/article/details/115440856)，[UltraLibrarian 软件下载链接](http://webench.ti.com/cad/ULib.zip)。
 
@@ -1053,25 +1069,24 @@ AD 中添加和设置差分线对：输入端和输出端的阻抗从 原理图�
   - 敏感电路或器件（如复位、看门狗、高速/关键 信号线路等）远离单板各边缘特别是单板接口侧边缘至少 1000mil，或关键信号线距参考平面边沿的距离大于 3H（H 为线距离参考平面的高度）。信号线不能从变压器、散热片、MOS 管脚等中穿过。关键信号线 远离 高频线路/器件。高速/关键 信号线应该 远离 其它任何 线路或器件 至少 10mil 以上。差分信号线组相互之间至少远离 3倍 差分线间距 的距离。
   - 高频元件一侧的 PCB 面上不要走线，应该大面积覆铜并加围圈的过地孔，在 PCB 的另一面可以布线。
   - 过孔可能会引发信号传输线的阻抗突变，因此需要尽量减少过孔使用的数量，尤其是对于关键信号线，一个过孔大约带来 10pF 的电容效应。
-  - 关键信号线不能出现 T 形线。
-  - 敏感信号线/高频信号线/关键信号线，其周围应放置多个接地过孔（宽度大于 50mil 地线或间距小于 300mil 的地孔），提供电磁屏蔽，或叫包地处理。信号线（特别是关键信号线）换层时，应在其换层过孔附近设计地过孔。
+  - 关键信号线/高速时钟线 不能出现 T 形线。
+  - 敏感信号线/高频信号线/关键信号线，其周围应放置多个接地过孔（宽度大于 50mil 地线或间距小于 300mil 的地孔），提供电磁笼的屏蔽作用，或叫包地处理。信号线（特别是关键信号线）换层时，应在其换层过孔附近设计地过孔。
   - 无论是时钟线、信号线还是电源线，在 PCB上 的走线都应该尽量短，器件紧密排布以减少 PCB 上走线长度；而且时钟线和信号线等在 PCB 上的走线应尽量用地过孔和地平面在空间上包裹；并且在 PCB 板的四周边缘打一圈连地平面的过孔。
 
-- MCU 的 IRQ 中断引脚等重要 IO 注意静电保护等，可加 TVS 保护管，防正负过压的保护二极管。
+- 防干扰、防冲击：
 
-- 开关器件如 MOS，其栅极和源极之间要加 TVS 防过压冲击（设计让 Vgs ≤ 18 V 恒）。MOS 的栅极串电阻的作用：MOS 导通速度过快，高压情况下容易击穿周围的器件或者损坏 MOS（后者为感性上理解）；栅极电阻阻值过大会导致 MOS 管导通速度过慢，开关损耗会巨大。栅极电阻最好紧靠栅极，并且这个是信号线，布线避免与其他线耦合，避免栅极过压。
-
-- 高阻抗输入端易受干扰，所以器件的高阻抗输入端的 R、C 元件要靠近输入端放置，高输入阻抗的器件有如 BJT 的基极、MOS 的栅极、二极管、CMOS 芯片（运放、数字IC等）引脚等。
+  - 防电压瞬变 / 减小电压变化速率（du/dt）可 并 RC 电路，防电流瞬变 / 减小 di/dt 可 串 电感。
+  - 关键数字信号线 如 MCU 的 IRQ 中断引脚等重要 IO 注意静电保护等，可加 防浪涌的 TVS 管，或 防正负过压/冲击 的 ESD 管（或用两个快速二极管）。
+  - 高阻抗输入端易受干扰，所以器件的高阻抗输入端的 R、C 元件要靠近输入端放置，高输入阻抗的器件有如 BJT 的基极、MOS 的栅极、二极管、CMOS 芯片（运放、数字IC等）引脚等。
+  - 开关器件如 MOS，其栅极和源极之间要加 TVS 管（或 常用 12V 左右的稳压管） 防过压冲击（始终让 Vgs ≤ 18 V）。MOS 的栅极串电阻的作用：减小/抑制 栅极的振铃现象；防止 MOS 导通速度过快（减慢导通 也应保持在 合理/够用 的范围内），即过高的 du/dt 或 di/dt 不好，高压情况下容易击穿周围的器件或者损坏 MOS（后者为感性上理解）；但是 栅极电阻阻值过大会导致 MOS 管导通速度过慢，开关损耗会巨大。栅极电阻 尽量 紧靠栅极，并且这个是信号线，布线避免与其他线耦合。
+  - 电源模块周围加一周过孔包地，电感接地端也要多加，晶振周围和时钟线用过孔包围，每个模块用过地孔围一圈（即 法拉第电磁屏蔽笼）。对于金属外壳接地元件(例如晶振)，应在其投影区的顶层上铺接地铜皮，并在其周围密布上一圈接地孔，提供电磁屏蔽。
+  - PCB 走线和覆铜完毕后，防止孤立铜箔，覆铜边角修为 45° 或圆角（减少天线效应）；并且 加“缝合”过地孔（增加回流面积，降低阻抗）。
 
 - 防护电路的检查项详看 "1 最基本的电路检查项和器件选型" 章节的 "保护机制"。
 
-- PCB 走线和覆铜完毕后，加“缝合”过地孔，防止孤立铜箔，覆铜边角修为 45° 或圆角（减少天线效应）。
-
-- 电源模块周围加一周过孔包地，电感接地端也要多加，晶振周围和时钟线用过孔包围，每个模块用过地孔围一圈（即 法拉第电磁屏蔽笼）。对于金属外壳接地元件(例如晶振)，应在其投影区的顶层上铺接地铜皮，并在其周围密布上一圈接地孔，提供电磁屏蔽。
+- 更多某些具体地方的规范看下面的 “各类型电路设计规范或要点” 一节。
 
 - 小型化是产品开发的必经之路，挑战极限才有竞争力。
-
-- 更多某些具体地方的规范看下面的 “各类型电路设计规范或要点” 一节。
 
 - 一本比较全的书《印制电路板（PCB）设计技术与实践》，对 PCB 中的走线、叠层、接地、去耦合、电源、数模、高速数字电路等等有实用而丰富的介绍。
 
