@@ -881,6 +881,12 @@ AD 中添加和设置差分线对：输入端和输出端的阻抗从 原理图�
 - [PCB阻抗设计及Polar Si9000 PCB阻抗计算软件的使用_ qlexcel的专栏-CSDN博客 _polar si9000](https://blog.csdn.net/qlexcel/article/details/82933320)。
 - [特性阻抗计算神器Polar SI9000 2021 V21.04 版本更新 (qq.com)](https://mp.weixin.qq.com/s/jRGLnSs5Nq7UpRtS8rTkzA).
 
+**SaturnPCBToolkit 小工具**
+
+对于该软件的介绍 [PCB参数计算神器-Saturn PCB Design Toolkit下载及安装指南 8.02 更新 - 吴川斌的博客 (mr-wu.cn)](https://www.mr-wu.cn/saturn-pcb-toolkit-install/)。
+
+本地离线包：`SCH&PCB 设计、计算和检查的工具和软件\SaturnPCBToolkit`。
+
 **嘉立创阻抗计算器**
 
 这里的步骤以 嘉立创 提供的计算工具和下单助手提供的阻抗生产选项为准。下面以 USB 差分走线（阻抗一般为 90 Ω）为例。
@@ -1094,14 +1100,17 @@ AD 中添加和设置差分线对：输入端和输出端的阻抗从 原理图�
 
 ### PCB 计算小工具 / 辅助设计小软件
 
-**电路&PCB计算小工具**
+**电路&PCB计算本地小工具**
 
 详见`PCB LOGO-画法集合-PCB工具-规则文件\SCH&PCB 设计、计算和检查的工具和软件\`里，包括：
 
-- 电路计算Excel表格合集！非常丰富。
-- PCB 过孔电流计算器。
-- ProPCB PCB设计助手。
-- 一键删除AD的History文件和Previews文件和ProjectLogs文件.bat（放到 AD PCB 工程文件夹内，双击运行一次可以清理除了工程以外的临时文件）。
+- 电路计算 Excel 表格合集！非常丰富。
+- PCB走线、过孔的电流计算。
+- SaturnPCBToolkit 工具集。
+- 反激开关电源参数计算。
+- 变压器设计软件 V1.2（用于自绕变压器吧）。
+- 一键删除 AD的History 文件和 Previews 文件和 ProjectLogs 文件的批处理 .bat（将该 .bat 文件 放到 AD PCB 工程文件夹内，双击运行一次可以清理除了工程以外的临时文件）。
+- 等。
 
 **零散电路计算工具网页**
 
