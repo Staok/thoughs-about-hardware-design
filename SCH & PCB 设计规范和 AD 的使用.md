@@ -1450,6 +1450,14 @@ EMC 主要用到的器件有：TVS 瞬态抑制管（和 GDT 气体放电管）�
 
 内容丰富，参看 “4 SCH-PCB 设计规范” 章的 “PCB 计算小工具 / 辅助设计小软件” 小节。
 
+### PCB DFM 自动化检查工具
+
+PCB 可制造性分析工具，PCB画好后、打板前的自动化检查工具。
+
+- [华秋 DFM](https://dfm.elecfans.com/)：一键分析导入的 PCB 文件，检查项有板子尺寸、孔、线、间距、孤铜等等，排除生产难点、设计缺陷，给出优化建议，结合各种生产因素，自动计算或反算阻抗等等，比较有用。
+- [捷配DFM](https://www.jiepei.com/dfm.html) PCB检查工具。
+- etc.
+
 ### TI-设计和仿真工具
 
 [设计工具和仿真 | 设计资源 | 德州仪器 TI.com.cn](https://www.ti.com.cn/zh-cn/design-resources/design-tools-simulation.html)。
@@ -1497,19 +1505,12 @@ EMC 主要用到的器件有：TVS 瞬态抑制管（和 GDT 气体放电管）�
 
 具有的工具和功能：
 
-![村田-设计辅助软件 SimSurfing](assets/村田-设计辅助软件 SimSurfing.png)
+![村田-设计辅助软件 SimSurfing](assets/村田-设计辅助软件-SimSurfing.png)
 
 使用教学视频：
 
 - [设计支持工具 SimSurfing - SimSurfing - 视频資料库 | 村田制作所 (murata.com)](https://video.murata.com/zh-cn/detail/videos/simsurfing/video/5288510174001)。
 - [电源噪声查不出来？不用上板子，滤波器仿真就能搞定 (bilibili.com)](https://www.bilibili.com/medialist/play/watchlater/BV12v411r798)。
-
-## 4.6 PCB 自动化检查工具
-
-自动化 PCB 检查工具。
-
-- [华秋 DFM](https://dfm.elecfans.com/)：一键分析导入的 PCB 文件，检查项有板子尺寸、孔、线、间距、孤铜等等，排除生产难点、设计缺陷，给出优化建议，结合各种生产因素，自动计算或反算阻抗等等，比较有用。
-- etc.
 
 ## 5 AD 导出 BOM 表
 
