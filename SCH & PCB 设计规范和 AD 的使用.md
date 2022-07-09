@@ -74,6 +74,7 @@
 - PCB类：[逆天PCB论坛-逆天电子论坛-电子工程师俱乐部-中国PCB论坛-PCB封装库-全球最大硬件开源网 - Powered by NTpcb](http://bbs.ntpcb.com/)、[凡亿教育-凡亿PCB,实战教学PCB视频PCB培训，十天入门到精通多层高速PCB设计 (fany-online.com)](https://www.fany-online.com/)、[志博教育-电子工程师PCB开源社区 (zbpcb.com)](https://zbpcb.com/)。
 - [哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/)，把 B 站放在这里没什么不对吧。
 - [微雪课堂 (waveshare.net)](https://www.waveshare.net/study/portal.php)。[深圳百问网科技有限公司 (100ask.org)](http://www.100ask.org/)。
+- [硬件工程师技能树 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/254980338)。[HardwareDesign: 介绍硬件设计的一些内容 - Gitee.com](https://gitee.com/AndrewChu/hardware-design/tree/master)。走硬件岗的推荐把这个人总结的都深深研究研究！
 
 **大型电子器件商城**
 
@@ -93,6 +94,8 @@
 > “一般是原理图修改、画PCB、跟线工厂贴片生产，以及后面生产完了使用出问题的话，要解决。有的在自己办公室用示波器之类的测，有的时候要到外地去看现场到底出的啥问题。有些需要满足国标的还要跟测试，看EMC，或者其他高低温测试之类的。  最后还有些文档，写写使用手册，维护手册，系统里改改BOM，走走各种流程。”
 
 > “首先是项目初期方案评审，主要考虑到项目的可实施性，第二是原理图框架评审，保证你后期设计不会跑偏，再者是原理图评审以及PCB评审，包括整个PCB绘制过程都是由硬件工程师主导。投板后开始写测试用例，其中就包含固件需求文档。板子回来就进入调试过程，这个过程完全脱离固件，你只保证你的硬件没有问题与设计符合就可以，测试完成需要进行测试结果评审查看是否可以转发布，发布完成就要给生产写生产指导文件以及跟踪前期试产，试产完成需要转C4测试这个是由测试部门主导，如果有问题随时反馈硬件工程师，测试不过需要重新设计。主要还是在设计技术和设计理念上下下功夫就好。”
+
+推荐：[硬件工程师技能树 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/254980338)。[HardwareDesign: 介绍硬件设计的一些内容 - Gitee.com](https://gitee.com/AndrewChu/hardware-design/tree/master)。走硬件岗的推荐把这个人总结的都深深研究研究！
 
 ### 设计原则
 
@@ -133,6 +136,7 @@
 
 - 电源隔离：常为使用变压器的磁路形式隔离（如金升阳等的电源模块）
 - 信号隔离：常有缓冲/中继（74 系列的244、245 等等）、光耦隔离和磁隔离（如 I2C、SPI 专用的磁隔离芯片）等等；要注意的是信号的隔离往往是两个单独的电路回路之间的信号连接，所以如果用光耦进行信号隔离，那么光耦两边的电源连接应该用两边对应的单独电路回路里面的电源，而不是公用一个地或者电源，这样起不到隔离效果。
+- [硬件- Isolation Power Design - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/255013263)。
 
 ### 选型的原则
 
@@ -164,6 +168,8 @@
   Isat(饱和电流，感值下降20%的电流)，Irms (温升电流，温升20°/40°的电流)相关：[功率电感的痛点：两个额定电流Isat , Irms 如何理解？_ 清风度面-CSDN博客_irms](https://blog.csdn.net/yanglianzhuang/article/details/94554598)。
 
 - 关于阻容的封装的补充说明：电阻的直插（金属膜电阻）封装比表贴（碳膜电阻）和电容的直插（MLCC独石，NPO或X7R）比表贴（陶瓷，NPO或X7R），要来的更加稳定（精度高、热稳定好），噪声可能更小。对于要求精密、稳定的硬件可选此。
+
+- 较全面的一文 [硬件-基本元件 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/254986829)。关于 电阻，电容，电感 比较全面的 参数介绍 和 高速的等效模型介绍。
 
 > **电阻、电容、电感品牌（包括国内、国外品牌）**
 >
@@ -220,6 +226,8 @@
 
 ### 功率开关管
 
+- 较全面的一文 [硬件-BJT MOSFET - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/254988239)。
+
 - Vds（漏源极电压），Vgs（栅极源极电压），Ids（漏源电流），Rds(on)（导通电阻）。
 
 - 分布/寄生电容（符号：Cs，Cg。其越小，开关速度越快，开关损耗越小，普通硅基材料 MOS 可选 TI 的 NexFET 型）；封装。
@@ -259,6 +267,12 @@
 - 差模输入阻抗（Rid，大于2MΩ），共模输入阻抗，共模抑制比（KCMR，大于80dB）。
 - 输入失调电压（Uio，小于2mV），输入失调电流（Iio，0.2~2uA），输入偏置电流（Iib，0.3~7uA），它们的温漂。
 - 功耗（80mW）。
+
+较全面的一文 [硬件-TI-OPA - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/255182475)。
+
+### ADC
+
+较全面的一文 [硬件-TI-ADC - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/255185139)。
 
 ### 电源
 
@@ -532,11 +546,13 @@ up 北冥有鱼qzs 的 总结：[【汇总】都有哪些免费下载PCB封装�
 
 11. 初次研制阶段，可多用 0 欧电阻、磁珠和跳线帽等，留出可以可测试、可断开和可配置的地方，方便逐个电源域、逐个模块的测试电流、功能裁剪等。比如加在电源出口，初次上电前可以先断开，不给后面的的电路供电，上电后测量电压和纹波，合理后，即可再接上，或者可以在此缺口直接测量电流。
 
-12. 原理图中接口件，旁边放上实物图，图片设置为内嵌型。
-
 13. 原理图画好后该给各个元件建立唯一编号。打开“工具”->“注解”，点 Reset All ，再点“更新更改列表”，最后执行“接受更改”。
 
-14. 对原理图进行编译和查错。依次点 “工程”->“Compile Document” 和 “工程”->“Compile PCB Project”。没错后即可导入PCB。
+13. 对原理图进行编译和查错。依次点 “工程”->“Compile Document” 和 “工程”->“Compile PCB Project”。没错后即可导入PCB。
+
+14. 原理图中一些器件 尤其是接口件，旁边放上实物图，图片设置为内嵌型。可以通过 “放置” 来导入图片到原理图内，也可以从 剪切板 直接复制出来（比如截图后复制、word/excel/ppt 里面直接复制 等等）。
+
+15. 可以用画框图的工具（draw.io/visio/Xmind 等等）画 该电路的 电源树图，并标出 每一路/电源轨 的最大电流，放在原理图内。
 
 **注意！**更多常用技巧总结在 “4 SCH-PCB 设计规范” 章节里。
 
@@ -590,9 +606,9 @@ up 北冥有鱼qzs 的 总结：[【汇总】都有哪些免费下载PCB封装�
 
    - 首先开启交叉选择，分别打开在原理图和PCB界面的“工具”->“交叉选择模式”选项。
 
-   - 在原理图界面中，选中一个子模块内所有器件，再到PCB界面，点“排列工具”->“在区域内排列器件”，在空白区域内拖出一个矩形，此子模块所有的器件便都堆在此矩形区域内。
+   - 在原理图界面中，选中一个子模块内所有器件，再到PCB界面，点“排列工具”->“在区域内排列器件”（这个经常用，可以设置快捷键，比如 shift+q），在空白区域内拖出一个矩形，此子模块所有的器件便都堆在此矩形区域内。
 
-5. PCB中显示元件的原名（此步骤非必须）。
+5. PCB中显示元件的原名（此步骤非必须；此步骤可以放到最后去做，找缝隙和空白的地方放下器件标号的丝印）。
 
    - 随便选中一个元件，右键点开“查找相似对象”，都是“any”情况下点“应用”，此时所有器件已全选，再点“确定”，出现“PCB Inspector”窗口，在其中取消选中 “Show Name” 或者 “Show Designator”，打开选中 “Show Comment” 即可。
 
@@ -635,10 +651,10 @@ up 北冥有鱼qzs 的 总结：[【汇总】都有哪些免费下载PCB封装�
    - 除非可以混过去的项目，否则坚决不用自动布线（你晓得）。
    - 不手动布地线，地线的布线在下一小节 “后续工作和润色” 中用覆铜和过孔解决，可以先隐藏地线（AD 10 的方法现查）。
    - 对于两层板而言：先走电源线，再走信号线；对于四层板而言：摆好器件，先划分好内电层区域，再走电源线，再走信号线。
-   - 确定整个板上大部分走线和过孔的规格，即 各类线的粗细和其过孔孔径 都提前定好。比如信号线均走 10mil，功率线为 20mil~60mil 不等，信号线过孔 12/18mil，功率线过孔 20/28mil。这些都要提前确定好。关于 线宽、过孔孔径 与 电流之间的关系 详见 “4 SCH-PCB 设计规范” 里面的 “幼稚园级” 一节。
+   - 确定整个板上大部分走线和过孔的规格，即 各类线的粗细和其过孔孔径 都提前定好。比如信号线均走 4~10mil，功率线为 20mil~60mil 不等，信号线过孔 4/10mil、8/16mil、12/18mil 等，功率线过孔 20/28mil。这些都要提前确定好。关于 线宽、过孔孔径 与 电流之间的关系 详见 “4 SCH-PCB 设计规范” 里面的 “幼稚园级” 一节。过孔不要 密集/紧挨着 排列，相互之间保持一定间距，否则加工易出现 钻孔披锋/金属披锋/铜皮倒刺。
    - 电源线足够粗，功率走线必要时考虑开窗加锡。功率走线可以用覆铜来布线，然后原地复制粘贴一个再换成开窗层，得到整块覆铜的开窗。
    - 走信号线时，模拟信号、高速信号和时钟线优先布线，尽量短。电流和地路径不形成环。即 电源、模拟小信号、高速信号、时钟信号和同步信号等关键信号优先布线。
-   - 关键信号、模拟信号、高频线等等尽量用曲线走线（曲线也蛮好看的），尽量采用菊花链拓扑形式连接而不是总分式；其它的数字低频电路避免直角、锐角、环形、电压/流快速变化的线（尽量短、避免环形）可不用曲线快速地走完。
+   - 关键信号、模拟信号、高频线等等尽量用曲线走线（另外，曲线也蛮好看的），尽量采用菊花链拓扑形式连接而不是总分式；其它的数字低频电路避免直角、锐角、环形、电压/流快速变化的线（尽量短、避免环形）可不用曲线快速地走完。
    - 过孔尽量避免在焊盘、丝印上面（酌情考虑，不是必须）。
 
    AD 10 的等长线/蛇形线设计：
@@ -949,6 +965,10 @@ AD 中添加和设置差分线对：输入端和输出端的阻抗从 原理图�
 2. 然后在 Rules 里面，High Speed 里面的 Matched Lengths 上右击新建一个规则，进去在 Where The Object Matches 栏里面的 第一个选 Net Class，第二个选 要等长的线的 class，然后在下面设置 Tolerance，容忍等长的误差，最好填小一点如 3 mil。
 3. PCB 界面 工具栏 选择 Interactively Tune Trace Lengths 工具，从最短的线开始画线进行等长变化的区域；鼠标开始拉蛇形线的时候，按下 TAB 键，打开属性窗口选择 本线组中最长的那根线，然后继续拉线，这样当等长的时候鼠标继续拉蛇形线也不会继续增加长度了。
 4. 快捷键：“1、2”改弧度，“3、4”改间距，“，、。”改绕长，在左下角导航选 “PCB” 窗口，可见加入网络的要等长的线及其各自的长度；走线等长变化的区域可以调整，直接对等长变化区域选中的矩形框的四周拖拽，改变等长区域；删除等长，直接选中线的等长变化区域再按 del。
+
+查看信号的等长，而不是线的等长：等长需要在 Xsignals 里面看，因为 NET 里面的等长是没算串阻的距离或者是把到ESD器件的距离算进去了，是不准确的。如下图所示：
+
+![Xsignals中查看等长](assets/Xsignals中查看等长.bmp)
 
 ### PCB ActiveRoute 用好省时
 
@@ -1278,54 +1298,23 @@ AD 中添加和设置差分线对：输入端和输出端的阻抗从 原理图�
 
 高价值补充：
 
-- EMC 环节，参考 各种 EMC 标准电路，[protection-circuits/EMC 理论和设计要点 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/EMC 理论和设计要点)，其它保护电路也参考这个仓库里面的电路。
+- 比较完善的：
+  - [硬件-硬件工程师应该知道DCDC知识 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/255011356)。这个实在太全了！
+  - [硬件-ACDC-DCDC-Common-mistake - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/255015076)。一些 AC-DC 和 DC-DC 的问题的分析和使用处理经验。
+
+- EMC 环节，PCB Layout：
+  - 参考 各种 EMC 标准电路，[protection-circuits/EMC 理论和设计要点 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/EMC 理论和设计要点)，其它保护电路也参考这个仓库里面的电路。
+  - DCDC PCB Layout 经验。[一文将 DCDC 的 Layout 讲的明明白白 (qq.com)](https://mp.weixin.qq.com/s/hDT5qWXzD-droTiETXwQPQ)。输入环路和输出环路的面积要尽量小，心中有 DCDC 的开 和 关状态时的信号流向。
+
 - “合路” 环节，对于低压、小电流用两个二极管来选择即可，对于高压、大电流用第二类或第三类路径切换电路，[protection-circuits/掉电保护 简易自动切换电源轨 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/掉电保护 简易自动切换电源轨)。
-- 泰克官方，电源测量小贴士，10 个设计阶段：[10_Steps_Power_Supply_48C-60180-cn.pdf (tek.com)](https://download.tek.com/document/10_Steps_Power_Supply_48C-60180-cn.pdf)，文档离线在`\额外文档\10_Steps_Power_Supply_48C-60180-cn.pdf`里。
+- 电源测量小贴士，10 个设计阶段：[10_Steps_Power_Supply_48C-60180-cn.pdf (tek.com)](https://download.tek.com/document/10_Steps_Power_Supply_48C-60180-cn.pdf)，文档离线在`\额外文档\10_Steps_Power_Supply_48C-60180-cn.pdf`里。泰克官方。
 - 电源噪声：[EEVblog #594 - 怎样测量电源纹波和噪声_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV15t411F76U)、[EEVBlog #1116 - 怎样消除电源纹波_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Gt411u7eR)。这篇文章 [【实用】看完这篇，轻松掌握开关电源纹波测量和抑制方法 (qq.com)](https://mp.weixin.qq.com/s?__biz=MzI4NTQ4NTA3NA==&mid=2247486962&idx=1&sn=48001cbfdaa8e92e939abe2c932cb1ec&chksm=ebea3c8fdc9db599c9e6b0ba26274dae8adc999f5bed574fd9ccb50e8f2234ffcbe7c20141fb&scene=0&ascene=7&devicetype=android-23&version=26060638&nettype=3gnet&abtest_cookie=BAABAAoACwASABMABAAjlx4AWZkeAGKZHgBtmR4AAAA%3D&lang=zh_CN&pass_ticket=BK2iBKubCk8sK6qJcWVmP87gLgblu8%2Bkqe1bucAW6oix4OJh3N5tw4OjP9nBjIVB&wx_header=1) 就是对前面两个视频的总结。
 - 阻尼震荡与振铃问题：[Buck的振铃实验与分析 (qq.com)](https://mp.weixin.qq.com/s/xj0gmkcpq5TplHRwkMHrCA)、[开关电源的阻尼振荡 (qq.com)](https://mp.weixin.qq.com/s/0n8xpQxZ8uDzwqaKPTruwg)。
-- [前馈电容是如何影响buck电路的输出特性的？ (qq.com)](https://mp.weixin.qq.com/s/Ia0-qRDyGThergkzwJJuiA)。反馈电阻的上电阻并联的前馈电容的作用的理论分析和经验参数。
-- [一文将 DCDC 的 Layout 讲的明明白白 (qq.com)](https://mp.weixin.qq.com/s/hDT5qWXzD-droTiETXwQPQ)。DCDC PCB Layout 经验。输入环路和输出环路的面积要尽量小，心中有 DCDC 的开 和 关状态时的信号流向。
+- 环路相关：
+  - [电源-环路补偿的意义 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/255169832)。
+  - [前馈电容是如何影响buck电路的输出特性的？ (qq.com)](https://mp.weixin.qq.com/s/Ia0-qRDyGThergkzwJJuiA)。反馈电阻的上电阻并联的前馈电容的作用的理论分析和经验参数。
 
-#### EMC 电磁兼容设计
-
-> 引自《硬件系统工程师宝典》。
-> 
-> EMC（Electromagnetic Compatibility）即电磁兼容性，指在特定的电磁环境下，电子系统或PCB上的电子元器件之间相互协调有序工作的能力。对于EMC，相应的标准有欧洲的CE认证、美国的FCC认证和中国的3C认证，电子产品在各个区域必须符合相应的认证才可以
-> 销售。
-> 
-> **EMC 包含 EMI 和 EMS 两项。**EMI (Electromagnetic Interface)即电磁干扰，指电子系统或PCB上的电子元器件之间在工作时，产生的不利于其他电子系统或器件的电磁能量。EMS (Electromagnetic Susceptibility)即电磁敏感度，指电子系统或PCB上的电子元器件应能接受其他设备或器件的电磁干扰。
->     **EMC 设计的方法可以分为以下四点：接地、滤波、隔离和屏蔽。**接地能够有效地将噪声导入GND平面，滤波能够将无效的信号频段滤除，隔离能够阻挡噪声的传导干扰，屏蔽能够有效地阻断噪声的辐射干扰。
-> 
-> ...
-> 
-> **干扰源、耦合途径 和 敏感装置 是 EMC 存在的三个要求。对症下药。**
-> 
-> 在进行产品的EMC可行性分析时，首先要确定产品定位的区域，从而对应其标准进行相应的测试。对于EMC的可行性分析，可以着重从三个方面入手：**隔离（或抑制）干扰源、切断干扰噪声的传输路径和保护受干扰的群体。**
-
-> 引自 [单片机硬件设计原则：抗干扰常用方法（学习群：943552345） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/450623564)。
-> 
-> 1. 干扰源。指产生干扰的元件、设备或信号，用数学语言描述如下：du/dt， di/dt大的地方就是干扰源。如：雷电、继电器、可控硅、电机、高频时钟等都可能成为干扰源。
-> 2. 传播路径。指干扰从干扰源传播到敏感器件的通路或媒介。典型的干扰传播路径是通过导线的传导和空间的辐射。
-> 3. 敏感器件。指容易被干扰的对象。如：A/D、D/A变换器，单片机，数字IC，弱信号放大器等。干扰的分类干扰的分类有好多种，通常可以按照噪声产生的原因、传导方式、波形特性等等进行不同的分类。按产生的原因分：可分为放电噪声音、高频振荡噪声、浪涌噪声。按传导方式分：可分为共模噪声和串模噪声。按波形分：可分为持续正弦波、脉冲电压、脉冲序列等等。
-> 
-> 因此，常用硬件抗干扰技术针对形成干扰的三要素，采取的抗干扰主要有以下手段：
-> 
-> 一是，抑制干扰源抑制干扰源，就是尽可能的减小干扰源的du/dt，di/dt。这是抗干扰设计中先考虑和重要的原则，常常会起到事半功倍的效果。减小干扰源的du/dt主要是通过在干扰源两端并联电容来实现。减小干扰源的di/dt则是在干扰源回路串联电感或电阻以及增加续流二极管后RC抑制来实现。
-> 
-> 二是，切断干扰传播路径按干扰的传播路径可分为传导干扰和辐射干扰两类。所谓传导干扰是指通过导线传播到敏感器件的干扰。高频干扰噪声和有用信号的频带不同，可以通过在导线上增加滤波器的方法切断高频干扰噪声的传播，有时也可加隔离光耦来解决。电源噪声的危害，要特别注意处理。所谓辐射干扰，是指通过空间辐射传播到敏感器件的干扰。一般的解决方法是增加干扰源与敏感器件的距离，用地线把它们隔离和在敏感器件上加蔽罩。
-> 
-> 三是，提高敏感器件的抗干扰性能提高敏感器件的抗干扰性能是指从敏感器件这边考虑尽量减少对干扰噪声的拾取，以及从不正常状态尽快恢复的方法。
-> 
-> 四是，其它常用抗干扰措施交流端用电感电容滤波：去掉高频低频干扰脉冲。变压器双隔离措施：变压器初级输入端串接电容，初、次级线圈间屏蔽层与初级间电容中心接点接大地，次级外屏蔽层接印制板地，这是硬件抗干扰的关键手段。次级加低通滤波器：吸收变压器产生的浪涌电压。采用集成式直流稳压电源：因为有过流、过压、过热等保护。I/O口采用光电、磁电、继电器隔离，同时去掉公共地。通讯线用双绞线：排除平行互感。防雷电用光纤隔离为有效。A/D转换用隔离放大器或采用现场转换：减少误差。外壳接大地：解决人身安全及防外界电磁场干扰。加复位电压检测电路。防止复位不充分CPU就工作，尤其有EEPROM的器件，复位不充分会改变EEPROM的内容。
-
-EMC（电磁兼容性）下分 EMI（电磁干扰，因发射/排放（Emission）电磁波而对环境的干扰）和 EMS（电磁敏感性，对电磁波干扰的耐受度/抗扰度（Immunity））。EMI 下分 CE（Conducted Emission，传导嗓声）、RE（Radiated Emission，辐射噪声）；EMS 下分 CI（Conducted Immunity，传导抗扰度）、RI（Radiated Immunity，辐射抗扰度），还有 浪涌（Surge）和电压跌落等测试。
-
-EMC 主要用到的器件有：TVS 瞬态抑制管（和 GDT 气体放电管）、ESD 防护器件、Y/X 电容、MLCC（片式多层陶瓷电容）、共模电感、磁珠等。对于 各种电压的 AC、DC 电源接口，以及各种通讯接口，均有 标准/常用 的 EMC 电路供参考。
-
-更多内容参见 参考上文的 “保护机制” 小节。更多内容参见 可以参考在 “保护电路” Github 仓库里面总结比较丰富的 EMC 有关的教材资料、**EMC 标准电路**和，以及 ESD 器件如 TVS管、共模电感、磁珠等的介绍和选型。详见如下：
-
-- [protection-circuits/EMC 理论和设计要点 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/EMC 理论和设计要点)。
-- [protection-circuits/TVS管 ESD器件选型 接口保护选型 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/TVS管 ESD器件选型 接口保护选型)。
+- 
 
 #### "地"的类型 / 地平面分割
 
@@ -1360,6 +1349,52 @@ EMC 主要用到的器件有：TVS 瞬态抑制管（和 GDT 气体放电管）�
   - 强信号、大电流部分 与 弱信号（又分高频、低频）部分。
   - 高电压区域 与 低电压区域。
   - 干扰源 与 敏感元件。即按频率范围划分区域。
+
+#### EMC 电磁兼容设计
+
+> 引自《硬件系统工程师宝典》。
+>
+> EMC（Electromagnetic Compatibility）即电磁兼容性，指在特定的电磁环境下，电子系统或PCB上的电子元器件之间相互协调有序工作的能力。对于EMC，相应的标准有欧洲的CE认证、美国的FCC认证和中国的3C认证，电子产品在各个区域必须符合相应的认证才可以
+> 销售。
+>
+> **EMC 包含 EMI 和 EMS 两项。**EMI (Electromagnetic Interface)即电磁干扰，指电子系统或PCB上的电子元器件之间在工作时，产生的不利于其他电子系统或器件的电磁能量。EMS (Electromagnetic Susceptibility)即电磁敏感度，指电子系统或PCB上的电子元器件应能接受其他设备或器件的电磁干扰。
+>  **EMC 设计的方法可以分为以下四点：接地、滤波、隔离和屏蔽。**接地能够有效地将噪声导入GND平面，滤波能够将无效的信号频段滤除，隔离能够阻挡噪声的传导干扰，屏蔽能够有效地阻断噪声的辐射干扰。
+>
+> ...
+>
+> **干扰源、耦合途径 和 敏感装置 是 EMC 存在的三个要求。对症下药。**
+>
+> 在进行产品的EMC可行性分析时，首先要确定产品定位的区域，从而对应其标准进行相应的测试。对于EMC的可行性分析，可以着重从三个方面入手：**隔离（或抑制）干扰源、切断干扰噪声的传输路径和保护受干扰的群体。**
+
+> 引自 [单片机硬件设计原则：抗干扰常用方法（学习群：943552345） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/450623564)。
+>
+> 1. 干扰源。指产生干扰的元件、设备或信号，用数学语言描述如下：du/dt， di/dt大的地方就是干扰源。如：雷电、继电器、可控硅、电机、高频时钟等都可能成为干扰源。
+> 2. 传播路径。指干扰从干扰源传播到敏感器件的通路或媒介。典型的干扰传播路径是通过导线的传导和空间的辐射。
+> 3. 敏感器件。指容易被干扰的对象。如：A/D、D/A变换器，单片机，数字IC，弱信号放大器等。干扰的分类干扰的分类有好多种，通常可以按照噪声产生的原因、传导方式、波形特性等等进行不同的分类。按产生的原因分：可分为放电噪声音、高频振荡噪声、浪涌噪声。按传导方式分：可分为共模噪声和串模噪声。按波形分：可分为持续正弦波、脉冲电压、脉冲序列等等。
+>
+> 因此，常用硬件抗干扰技术针对形成干扰的三要素，采取的抗干扰主要有以下手段：
+>
+> 一是，抑制干扰源抑制干扰源，就是尽可能的减小干扰源的du/dt，di/dt。这是抗干扰设计中先考虑和重要的原则，常常会起到事半功倍的效果。减小干扰源的du/dt主要是通过在干扰源两端并联电容来实现。减小干扰源的di/dt则是在干扰源回路串联电感或电阻以及增加续流二极管后RC抑制来实现。
+>
+> 二是，切断干扰传播路径按干扰的传播路径可分为传导干扰和辐射干扰两类。所谓传导干扰是指通过导线传播到敏感器件的干扰。高频干扰噪声和有用信号的频带不同，可以通过在导线上增加滤波器的方法切断高频干扰噪声的传播，有时也可加隔离光耦来解决。电源噪声的危害，要特别注意处理。所谓辐射干扰，是指通过空间辐射传播到敏感器件的干扰。一般的解决方法是增加干扰源与敏感器件的距离，用地线把它们隔离和在敏感器件上加蔽罩。
+>
+> 三是，提高敏感器件的抗干扰性能提高敏感器件的抗干扰性能是指从敏感器件这边考虑尽量减少对干扰噪声的拾取，以及从不正常状态尽快恢复的方法。
+>
+> 四是，其它常用抗干扰措施交流端用电感电容滤波：去掉高频低频干扰脉冲。变压器双隔离措施：变压器初级输入端串接电容，初、次级线圈间屏蔽层与初级间电容中心接点接大地，次级外屏蔽层接印制板地，这是硬件抗干扰的关键手段。次级加低通滤波器：吸收变压器产生的浪涌电压。采用集成式直流稳压电源：因为有过流、过压、过热等保护。I/O口采用光电、磁电、继电器隔离，同时去掉公共地。通讯线用双绞线：排除平行互感。防雷电用光纤隔离为有效。A/D转换用隔离放大器或采用现场转换：减少误差。外壳接大地：解决人身安全及防外界电磁场干扰。加复位电压检测电路。防止复位不充分CPU就工作，尤其有EEPROM的器件，复位不充分会改变EEPROM的内容。
+
+EMC（电磁兼容性）下分 EMI（电磁干扰，因发射/排放（Emission）电磁波而对环境的干扰）和 EMS（电磁敏感性，对电磁波干扰的耐受度/抗扰度（Immunity））。EMI 下分 CE（Conducted Emission，传导嗓声）、RE（Radiated Emission，辐射噪声）；EMS 下分 CI（Conducted Immunity，传导抗扰度）、RI（Radiated Immunity，辐射抗扰度），还有 浪涌（Surge）和电压跌落等测试。
+
+EMC 主要用到的器件有：TVS 瞬态抑制管（和 GDT 气体放电管）、ESD 防护器件、Y/X 电容、MLCC（片式多层陶瓷电容）、共模电感、磁珠等。对于 各种电压的 AC、DC 电源接口，以及各种通讯接口，均有 标准/常用 的 EMC 电路供参考。
+
+更多内容参见 参考上文的 “保护机制” 小节。更多内容参见 可以参考在 “保护电路” Github 仓库里面总结比较丰富的 EMC 有关的教材资料、**EMC 标准电路**和，以及 ESD 器件如 TVS管、共模电感、磁珠等的介绍和选型。详见如下：
+
+- [protection-circuits/EMC 理论和设计要点 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/EMC 理论和设计要点)。
+- [protection-circuits/TVS管 ESD器件选型 接口保护选型 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/TVS管 ESD器件选型 接口保护选型)。
+
+很有价值的文章：
+
+- [EMC-简单记录 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/255005607)。
+- [EMC-产品EMC设计 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/255007193)。
 
 #### SI/PI/HS/RF X
 
@@ -1419,6 +1454,8 @@ EMC 主要用到的器件有：TVS 瞬态抑制管（和 GDT 气体放电管）�
 差分线 以及 阻抗匹配，会大概率遇到，对于非硬件人员可能属于需要稍稍会做的内容，其更多内容可看“PCB 差分走线设计”一节。
 
 更多 [信号完整性常用九类公式 (qq.com)](https://mp.weixin.qq.com/s/Y7entmL5X_DIyWZ7LNjGZg)。
+
+[硬件-简单的Signal Integrity - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/254991939)，有关于 SI 的涉及到的点 和 一些使用经验。
 
 ##### 电源完整性（PI）分析
 
@@ -1608,6 +1645,8 @@ PCB 可制造性分析工具，PCB画好后、打板前的自动化检查工具�
 
 - LTspice 电路仿真：[LTspice Simulator | 亚德诺半导体 (analog.com)](https://www.analog.com/cn/design-center/design-tools-and-calculators/ltspice-simulator.html)。
 
+  [硬件-LTspice仿真 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/255003440)。
+
 - RF 及相关工具（包括 RF 阻抗匹配设计）：[RF及相关工具 | 亚德诺半导体 (analog.com)](https://www.analog.com/cn/design-center/design-tools-and-calculators/rf-and-synthesis-tools.html)。
 
 **ADI-解决方案**
@@ -1720,6 +1759,8 @@ B站等有很多教程视频，以下只经验之谈。
 *p.s 以下有些是作者还没有看到的，均填列其中（有时间的话会看看，再之后都会把其精髓补充在本文）。*
 
 - [PCB 基本布线规范与设计原则 by Hank](https://uinika.gitee.io/Electronics/PCB/)。
+
+- [Andrew Chu - 知乎 (zhihu.com)](https://www.zhihu.com/people/zixiang-44/posts)，[HardwareDesign: 介绍硬件设计的一些内容 - Gitee.com](https://gitee.com/AndrewChu/hardware-design/tree/master)。这其中的一些专题文章已经放到了 正文 对应的章节内，这个内容很丰富，是 经验丰富的/优秀的 硬件工程师 必看的。[硬件工程师技能树 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/254980338)。
 
 - 本条是作者的备注：
 
