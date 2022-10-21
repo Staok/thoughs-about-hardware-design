@@ -22,7 +22,9 @@
 
 ## 0.5 电子类网站收集
 
-**大厂官网**（筛选器件型号的选型、获得器件手册+参考设计+设计要点等文档资料）
+### 大厂官网
+
+筛选器件型号的选型、获得器件手册+参考设计+设计要点等文档资料
 
 - TI（德州仪器）：[模拟 | 嵌入式处理 | 半导体公司 | 德州仪器 TI.com.cn](https://www.ti.com.cn/)。
 - ADI（亚德诺）：[ADI | 混合信号和数字信号处理IC | 亚德诺半导体 (analog.com)](https://www.analog.com/cn/index.html)。
@@ -39,7 +41,7 @@
 - Powerint：[Homepage (CN) | Power Integrations, Inc.](https://www.powerint.cn/zh-hans/)。
 - Keysight：[资源 | 是德科技 (keysight.com)](https://www.keysight.com/cn/zh/resources.html)。
 
-**综合类网站、论坛**
+### 综合类网站、论坛
 
 - [电子发烧友网：领先的电子工程师技术社区，为工程师创造价值 (elecfans.com)](http://www.elecfans.com/)。
 - [21IC电子网 - 电子工程师的优选网站](https://www.21ic.com/)。
@@ -52,7 +54,9 @@
 - [一个专注于智能硬件、嵌入式系统、物联网、电子产品设计美学的独立博客 - 吴川斌的博客 (mr-wu.cn)](https://www.mr-wu.cn/)。
 - 一个目录：[扩展获取信息/学习的渠道（以EE为例） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/379216586)。
 
-**开源电子项目分享类/资源类**（当作兴趣，交流爱好的社群）
+### 开源电子项目分享类/资源类
+
+当作兴趣，交流爱好的社群
 
 - [All projects | Hackaday.io](https://hackaday.io/projects)。
 - [硬件设计，立创EDA开源硬件平台，硬件工程师的电路家园。 (oshwhub.com)](https://oshwhub.com/)，开源 PCB 项目分享。
@@ -65,18 +69,24 @@
 - [电子制作实验室网站欢迎您！ (xie-gang.com)](http://www.xie-gang.com/)。
 - [GitHub](https://github.com/)。
 
-**教程类**（活到老学到老系列）
+### 教程类
+
+活到老学到老系列
 
 - [德州仪器（TI）官方视频课程培训 - 21ic电子网](https://edu.21ic.com/)。
 - [学堂在线 - 精品在线课程学习平台 (xuetangx.com)](https://www.xuetangx.com/)。
 - [网易公开课 (163.com)](https://open.163.com/)。[中国大学MOOC(慕课)_国家精品课程在线学习平台 (icourse163.org)](https://www.icourse163.org/)。
 - [培训资源-全国大学生电子设计竞赛培训网 (nuedc-training.com.cn)](https://www.nuedc-training.com.cn/index/video)。
-- PCB类：[逆天PCB论坛-逆天电子论坛-电子工程师俱乐部-中国PCB论坛-PCB封装库-全球最大硬件开源网 - Powered by NTpcb](http://bbs.ntpcb.com/)、[凡亿教育-凡亿PCB,实战教学PCB视频PCB培训，十天入门到精通多层高速PCB设计 (fany-online.com)](https://www.fany-online.com/)、[志博教育-电子工程师PCB开源社区 (zbpcb.com)](https://zbpcb.com/)。
+- PCB 类：
+  - [逆天PCB论坛-逆天电子论坛-电子工程师俱乐部-中国PCB论坛-PCB封装库-全球最大硬件开源网 - Powered by NTpcb](http://bbs.ntpcb.com/)。
+  - [凡亿教育-凡亿PCB,实战教学PCB视频PCB培训，十天入门到精通多层高速PCB设计 (fany-online.com)](https://www.fany-online.com/)。
+  - [志博教育-电子工程师PCB开源社区 (zbpcb.com)](https://zbpcb.com/)。
+
 - [哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/)，把 B 站放在这里没什么不对吧。
 - [微雪课堂 (waveshare.net)](https://www.waveshare.net/study/portal.php)。[深圳百问网科技有限公司 (100ask.org)](http://www.100ask.org/)。
-- [硬件工程师技能树 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/254980338)。[HardwareDesign: 介绍硬件设计的一些内容 - Gitee.com](https://gitee.com/AndrewChu/hardware-design/tree/master)。走硬件岗的推荐把这个人总结的都深深研究研究！
+- [硬件工程师技能树 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/254980338)。[HardwareDesign: 介绍硬件设计的一些内容 - Gitee.com](https://gitee.com/AndrewChu/hardware-design/tree/master)。走硬件岗的推荐把这个人总结的都值得深深研究研究！
 
-**大型电子器件商城**
+### 大型电子器件商城
 
 - 立创商城：[立创商城_电子元器件采购网上商城_领先的现货元器件交易平台-嘉立创电子商城 (szlcsc.com)](https://www.szlcsc.com/)。
 - 得捷电子（Digi-Key）：[得捷电子 中国 Digi-Key官网 | 供应商直授权电子元器件分销商 (digikey.cn)](https://www.digikey.cn/)。
@@ -85,9 +95,13 @@
 - 云汉芯城：[云汉芯城ICKey.cn_电子元器件采购_BOM配单_SMT贴片_PCB打样](https://www.ickey.cn/)。
 - 淘宝（货源存疑望小心，便宜没好货），咸鱼（或可超廉价入拆机芯片盲盒）。
 
+### 优秀参考/书籍/数模电基础（新人必看）
+
+请转到 本文最后一章 “9 优秀参考/书籍/数模电基础（新人必看）”。
+
 ## 1 最基本的设计理念和器件选型
 
-### 硬件岗位
+### 硬件岗位描述
 
 引自从事硬件工作朋友的口述。
 
@@ -135,7 +149,7 @@
 - 信号的缓冲和隔离。信号隔离（光耦隔离、磁隔离等）。电源隔离（通过变压器线圈在物理上隔离）。
 - 共阻抗地干扰抑制（高频）。
 
-上述保护电路更多细节内容可详看： [Staok/protection-circuits: 对保护电路中的过流、过压、软起动、防反接、通讯和信号隔离、电平转换、防共地干扰、TVS瞬态抑制、共模抑制和电磁兼容做一个大总结 (github.com)](https://github.com/Staok/protection-circuits)。
+上述保护电路更多细节内容可详看这个，非常实用的各类保护电路的总结： [Staok/protection-circuits: 对保护电路中的过流、过压、软起动、防反接、通讯和信号隔离、电平转换、防共地干扰、TVS瞬态抑制、共模抑制和电磁兼容做一个大总结 (github.com)](https://github.com/Staok/protection-circuits)。
 
 关于隔离：
 
@@ -155,6 +169,10 @@
 - 持续发展：环保、供货周期长；
 
 更多内容见`/额外文档/一篇很完整的元器件选型指南.docx`，[巧学系列——各种基础器件介绍 (qq.com)](https://mp.weixin.qq.com/s/M1UPXkJ9tbYza6rgQp-lrg)。
+
+元器件降额参数基本要求 [【一张图概括】元器件降额参数及要求 (qq.com)](https://mp.weixin.qq.com/s/Yk7wjIB9DggskhxEd8_Kyg)。
+
+
 
 ### 电阻，电容，电感
 
@@ -241,7 +259,7 @@
 
 - 目前三类 MOS 开关管：硅基（Si），碳化硅（SiC），氮化镓（GaN），目前英飞凌（Infineon）能提供很广泛的 MOS 选型和对应的预驱 IC，官网有不少选型指导手册。下图是三类 MOS 的适用范围：
   
-  ![Infineon image wide bandgap semiconductors Si-Sic-GaN](assets/Wide-Bandgap-Semiconductors-(SiCGaN).jpg)
+  <img src="assets/Wide-Bandgap-Semiconductors-(SiCGaN).jpg" alt="Infineon image wide bandgap semiconductors Si-Sic-GaN" style="zoom:67%;" />
 
 总结目前适用范围：
 
@@ -266,16 +284,24 @@
 
 ### 运放
 
-更多设计相关内容见`运放设计注意`一节。
+**更多设计相关内容见 `运放设计注意` 一节。**
 
-括号内为最廉价运放的典型值。
+括号内为最廉价运放的典型值，即不是各种具有特殊特性运放的参数值，比如主打低噪声的运放、主打低功耗的运放、主打性价比的运放等等。
 
 - 输入、输出电压范围（供电是否必须双电源，输出是否轨到轨），带宽/摆率/电压转换速率（SR，0.5V/us），开环差模增益（Aod，100dB）/频率响应/伯德图/频带宽（-3dB的频率，0.5~2MHz），放大倍数温漂。
+
 - 差模输入阻抗（Rid，大于2MΩ），共模输入阻抗，共模抑制比（KCMR，大于80dB）。
+
 - 输入失调电压（Uio，小于2mV），输入失调电流（Iio，0.2~2uA），输入偏置电流（Iib，0.3~7uA），它们的温漂。
+
 - 功耗（80mW）。
 
-较全面的一文 [硬件-TI-OPA - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/255182475)。
+- 补充：[【一张图概括】运放关键参数 (qq.com)](https://mp.weixin.qq.com/s/7WGnggbIuSaEcw7xOBYgbw)。
+
+  ![图片](assets/运放关键参数.png)
+
+- 较全面的一文 [硬件-TI-OPA - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/255182475)。
+
 
 ### ADC
 
@@ -283,7 +309,7 @@
 
 ### 电源
 
-更多设计相关内容见`电源规范设计`一节。
+**更多设计相关内容见 `电源规范设计` 一节。**
 
 - 确定入、出的压、流范围，纹波，温度特性。
 - 电源设计四要素（设计一个好电源，打好整板的 “地基”）：
@@ -443,20 +469,20 @@
 
 up 北冥有鱼qzs 的 总结：[【汇总】都有哪些免费下载PCB封装的网站或者软件（一）_ 哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1CR4y1x7Rz)。
 
-> - https://www.szlcsc.com/
-> - https://componentsearchengine.com/
-> - https://www.snapeda.com/home/
-> - https://www.pcblibraries.com/
-> - https://www.ultralibrarian.com/
+> - https://www.szlcsc.com/。
+> - https://componentsearchengine.com/。
+> - https://www.snapeda.com/home/。
+> - https://www.pcblibraries.com/。
+> - https://www.ultralibrarian.com/。
 > 
-> Altium 官方：https://mp.weixin.qq.com/s/U5_yQ3ezFTjMD5twE8RMkA
+> Altium 官方：https://mp.weixin.qq.com/s/U5_yQ3ezFTjMD5twE8RMkA。
 > 
-> 凡亿PCB：www.iclib.com 
+> 凡亿PCB：www.iclib.com 。
 > 
 > 3D封装:
 > 
-> - https://www.traceparts.com/zh
-> - https://www.3dcontentcentral.cn/Default.aspx
+> - https://www.traceparts.com/zh。
+> - https://www.3dcontentcentral.cn/Default.aspx。
 
 ## 2 SCH 绘制规范和 AD 使用
 
@@ -532,7 +558,7 @@ up 北冥有鱼qzs 的 总结：[【汇总】都有哪些免费下载PCB封装�
 
 7. 型号名补全，查看器件手册的发货信息（Order information），确定具体的封装、温度范围和功能等的一个器件型号全名，在原理图的器件中写清，方便导出 BOM 表和采购。
 
-8. 原理图中元件标识的规范，供参考，不是必须。如下图，电阻原理图的左上角、右上角、左下角和右下角以此标识 Designator、Comment（一般为阻值）、封装和精度，对于电容类似，对于电感要有饱和电流标识，其他器件同理。
+8. 原理图中元件标识的规范，供参考，不是必须。如下图（引自野火），电阻原理图的左上角、右上角、左下角和右下角以此标识 Designator、Comment（一般为阻值）、封装和精度，对于电容类似，对于电感要有饱和电流标识，其他器件同理。
    
    ![原理图中元件标识的规范](assets/原理图中元件标识的规范.png)
    
@@ -540,14 +566,30 @@ up 北冥有鱼qzs 的 总结：[【汇总】都有哪些免费下载PCB封装�
    
    ![原理图中元件标识的规范2](assets/原理图中元件标识的规范2.png)
 
-9. 网络标识的命名规范，基于 "器件名（或器件类型） _ IO性质（数字还是ADC） _ IO名（管脚名）"。中间常用于 MCU 的网络命名，其他非 MCU 器件非必须。例如，"MCU _  IO _ KEY1"、"TPS5450 _ SW"、"DRV _ EN _ BUCK  "等，如下图示意。
+9. 网络标识的命名规范。MCU/FPGA/SOC 芯片的GPIO引脚网络标号规范（特定功能引脚就直接标其功能名称即可，这里是针对繁杂GPIO网络标号的规范），这里只自己经验之谈：
    
-   ![网络标识的命名规范 示意](assets/网络标识的命名规范-示意.png)
+   - MCU：先标所有功能引脚比如电源、复位、BOOT、JTAG、USB、串行通讯口（UART、I2C、SPI、I2S 等等）、网口 等等，最后剩下的用做 GPIO，标法如下：
 
+     `<mcu型号简称>_<外设英文大写缩写>_<外设的具体引脚名称 或者 功能>`，比如：
+   
+     `STM32F4_TIMER1_PWM1`、`STM32F1_ADC_PA1`、`STM8S_GPIO_PA6`。
+   
+     实例（这里的尾缀就不加芯片 IO 的编号了）：基于 `器件名（或器件类型）_IO性质（数字还是ADC）_IO名（管脚名）`。常用于 MCU 的网络命名，其他非 MCU 器件非必须。例如，`MCU_IO_KEY1`、`MCU_IO_TPS5450_EN`、`DRV_EN_BUCK` 等，如下图示意，并且一组的 IO 旁边用黑色竖线括起来，用大括号图形括住最好。
+   
+     ![网络标识的命名规范 示意](assets/网络标识的命名规范-示意.png)
+   
+   - FPGA：先标所有功能引脚比如电源、JTAG、PCIe 等等，然后剩下的用作 GPIO 的引脚，都按照序号顺序，在 FPGA 芯片上由上到下由左到右按顺序标，即可，即 `IO1、IO2...` 等等这样，要在这些分组的 IO 旁边写上它的 IO 电压。
+   
+     当 FPGA 芯片用作核心板的时候，为了布线方便可以在插接件上不按标号顺序，这样在查找 IO 的时候，只要确定了其编号就可以在芯片的原理图上直接找到它连接的 FPGA 引脚和它周围按顺序标号的引脚。
+   
+     但是如果 FPGA 芯片是在一个大板子上，那么为了布线方便，就不得不在芯片原理图上调整标号的顺序了。
+   
+   - SOC：与 MCU 的大同小异。
+   
 10. 一些注意点：
     
     - 原理图中添加 线组（Net Class）和 差分对（Diff Pair）（尽量在原理图中将线分组完成，而不是在 PCB 中手动挨个添加，因为从原理图更新 PCB 时原来在 PCB 单独添加的线组会被清除），并在原理图中对电源线线宽规则、数据线线宽规则和差分线对均设置完成。原理图绘制完毕后要紧接着添加 线组（Net Class）、差分对（Diff Pair）和其它如电源线等单独添加规则，这些都尽量在 SCH 中完成（尽量不要在 PCB 界面中另设置，PCB 界面中只专注与画 PCB），方法详看 “SCH 线组和差分对设置” 一节。针对线宽的规则可以做依不同 线组（Net Class）设置不同线宽规则（Parameter Set 添加到线或 Blanket 上，并在其内添加 Rules，在 Rules 界面的左下角设置优先级（手动布线时低优先级不起作用））；针对高速线的规则要依 线组（Net Class）单独设置规则，详见下面的 "等长线/蛇形线设计" 小节；针对差分线要设置 差分对（Diff Pair）规则，详见下面的 “差分走线设计” 小节。
-    - 对于带有总线或差分线对的数据输入\输出的模块，都在模块内 对其 数据输出处添加 线组（Net Class）和 差分对（Diff Pair），这样保证各个 模块 连起来时候可以相互兼容。差分线对的阻抗匹配 可以依靠 PCB 上走线时的 线宽和线距的 测算和设置，也要在原理图中 分别串个小电阻，以方便后期拿到实物可以再 改电阻 来对线路的 阻抗 进行微调。
+    - 对于带有 总线或差分线对 的 数据输入\ 输出的 模块，都在模块内 对其 数据输出处添加 线组（Net Class）和 差分对（Diff Pair），这样保证各个 模块 连起来时候可以相互兼容。差分线对的阻抗匹配 可以依靠 PCB 上走线时的 线宽和线距的 测算和设置，也要在原理图中 分别串个小电阻，以方便后期拿到实物可以再 改电阻 来对线路的 阻抗 进行微调。
     - 对于电源模块，总是在输出处添加足够的 X5R/X7R 贴片陶瓷电容（可选：贴片固态电解电容 和 功率共模电感）和 TVS 管，输入处的滤波添加足，但是保护环节如 TVS 管为可选。在每个电源模块的输出处添加足够的滤波和保护，连起来的时候可以相互兼容，也不浪费。详参 “保护机制” 和 “EMC 电磁兼容设计” 等小节。
     - 对于有极性的器件（DIO、BJT、MOS、有极性电容等）要在原理图中露出器件引脚的数字号，并仔仔细细检查引脚是否均正确（在器件的  Component 窗口左下角 Pins 里面对引脚编号打对勾表示显示出来，在 PCB Model 里面的 Pin Map.. 里面可以交换引脚直到正确）。
 
@@ -559,7 +601,7 @@ up 北冥有鱼qzs 的 总结：[【汇总】都有哪些免费下载PCB封装�
 
 14. 原理图中一些器件 尤其是接口件，旁边放上实物图，图片设置为内嵌型。可以通过 “放置” 来导入图片到原理图内，也可以从 剪切板 直接复制出来（比如截图后复制、word/excel/ppt 里面直接复制 等等）。
 
-15. 可以用画框图的工具（draw.io/visio/Xmind 等等）画 该电路的 电源树图，并标出 每一路/电源轨 的最大电流，放在原理图内。
+15. 可以用画框图的工具（draw.io/visio/Xmind 等等）画 该电路的 电源树图（同时也可以是电路框图），并标出 每一路/电源轨 的最大电流，放在原理图内。
 
 **注意！**更多常用技巧总结在 “4 SCH-PCB 设计规范” 章节里。
 
@@ -603,9 +645,9 @@ up 北冥有鱼qzs 的 总结：[【汇总】都有哪些免费下载PCB封装�
 
 1. 先定义PCB规则。点开“设计”->“规则”，主要设置线宽范围，元件最小间距，焊盘的开窗范围，默认过孔尺寸，覆铜类型为直接连接等。
 
-   过孔尺寸：焊盘比孔至少大6mil。例如最小孔直径为12mil（0.305mm），焊盘直径至少18mil。
+   过孔尺寸：焊盘比孔至少大6mil。例如最小孔直径为12mil（0.305mm），焊盘直径至少18mil。更多 PCB 生产 工艺 参数 看 本节后面 “打板” 一段。
 
-   本规范已经有 AD 的 PCB 的 规则（Rule）模板，新建 PCB 文件后导入即可，在 PCB 文件中导入 AD20 的 PCB Rules 规则配置文件，参考 "7 AD 导入导出配置文件" 章节（AD的 PCB规则（Rule），最主要的几个就是按照 PCB 厂家的最小加工能力来改参数，比如[嘉立创PCB工艺加工能力范围说明-嘉立创PCB打样专业工厂-线路板打样 (jlc.com)](https://www.jlc.com/portal/vtechnology.html)））。
+   本规范已经有 AD 的 PCB 的 规则（Rule）模板，就是按照 上面的 工艺参数 来的，新建 PCB 文件后导入即可，在 PCB 文件中导入 AD20 的 PCB Rules 规则配置文件，参考 "7 AD 导入导出配置文件" 章节（AD的 PCB规则（Rule），最主要的几个就是按照 PCB 厂家的最小加工能力来改参数，比如 [嘉立创PCB工艺加工能力范围说明-嘉立创PCB打样专业工厂-线路板打样 (jlc.com)](https://www.jlc.com/portal/vtechnology.html)））。
 
 2. 确定板尺寸，划定板形。在 Keep-out Layer 层绘制板边界闭合线，然后执行“设计”->“板子形状”->“按照选择对象定义”。
 
@@ -625,7 +667,7 @@ up 北冥有鱼qzs 的 总结：[【汇总】都有哪些免费下载PCB封装�
 
 6. 多层板（多于 2 层的偶数层）。
 
-   - 在 PCB 里连按快捷键“D”、“K”调出层叠管理，或者在“设计”里面找“叠层管理”，或者空白处右击，“选项”里的“层叠管理”。
+   - 在 PCB 里连按快捷键 “D”、“K” 调出层叠管理，或者在“设计”里面找“叠层管理”，或者空白处右击，“选项”里的“层叠管理”。
    - 多层板的推荐板层分布图在“PCB 布局布线规范”章节里。
    - 注意内电层在拼板的时候网络会丢失，暂时没有简便的办法。有内电层在需要拼板的时候，建议这样处理：先把PCB文件直接复制一个，命名为“xxx_不含内电层版.PcbDoc”，然后打开此文件，执行以下步骤：
      1. 先把内电层的分割线都删掉，然后 D K 快捷键调出板层管理，把内电层（负片层）删掉，换为普通层（正片层）。
@@ -668,18 +710,27 @@ up 北冥有鱼qzs 的 总结：[【汇总】都有哪些免费下载PCB封装�
    - 关键信号、模拟信号、高频线等等尽量用曲线走线（另外，曲线也蛮好看的），尽量采用菊花链拓扑形式连接而不是总分式；其它的数字低频电路避免直角、锐角、环形、电压/流快速变化的线（尽量短、避免环形）可不用曲线快速地走完。尽量避免信号线形成环路、尽量使环路面积小。
    - 过孔尽量避免在焊盘、丝印上面（酌情考虑，不是必须）。
 
-   AD 10 的等长线/蛇形线设计：
-
-   - 画法参考文档`./PCB LOGO-画法集合-PCB工具-规则文件/AD10教程/AD10 蛇形等长线的画法和规则设定.pdf`；
-   - 先走好线，然后等长线都加到一个网络，按T R，选择最长线确定，移动鼠标拖蛇形线。
-   - 快捷键：“1、2” 改弧度，“3、4” 改间距，“，、。” 改绕长，在左下角导航选 “PCB” 窗口，可见加入网络的要等长的线及其各自的长度。
-
-   多跟线一块走：先选中多跟线，点 “交互式布多跟线”，再点任一个线，就并排走了。
-
-   更多布线规则请参考 “4 PCB 布局布线规范” 章节的内容。
+   
 
    - 检查布线完成情况：工具栏 "Report"，"Board information"，勾上 "Routing information"，点 "Report"，新页面中查看布线的完成情况。如果还差最后几根不容易发现的线，在 PCB 页面中以 shitf + s 显示单独层来查看未连接的线。
    - 查看 有多少个 pin：原理图界面，找到 tools 下面的 parameter manager，只选择 pins 选项，点确定即可查看有多少个（以 xxx objects 显示数量）。
+
+   
+
+   - 检查不要超过PCB加工工艺指标，重点在 线距（JLC为 0.1mm，尤其是蛇形线容易超）、线宽（5mil 以上）、过孔直径和孔焊盘直径（8/16mil 以上）、丝印层字符大小（60mil 以上）等等。
+
+   
+
+   更多布线规则请参考 “4 PCB 布局布线规范” 章节的内容。
+
+   
+
+   AD 10 的等长线/蛇形线设计：
+
+   - 画法参考文档 `./PCB LOGO-画法集合-PCB工具-规则文件/AD10教程/AD10 蛇形等长线的画法和规则设定.pdf`；
+   - 先走好线，然后等长线都加到一个网络，按T R，选择最长线确定，移动鼠标拖蛇形线。
+   - 快捷键：“1、2” 改弧度，“3、4” 改间距，“，、。” 改绕长，在左下角导航选 “PCB” 窗口，可见加入网络的要等长的线及其各自的长度。
+   - 多跟线一块走：先选中多跟线，点 “交互式布多跟线”，再点任一个线，就并排走了。
 
 10. 后续工作和润色。
 
@@ -701,7 +752,7 @@ up 北冥有鱼qzs 的 总结：[【汇总】都有哪些免费下载PCB封装�
 
     - 覆铜 & 打过地缝合过孔一条龙：
 
-      1. 覆铜。原理图和器件布局时候按照“地”的划分而讲究，覆铜也按照这个讲究来讲究。每一块覆铜之间间隔在 2mm 以上，尤其是高压和低压区域的覆铜（可以先设置不用 自动删除 孤铜，等后面打完过地缝合孔、确保所有地线都连接完毕、每个模块良好接地之后，再全部选择设置自动删除孤铜再全部重复覆铜一遍即可）。
+      1. 覆铜。原理图和器件布局时候按照“地”的划分而讲究，覆铜也按照这个讲究来讲究。每一块覆铜之间间隔在 2mm 以上，尤其是高压和低压区域的覆铜（可以先设置不用 自动删除 孤铜，等后面打完过地缝合孔、确保所有地线都连接完毕、每个模块良好接地之后，再全部选择设置自动删除孤铜（勾选 remove dead copper）再全部重复覆铜一遍即可；为了放置覆铜出现小细区域，可以设置 remove necks less than 为 10mil）。
 
          覆铜可以在规则里单独设置与其它网络的间距大小，一般比布线时候设的间距大小要大（比如布线的间距为 6mil，而覆铜要设为 12mil/20mil 等，大一些），方法：[Altium Designer 规则设置Advance(Query)的使用_【ql君】qlexcel的博客-CSDN博客_ad custom query](https://blog.csdn.net/qlexcel/article/details/78910878)。
 
@@ -709,26 +760,64 @@ up 北冥有鱼qzs 的 总结：[【汇总】都有哪些免费下载PCB封装�
 
       3. 打完过地缝合孔、确保所有地线都连接完毕、每个模块良好接地之后，再选择全部覆铜再设置自动删除孤铜再全部重复覆铜一遍即可。对于覆铜，确保不出现较大的（超过 150mil）死铜、孤铜。覆铜不要有尖端或者细支延申或者存在于焊盘之间的覆铜的细线，可以在要去掉尖端的地方放置多边形占着地方，然后重新更新一下覆铜，尖端的地方就没有了；可以使用 Pour Cutout 画不覆铜的区域，对于高速线/差分线/敏感信号线、高低压区域之间、需要更大间相互距的区域 可以画上 Pour Cutout 表示这里覆铜不要覆盖。敷铜不要有尖锐的边角，四周要圆润。
 
-11. 工艺边
+11. PCB 画好后，最后执行 DRC 检查！剩余走线、距离过近、过孔的孔径均合适并且孔径一致，等等这些均无错。
 
-    工艺边是为了满足自动化贴片的需要而增加的辅助部分，生产完成之后会被移除，一般设计为 5mm。
-
-    - 定位孔: 用于 PCB 加工和测试时的定位，一般设计为 2mm 的过孔。
-    - Mark 点: 用于自动化贴片机进行识别定位，通常设计为 1mm 的焊盘。
-
-12. PCB 画好后，最后执行 DRC 检查！剩余走线、距离过近、过孔的孔径均合适并且孔径一致，等等这些均无错。
-
-13. 拼板。
+12. 拼板。
 
     1. 新建一个PCB，选择“放置”->“内嵌板阵列”或者拼板之类的（不同版本名字不同），选择要拼板的源文件、更改阵列参数和更改间距参数等即可。
     2. 两板的连接处中间加两排或者一排过孔（邮票孔：一般0.8mm大小的非金属化过孔，间距1.1mm，五个为宜），拿到后可直接掰开，掰开后再处理平滑一下边缘，而省去切割；应该注意便于板掰开的过孔要足够多，不用吝啬，如果寥寥几个过孔的话掰开仍然很困难。
     3. 或者用粘贴的方法。把要拼的板子的PCB文件复制一份，打开新复制的文件，全选并复制，原点要在最左下角，然后点特殊粘贴，只勾选“duplicate designator”（如果勾选“Keep Net Name”，那么多个板同名线会显示未连接），然后点“粘贴”或者“矩阵粘贴”，然后选不进行重新覆铜即可。
 
-14. （简单地）写一个 “调试说明” 文档。PCB 完成之后 即硬件设计工作基本完成，但在拿到 实物板子之前 还有一段时间，如果板子比较复杂、调试/测试的接口和点位比较多，那么应该趁热打铁 将在设计过程中的 留给调试/测试/使用 时候的东西 和 第一次调试的流程 等等 都做一个记录。
+13. （简单地）写一个 “调试说明” 文档。PCB 完成之后 即硬件设计工作基本完成，但在拿到 实物板子之前 还有一段时间，如果板子比较复杂、调试/测试的接口和点位比较多，那么应该趁热打铁 将在设计过程中的 留给调试/测试/使用 时候的东西 和 第一次调试的流程 等等 都做一个记录。
 
     写 第一次上电测试的流程。一般，最开始，应该将电源与后续的电路隔离开（预留的 通过 0R电阻、排针+跳线帽、电子开关 等等方式），先测试电源的性能（电源指标见 `1 最基本的设计理念和器件选型` 里的 `电源` 一节），电源好使/不错/达标之后再考虑测试后面电路。电源后面的电路也应该按照模块、区域来逐个测试，比如 低压/高压、小功率/大功率、处理器部分/外设部分 等等分开单独测试。均正常后 才敢 全部联通，进行整板测试。
 
     比如对于我的 通用电源模块 的测试是这么写的：`通用电源模块的测试：断开各个电源轨与后面电路的连接，上电，各个电压均正常，使能端可以控制，测空载纹波；每一个电压挨个加负载并看纹波，并记录不同负载下的峰峰值，从轻负载到额定负载；测保护功能`。
+
+14. 打板。
+
+    1. PCB 生成厂家 的工艺参数，[以嘉立创为例](https://www.jlc.com/portal/vtechnology.html)：
+
+       最小过孔/焊盘：单双面板：0.3mm(内径)/0.5mm(外径)；多层板：0.2mm(内径)/0.3mm(外径)。换成 mil 单位即：双面板 12mil/18mil（过孔内径/过孔焊盘外径） 和 多层板 8mil/16mil。
+
+       最小线宽/线隙（1OZ）：单双面板：0.127/0.127mm(5mil/5mil)；多层板：0.09/0.09mm(3.5mil/3.5mil)。
+
+       焊盘边到线边间距：≧0.127mm(极限值)，尽量大于此参数。换成 mil 单位 即 尽量 6mil 以上。
+
+       字符高度：≧1mm（特殊字体，中文，掏空字符视情况需更高）。
+
+       字符粗细：≧0.15mm（低于此值可能印不出来）。
+
+       
+
+       本规范已经有 AD 的 PCB 的 规则（Rule）模板，就是按照 上面的 工艺参数 来的，新建 PCB 文件后导入即可，在 PCB 文件中导入 AD20 的 PCB Rules 规则配置文件，参考 "7 AD 导入导出配置文件" 章节（AD的 PCB规则（Rule），最主要的几个就是按照 PCB 厂家的最小加工能力来改参数。
+
+    2. PCB 打板下单 时候 最基本 / 最普遍的普通（便宜的） 工艺，[以嘉立创为例](https://www.jlc.com/newOrder/#/pcb/pcbPlaceOrder)，[下单前技术员必看 (jlc.com)](https://www.jlc.com/portal/server_guide_112.html)：
+
+       板子尺寸，长x宽：10cm x 10cm 以内。
+
+       板子数量：5。
+
+       板子层数：2/4/6，等等。
+
+       板子厚度：1.6mm。
+
+       外层铜厚：1盎司（oz.），铜厚、线宽、孔径 与 电流能力 关系 看下面 “4 SCH-PCB 设计规范” 第一节 “幼稚园级” 里面。
+
+       阻焊颜色：绿色，其他颜色在焊接、上助焊剂时候可能有掉阻焊、露出铜皮的问题，还是绿色最普遍、阻焊能力比较强。
+
+       过孔盖油，一般都选择盖油，除非是调试需求才所有过孔开窗。
+
+       多层板需要格外注意层压结构，阻抗匹配 与 内层铜厚等参数 相关，需要比较专业（本人不是硬件专业，不要迷信本文），一般按照 工程里面的 层压结构。
+
+    3. 工艺边。
+
+       工艺边是为了满足自动化贴片的需要而增加的辅助部分，生产完成之后会被移除，一般设计为 5mm。
+
+       一般 SMT 时候会用到 工艺边 用于 固定板子和定位，这个一般 SMT 厂家会帮助去做。
+
+       - 定位孔: 用于 PCB 加工和测试时的定位，一般设计为 2mm 的过孔。
+       - Mark 点: 用于自动化贴片机进行识别定位，通常设计为 1mm 的焊盘。
 
 15. PCB 实物拿到之后。
 
@@ -963,6 +1052,21 @@ PCB 效果：
 
 差分线具有抗干扰能力强、信噪比高、辐射小和带宽容量大等优点，常用于高速链路设计。更多 信号完整性（SI）基本概念说明可见 “信号完整性（SI）分析” 一节。
 
+**阻抗匹配概念简单入门**
+
+- [技术指导：阻抗设计说明 (jlc.com)](https://www.jlc.com/portal/server_guide_38565.html)。
+- [PCB板画废了，才知道阻抗设计这么重要！ (qq.com)](https://mp.weixin.qq.com/s/DWc3dFyCAzR6rfw0BeHRfg)。
+
+阻抗匹配是差分线对的输出端、传输路径 和 接收端 三个位置的 阻抗 均相同，从而不会产生信号的反射。“信号源内阻与所接传输线的特性阻抗大小相等且相位相同，或传输线的特性阻抗与所接负载阻抗的大小相等且相位相同，分别称为传输线的输入端或输出端处于阻抗匹配状态，简称为阻抗匹配（引自百度百科）”。
+
+- 如果差分线对的两根线不等长会怎么样：[高速 PCB 蛇形线，等长线，差分对是咋回事，我们再做个实验_ 哔哩哔哩 _bilibili](https://www.bilibili.com/video/BV1Vr4y1w75S)。
+- 如果差分线对的阻抗不一致会怎样：[做个实验告诉你高速PCB为什么要阻抗匹配_ 哔哩哔哩 _bilibili](https://www.bilibili.com/video/BV1hi4y1j7zX)。
+- 更具体的差分线阻抗匹配原理介绍 [lvds匹配阻抗 (360doc.com)](http://www.360doc.com/content/22/0419/09/348183_1027204430.shtml)。
+
+**常见信号的阻抗需求**
+
+做阻抗匹配通常为单端阻抗和差分阻抗，前者如 天线 RF（50Ω）、SDIO（50Ω），后者如下：
+
 常见差分线的阻抗：
 
 - 一般的高频差分信号线均为 85 欧姆 ~ 100 欧姆。
@@ -975,13 +1079,9 @@ PCB 效果：
 - RS422、RS485、CAN 差分信号的差分阻抗为 120 欧姆，一般在终端并联 120Ω 匹配电阻。
 - 视频信号线 主要是 75 欧姆。
 
-阻抗匹配概念简单入门：[PCB板画废了，才知道阻抗设计这么重要！ (qq.com)](https://mp.weixin.qq.com/s/DWc3dFyCAzR6rfw0BeHRfg)。阻抗匹配是差分线对的输出端、传输路径 和 接收端 三个位置的 阻抗 均相同，从而不会产生信号的反射。“信号源内阻与所接传输线的特性阻抗大小相等且相位相同，或传输线的特性阻抗与所接负载阻抗的大小相等且相位相同，分别称为传输线的输入端或输出端处于阻抗匹配状态，简称为阻抗匹配（引自百度百科）”。
+**AD 中添加和设置差分线对**
 
-- 如果差分线对的两根线不等长会怎么样：[高速 PCB 蛇形线，等长线，差分对是咋回事，我们再做个实验_ 哔哩哔哩 _bilibili](https://www.bilibili.com/video/BV1Vr4y1w75S)。
-- 如果差分线对的阻抗不一致会怎样：[做个实验告诉你高速PCB为什么要阻抗匹配_ 哔哩哔哩 _bilibili](https://www.bilibili.com/video/BV1hi4y1j7zX)。
-- 更具体的差分线阻抗匹配原理介绍 [lvds匹配阻抗 (360doc.com)](http://www.360doc.com/content/22/0419/09/348183_1027204430.shtml)。
-
-AD 中添加和设置差分线对：输入端和输出端的阻抗从 原理图的电路和IC选型上就能定好，传输过程的阻抗调节有两种方法，设置差分线对的 线宽 和 线距 来产生一定的阻抗，或者差分线对 分别 串联 电阻 进行后期的调整。在 PCB 上走差分线对 需要先 严格的 测算和设置 线宽 和 线距 等，以达到目标阻抗。实际中，若在调试阶段，除了走计算好的差分线之外，还应该添加上 阻容感 元件 的位置用于后期调试的阻抗调整。首先要原理图中添加差分线对：步骤详看“AD 20 快捷键 & 绘制技巧” 小节里面的 “SCH 中” 部分的 “添加差分线对” 部分！
+输入端和输出端的阻抗从 原理图的电路和IC选型上就能定好，传输过程的阻抗调节有两种方法，设置差分线对的 线宽 和 线距 来产生一定的阻抗，或者差分线对 分别 串联 电阻 进行后期的调整。在 PCB 上走差分线对 需要先 严格的 测算和设置 线宽 和 线距 等，以达到目标阻抗。实际中，若在调试阶段，除了走计算好的差分线之外，还应该添加上 阻容感 元件 的位置用于后期调试的阻抗调整。首先要原理图中添加差分线对：步骤详看“AD 20 快捷键 & 绘制技巧” 小节里面的 “SCH 中” 部分的 “添加差分线对” 部分！
 
 #### 阻抗计算软件
 
@@ -1005,11 +1105,15 @@ AD 中添加和设置差分线对：输入端和输出端的阻抗从 原理图�
 
 这里的步骤以 嘉立创 提供的计算工具和下单助手提供的阻抗生产选项为准。下面以 USB 差分走线（阻抗一般为 90 Ω）为例。
 
-1. 嘉立创提供的阻抗计算工具；
+1. 嘉立创提供的阻抗计算工具。
+   
+   网页版：[嘉立创阻抗计算 (jlc.com)](https://tools.jlc.com/jlcTools/index.html#/impedanceCalculatenew)。
+
+   手机上：下图。
    
    <img src="assets/嘉立创-阻抗计算.png" alt="嘉立创 阻抗计算" style="zoom: 67%;" />
-
-2. 嘉立创下单助手的 工艺信息 一栏选择 "需要阻抗"，并选择层压结构（一般为第一个 JLC7628）；
+   
+2. 嘉立创下单助手的 工艺信息 一栏选择 "需要阻抗"，并选择层压结构（一般为第一个 JLC7628）。
    
    ![嘉立创 层压结构](assets/嘉立创-层压结构.png)
 
@@ -1037,7 +1141,10 @@ AD 中添加和设置差分线对：输入端和输出端的阻抗从 原理图�
 3. PCB 界面 工具栏 选择 Interactively Tune Trace Lengths 工具，从最短的线开始画线进行等长变化的区域；鼠标开始拉蛇形线的时候，按下 TAB 键，打开属性窗口选择 本线组中最长的那根线，然后继续拉线，这样当等长的时候鼠标继续拉蛇形线也不会继续增加长度了。
 4. 快捷键：“1、2”改弧度，“3、4”改间距，“，、。”改绕长，在左下角导航选 “PCB” 窗口，可见加入网络的要等长的线及其各自的长度；走线等长变化的区域可以调整，直接对等长变化区域选中的矩形框的四周拖拽，改变等长区域；删除等长，直接选中线的等长变化区域再按 del。
 
-查看信号的等长，而不是线的等长：等长需要在 Xsignals 里面看，因为 NET 里面的等长是没算串阻的距离或者是把到ESD器件的距离算进去了，是不准确的。如下图所示：
+其它重要注意：
+
+- 线距不要超过PCB加工工艺指标，JLC 是 0.1mm，蛇形线有时候空间小会很密容易超。
+- 查看信号的等长，而不是线的等长：等长需要在 Xsignals 里面看，因为 NET 里面的等长是没算串阻的距离或者是把到ESD器件的距离算进去了，是不准确的。如下图所示：
 
 ![Xsignals中查看等长](assets/Xsignals中查看等长.bmp)
 
@@ -1049,18 +1156,18 @@ AD 中添加和设置差分线对：输入端和输出端的阻抗从 原理图�
 
 1. PCB 界面的右下角 Panels -> PCB ActiveRoute。
 2. 按住 Alt 并按住鼠标左键从右向左拖动 选择 全部要 ActiveRouting 的线。
-3. 选择在哪层布线，在 PCB ActiveRoute 窗口中的 Layers 区域选。
+3. 选择在哪层布线，在 PCB ActiveRoute 窗口中的 Layers 区域选。如果线要走不同层，需要两个引脚端分别手动打好过孔，这里不会自动打过孔。
 4. 绘制布线 区域规划，在 PCB ActiveRoute 窗口中 Action 区域点击 Route Guide 按钮，然后在 PCB 里面 画 走线区域，键盘上 上下箭头按键 调节区域宽度。
 5. 执行 ActiveRoute 命令，在 PCB ActiveRoute 窗口中 Action 区域点击 ActiveRoute 按钮，执行 ActiveRoute 布线命令，软件左下角进度条 显示执行进度。
 6. 可以自动进行等长线、和差分线的走线，用时学即可，网上教程很多，这里不重复。
 
 ### PCB 添加 LOGO 图案
 
-两个方法（[PCB个性logo设计-面包板社区 (eet-china.com)](https://www.eet-china.com/mp/a103267.html)），第二种和第三种精度高，但第三种操作最方便且通用（你看，口水话几乎没有）。
+下面给出 3 + 1 方法，第二种和第三种精度高，但第三种操作最方便且通用（你看，本文就是这么干货，口水话几乎没有）。
 
 1. PCB Logo Creator 生成丝印图案的方法，具体教程 pdf 和所需软件在 `./PCB LOGO-画法集合-PCB工具-规则文件/创建-收集 PCB Logo 图形/PCB Logo Creator 生成丝印图案的方法.zip` 里面。
-2. LOGO 字体 添加 PCB 图案的方法，具体教程和所需软件在 `./PCB LOGO-画法集合-PCB工具-规则文件/创建-收集 PCB Logo 图形/LOGO 字体 添加 PCB 图案的方法.zip` 。[AD20 添加字体logo 视频教程 - 北冥有鱼](https://www.bilibili.com/video/BV1kC4y1a7bM)。
-3. 新版 AD 直接在 PCB 里导入 图形即可，[AD21如何快速添加LOGO_ 哔哩哔哩_bilibili](https://www.bilibili.com/video/BV193411e7mW)。当前在哪个导入，就会是那个图层的图形，导入的时候选择多大的框就导入多大！
+2. LOGO 字体 添加 PCB 图案的方法，具体教程和所需软件在 `./PCB LOGO-画法集合-PCB工具-规则文件/创建-收集 PCB Logo 图形/LOGO 字体 添加 PCB 图案的方法.zip` 。[AD20 添加字体logo 视频教程 - 北冥有鱼](https://www.bilibili.com/video/BV1kC4y1a7bM)。[PCB个性logo设计-面包板社区 (eet-china.com)](https://www.eet-china.com/mp/a103267.html)。
+3. 新版 AD 直接在 PCB 里导入 图形即可，[AD21如何快速添加LOGO_ 哔哩哔哩_bilibili](https://www.bilibili.com/video/BV193411e7mW)。当前在哪个导入，就会是那个图层的图形，导入的时候选择多大的框就导入多大！推荐这种！
 4. 网友收集：
    1. [各种花活标志 - 立创EDA开源硬件平台 (oshwhub.com)](https://oshwhub.com/PROREEDS/ge-zhong-hua-huo-biao-zhi)，在 立创 EDA 打开此工程 然后导出 AD 格式 的 PCB 即可，最新离线在 文件夹 `./PCB LOGO-画法集合-PCB工具-规则文件\创建-收集 PCB Logo 图形\各种花活标志/` 里。
    2. etc.
@@ -1122,7 +1229,7 @@ AD 中添加和设置差分线对：输入端和输出端的阻抗从 原理图�
 
 ### 幼稚园级
 
-1. 首要参考 “最基本的 PCB 绘制过程” 小节中的 6 多层板、7 布局、8 布线 部分！
+1. 首要参考 “最基本的 PCB 绘制过程” 小节中的 “多层板”、“布局”、“布线” 等部分！
 
 2. 走线没有锐角和直角拐弯（包括信号线和电源线）；可以走 T 型线，但其直角转角要做缓和的圆角过渡处理。
 
@@ -1327,9 +1434,9 @@ AD 中添加和设置差分线对：输入端和输出端的阻抗从 原理图�
 #### 运放设计注意
 
 - 运放定性和定量分析，熟练模电书！另外可以看 [【手撕运放】运放的“第一原理”式定量分析法 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/438051082) / [【直达本质讲运放】运放的“第一原理”式定量分析法_Real-Staok的博客-CSDN博客](https://blog.csdn.net/Staokgo/article/details/122010699)。
-  
-- 运放选型。运放基本参数 详见 “1 最基本的设计理念和器件选型” 一节的 “运放” 小节（去看一下，里面说的参数选择比较全面，光靠记忆不太中）。
-  
+
+- 运放选型。熟知运放基本参数，详见 “1 最基本的设计理念和器件选型” 一节的 “运放” 小节（去看一下，里面说的参数选择比较全面，光靠记忆不太中）。
+
   > 下面引自 ADI 2021.12 线下专题讲座 某个 PPT。
   > 
   > <img src="assets/选运放.png" alt="选运放" style="zoom:67%;" />
@@ -1343,19 +1450,19 @@ AD 中添加和设置差分线对：输入端和输出端的阻抗从 原理图�
 - 防止输出信号失真：运放/放大电路 的 摆率/带宽 足够，不合适的放大倍数导致输出超过电源电压。
 
 - 电路设计注意点：
-  
+
   - 首先是线路尽量短，运放周围阻容等器件尽量靠近运放引脚。反馈路线尽量短防止形成天线效应容易发射电磁波和容易受到外部电磁环境干扰，输入端口的阻容尽量靠近运放引脚，因为其前一级器件作为能量提供端，其发射的信号经过阻容器件的阻抗作用会变弱，因此变弱后的信号应该经过尽量短的路线进入本运放。
-  
+
   - [仪表放大器的PCB布局-运放_ltqshs的博客-CSDN博客](https://blog.csdn.net/qq_21794157/article/details/123277502)。
-  
+
   - [想要提高差分放大器的共模抑制比，电阻的选择是关键！ (qq.com)](https://mp.weixin.qq.com/s/bkVpOepy-XiF1h9sEaYyUg)。
-  
+
     > 差分放大器电路中的电阻应仔细选择，其比值应相同 (R2/R1 = R4/R3)。这些比值有任何偏差都将导致不良的共模误差。
     
   - 运放应用要点：引自 [实例分析运放7大经典电路 (qq.com)](https://mp.weixin.qq.com/s/pYduzkeD61qXEIOaoBsYow)。
-  
+
     ![运放应用要点](assets/运放应用要点.png)
-  
+
   > 下面部分内容引自 [运放使用的注意事项 (qq.com)](https://mp.weixin.qq.com/s/PascwarLFo7kndlbt8vw0w)。
   > 
   > - 运放的输出和输入口上不要直接并电容，要先通过电阻再经过电容。
@@ -1365,9 +1472,9 @@ AD 中添加和设置差分线对：输入端和输出端的阻抗从 原理图�
   > 下面引自 ADI 2021.12 线下专题讲座 某个 PPT。
   > 
   > <img src="assets/处理运放自激振荡.png" alt="处理运放自激振荡" style="zoom:67%;" />
-  
+
 - 运放噪声问题：
-  
+
   > 下面引自 ADI 2021.12 线下专题讲座 某个 PPT。
   > 
   > <img src="assets/运放噪声计算.png" alt="运放噪声计算" style="zoom: 55%;" />
@@ -1404,16 +1511,30 @@ AD 中添加和设置差分线对：输入端和输出端的阻抗从 原理图�
   - [如何做一个不炸机的电源？ - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/119223784)。电源可靠性要点。
   - [如何减少PCB元器件的磁场辐射 - EMC/EMI设计 - 电子发烧友网 (elecfans.com)](https://www.elecfans.com/emc_emi/1163855.html)。减少电磁辐射。
   - [plla1981/PCB-Layout: 多层板的设计 (github.com)](https://github.com/plla1981/PCB-Layout)，这篇文章概述了叠层排布原则、布局原则、布线原则、阻抗设计、信号完整性、电源完整性、EMC设计、热设计、DFM设计 等内容，感谢分析。特别对电源的画法有很多实例说明。原文已经离线在本地 `额外文档\plla1981-PCB-Layout`。
+
 - EMC 环节，PCB Layout：
   - 参考 各种 EMC 标准电路，[protection-circuits/EMC 理论和设计要点 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/EMC 理论和设计要点)，其它保护电路也参考这个仓库里面的电路。
   - DCDC PCB Layout 经验。[一文将 DCDC 的 Layout 讲的明明白白 (qq.com)](https://mp.weixin.qq.com/s/hDT5qWXzD-droTiETXwQPQ)。输入环路和输出环路的面积要尽量小，心中有 DCDC 的开 和 关状态时的信号流向。
+
 - “合路” 环节，对于低压、小电流用两个二极管来选择即可，对于高压、大电流用第二类或第三类路径切换电路，[protection-circuits/掉电保护 简易自动切换电源轨 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/掉电保护 简易自动切换电源轨)。
+
 - 电源测量小贴士，10 个设计阶段：[10_Steps_Power_Supply_48C-60180-cn.pdf (tek.com)](https://download.tek.com/document/10_Steps_Power_Supply_48C-60180-cn.pdf)，文档离线在`\额外文档\10_Steps_Power_Supply_48C-60180-cn.pdf`里。泰克官方。
+
 - 电源噪声：[EEVblog #594 - 怎样测量电源纹波和噪声_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV15t411F76U)、[EEVBlog #1116 - 怎样消除电源纹波_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Gt411u7eR)。这篇文章 [【实用】看完这篇，轻松掌握开关电源纹波测量和抑制方法 (qq.com)](https://mp.weixin.qq.com/s?__biz=MzI4NTQ4NTA3NA==&mid=2247486962&idx=1&sn=48001cbfdaa8e92e939abe2c932cb1ec&chksm=ebea3c8fdc9db599c9e6b0ba26274dae8adc999f5bed574fd9ccb50e8f2234ffcbe7c20141fb&scene=0&ascene=7&devicetype=android-23&version=26060638&nettype=3gnet&abtest_cookie=BAABAAoACwASABMABAAjlx4AWZkeAGKZHgBtmR4AAAA%3D&lang=zh_CN&pass_ticket=BK2iBKubCk8sK6qJcWVmP87gLgblu8%2Bkqe1bucAW6oix4OJh3N5tw4OjP9nBjIVB&wx_header=1) 就是对前面两个视频的总结。
+
 - 阻尼震荡与振铃问题：[Buck的振铃实验与分析 (qq.com)](https://mp.weixin.qq.com/s/xj0gmkcpq5TplHRwkMHrCA)、[开关电源的阻尼振荡 (qq.com)](https://mp.weixin.qq.com/s/0n8xpQxZ8uDzwqaKPTruwg)。
+
 - 环路相关：
   - [电源-环路补偿的意义 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/255169832)。
   - [前馈电容是如何影响buck电路的输出特性的？ (qq.com)](https://mp.weixin.qq.com/s/Ia0-qRDyGThergkzwJJuiA)。反馈电阻的上电阻并联的前馈电容的作用的理论分析和经验参数。
+
+- 上电时序控制：
+
+  引自 [【一张图概括】上电时序控制 (qq.com)](https://mp.weixin.qq.com/s/tso8zMkPpFq5XCtltTu5-g)。
+
+  ![图片](assets/上电时序控制.png)
+
+- .etc
 
 #### "地"的类型 / 地平面分割
 
@@ -1814,6 +1935,7 @@ AD20 的教程（推荐使用，还包含自定义 BOM 表模板）：[AD20如�
 
 用时再学：
 
+- 嘉立创官方教程 [技术指导：Altium Designer输出Gerber文件步骤 (jlc.com)](https://www.jlc.com/portal/server_guide_10171.html)。
 - [【AD小教程】导出Gerber文件和钻孔文件_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1n4411L7c9)
 - [【完结】第26课 Altium Designer20(AD20)+VESC6.4实战教程：调整丝印输出Geber文件并投板（北冥有鱼）完结撒花_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1ea4y1Y7Mx)
 
@@ -1876,6 +1998,8 @@ B站等有很多教程视频，以下只经验之谈。
 
   <img src="assets/《PCB设计技术与实践》.jpg" alt="《PCB设计技术与实践》" style="zoom: 50%;" />
 
+- 《PCB电磁兼容技术——设计与实现》清华大学出版社出版。[PCB电磁兼容技术：设计实践_百度百科 (baidu.com)](https://baike.baidu.com/item/PCB电磁兼容技术：设计实践)，[PCB电磁兼容技术——实践设计 - 百度文库 (baidu.com)](https://wenku.baidu.com/view/f28d9d1f7075a417866fb84ae45c3b3567ecddbc.html)。网友推荐，不厚，干货多。
+
 - .etc
 
 ### 网络优秀参考
@@ -1885,6 +2009,8 @@ B站等有很多教程视频，以下只经验之谈。
 - [ 刀与沉默 - 知乎 (zhihu.com)](https://www.zhihu.com/people/dao-yu-chen-mo-36/posts)，这位的文章对 电源、EMC、运放等等等等总结的比较全面实在！
 
 - [你的产品怎样进行抗干扰设计? (qq.com)](https://mp.weixin.qq.com/s/2U5ga9O7FBnzuqJ8r2XjMQ)，这个已经补充到 “4 SCH-PCB 设计规范” 里面了。
+
+- [嘉立创PCB下单帮助文档-嘉立创PCB打样专业工厂-线路板打样 (jlc.com)](https://www.jlc.com/portal/serviceGuide/service_pcb/service_type_technology)，好总结，很多文章。
 
 - [PCB 基本布线规范与设计原则 by Hank](https://uinika.gitee.io/Electronics/PCB/)。
 
