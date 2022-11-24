@@ -111,6 +111,8 @@
 
 推荐：[硬件工程师技能树 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/254980338)。[HardwareDesign: 介绍硬件设计的一些内容 - Gitee.com](https://gitee.com/AndrewChu/hardware-design/tree/master)。走硬件岗的推荐把这个人总结的都深深研究研究！
 
+p.s 免得我这个文章误人子弟，我要反复提醒，本文只非硬件专业的我的长期、大量做硬件、踩坑的经验总结，想要专业搞硬件的，还需要经过相当专业的理论学习、软件使用和大量实践，每个好的硬件工程师都是大量实践（硬件、金钱）喂出来的！
+
 ### 设计原则
 
 分别严肃考虑以下几个方面：
@@ -149,7 +151,7 @@
 - 信号的缓冲和隔离。信号隔离（光耦隔离、磁隔离等）。电源隔离（通过变压器线圈在物理上隔离）。
 - 共阻抗地干扰抑制（高频）。
 
-上述保护电路更多细节内容可详看这个，非常实用的各类保护电路的总结： [Staok/protection-circuits: 对保护电路中的过流、过压、软起动、防反接、通讯和信号隔离、电平转换、防共地干扰、TVS瞬态抑制、共模抑制和电磁兼容做一个大总结 (github.com)](https://github.com/Staok/protection-circuits)。
+上述保护电路更多细节内容可详看这个，非常实用的各类保护电路的总结：Github [Staok/protection-circuits: 对保护电路中的过流、过压、软起动、防反接、通讯和信号隔离、电平转换、防共地干扰、TVS瞬态抑制、共模抑制和电磁兼容做一个大总结 (github.com)](https://github.com/Staok/protection-circuits)。Gitee [protection-circuits: 对保护电路中的过流、过压、软起动、防反接、通讯和信号隔离、电平转换、防共地干扰、TVS瞬态抑制、共模抑制和电磁兼容做一个大总结 (gitee.com)](https://gitee.com/staok/protection-circuits)。
 
 关于隔离：
 
@@ -182,10 +184,18 @@
 
 - **电容**：容值，耐压，材质（优先选：固态，铝聚合物，多层陶瓷电容（MLCC，也有叫“独石电容”）（优先选：NPO（温度稳定性很高，容值小，适合信号处理），X7R（容值范围大，适合电源滤波），X5R（容值可以很大，低压大容值滤波（47uf/100uf 的 6.3V等））），钽电容（大容量的钽电容耐压很低），X/Y安规电容（掉电后不存电，安全）），ESR（等效电阻，要低），纹波电流额定值（rated ripple current），温度特性，泄露电流，封装，寿命年限（一般 10 年就明显老化）。[一文看透MLCC，附原厂及代理商名单！ (sohu.com)](https://www.sohu.com/a/191244092_609521)。
   
-  电容 ESR 相关：[电容的ESR知识汇总（很全） (sohu.com)](https://www.sohu.com/a/219221986_819258)；ESR性能排序，从好到差：MLCC>聚合物铝电解电容(固态电容)>聚合物钽电解电容>钽电容>铝电解电容。
+  电容 ESR 相关，重要：
+  
+  - [关于电容的ESR参数，它是什么？为何重要？以及测量它的 N 种方法_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1AB4y1J7Vd/?vd_source=c633af9518bed5572b1614612e2be3df)。
+  - [电容的ESR知识汇总（很全） (sohu.com)](https://www.sohu.com/a/219221986_819258)。
+  - ESR性能排序，从好到差：MLCC>聚合物铝电解电容(固态电容)>聚合物钽电解电容>钽电容>铝电解电容。
   
   不同电容的 频率-阻抗 特性不同，每个容值都有一个对应的阻抗最低频率（谐振频率），所以对于重要器件如主控制器、FPGA等，其供电处应将很多、容值从大到小（uf 级别~nf 级别）的贴片电容并联用于对电源的去耦/滤波。相同容量电容的并联时并未展宽低阻抗频带，只是在谐振频率点处的阻抗降低了。多个不同容值（和多个封装大小）的贴片电容并联才可以有效的展宽低阻抗频带。每一个电容对某一个频率段呈低阻抗，外部电源的噪声的这个频率段的分量会在该电容泄放到地，因此好的电源噪声滤波是尽量覆盖全频段的多容值的好电容的并联，即 展宽 低阻抗 的 频带，或描述为 在 更宽的高频带内 使噪声 对地 形成 低阻抗的 泄放通路。
-
+  
+  用于芯片电源脚旁边 “滤波” 用的电容 可分为 去耦 和 旁路 两种作用，去耦降低线路上的扰动（电源纹波、其它器件的高频或大电流脉动对电源线路的干扰等），也就是泄放高频信号到地，旁路则相当于 “小电池”，电源较远不能及时供上能量的时候就靠 旁路电容 “小电池” 放电供能，而这个电容的 ESR 就相当于 “小电池” 的电源内阻，当然 电源内阻小 放电能力 就强~
+  
+  重要说明，这里都是 定量分析，属于 “感性”/“想当然” 分析，对于低频、小功率电路无所谓这么多，对于高频电路就要考虑负责的线路和器件的分布参数（等效串并复杂的联电容、电感），需要做仔细、专业的仿真和实测！
+  
 - **电感**：Irms 温升电流（电流-温度特性图表），Isat 饱和电流（电流-感值特性图表），直流电阻（DCR），封装/构成类型（电源用的功率电感优先选：一体成型带屏蔽层的 0630/4040 较小封装的功率电感，线艺公司的 扁铜带/扁铜线型（大电流，封装紧凑），铁硅铝（适合做电源滤波的大电流、大感值的功率电感））。
   
   Isat(饱和电流，感值下降20%的电流)，Irms (温升电流，温升20°/40°的电流)相关：[功率电感的痛点：两个额定电流Isat , Irms 如何理解？_ 清风度面-CSDN博客_irms](https://blog.csdn.net/yanglianzhuang/article/details/94554598)。
@@ -580,7 +590,7 @@ up 北冥有鱼qzs 的 总结：[【汇总】都有哪些免费下载PCB封装�
    
    - FPGA：先标所有功能引脚比如电源、JTAG、PCIe 等等，然后剩下的用作 GPIO 的引脚，都按照序号顺序，在 FPGA 芯片上由上到下由左到右按顺序标，即可，即 `IO1、IO2...` 等等这样，要在这些分组的 IO 旁边写上它的 IO 电压。
    
-     当 FPGA 芯片用作核心板的时候，为了布线方便可以在插接件上不按标号顺序，这样在查找 IO 的时候，只要确定了其编号就可以在芯片的原理图上直接找到它连接的 FPGA 引脚和它周围按顺序标号的引脚。
+     当 FPGA 芯片用作核心板的时候，为了布线方便可以在插接件上（不按标号顺序）去调整标号，这样在查找 IO 的时候，只要确定了其编号就可以在芯片的原理图上直接找到它连接的 FPGA 引脚和它周围按顺序标号的引脚。
    
      但是如果 FPGA 芯片是在一个大板子上，那么为了布线方便，就不得不在芯片原理图上调整标号的顺序了。
    
@@ -1054,7 +1064,10 @@ PCB 效果：
 
 **阻抗匹配概念简单入门**
 
+p.s 这几个都是入门好文
+
 - [技术指导：阻抗设计说明 (jlc.com)](https://www.jlc.com/portal/server_guide_38565.html)。
+- [画PCB板时阻抗设计的重要性 (qq.com)](https://mp.weixin.qq.com/s/V_kz4RFk-dA8EYOXC-ssjg)。
 - [PCB板画废了，才知道阻抗设计这么重要！ (qq.com)](https://mp.weixin.qq.com/s/DWc3dFyCAzR6rfw0BeHRfg)。
 
 阻抗匹配是差分线对的输出端、传输路径 和 接收端 三个位置的 阻抗 均相同，从而不会产生信号的反射。“信号源内阻与所接传输线的特性阻抗大小相等且相位相同，或传输线的特性阻抗与所接负载阻抗的大小相等且相位相同，分别称为传输线的输入端或输出端处于阻抗匹配状态，简称为阻抗匹配（引自百度百科）”。
@@ -1513,14 +1526,16 @@ PCB 效果：
   - [plla1981/PCB-Layout: 多层板的设计 (github.com)](https://github.com/plla1981/PCB-Layout)，这篇文章概述了叠层排布原则、布局原则、布线原则、阻抗设计、信号完整性、电源完整性、EMC设计、热设计、DFM设计 等内容，感谢分析。特别对电源的画法有很多实例说明。原文已经离线在本地 `额外文档\plla1981-PCB-Layout`。
 
 - EMC 环节，PCB Layout：
-  - 参考 各种 EMC 标准电路，[protection-circuits/EMC 理论和设计要点 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/EMC 理论和设计要点)，其它保护电路也参考这个仓库里面的电路。
+  - 参考 各种 EMC 标准电路，[protection-circuits/EMC 理论和设计要点 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/EMC 理论和设计要点) / [EMC 理论和设计要点 · 瞰百/protection-circuits - 码云 - 开源中国 (gitee.com)](https://gitee.com/staok/protection-circuits/tree/master/EMC 理论和设计要点)，其它保护电路也参考这个仓库里面的电路。
   - DCDC PCB Layout 经验。[一文将 DCDC 的 Layout 讲的明明白白 (qq.com)](https://mp.weixin.qq.com/s/hDT5qWXzD-droTiETXwQPQ)。输入环路和输出环路的面积要尽量小，心中有 DCDC 的开 和 关状态时的信号流向。
 
-- “合路” 环节，对于低压、小电流用两个二极管来选择即可，对于高压、大电流用第二类或第三类路径切换电路，[protection-circuits/掉电保护 简易自动切换电源轨 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/掉电保护 简易自动切换电源轨)。
+- “合路” 环节，对于低压、小电流用两个二极管来选择即可，对于高压、大电流用第二类或第三类路径切换电路，[protection-circuits/掉电保护 简易自动切换电源轨 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/掉电保护 简易自动切换电源轨)。[掉电保护 简易自动切换电源轨 · 瞰百/protection-circuits - 码云 - 开源中国 (gitee.com)](https://gitee.com/staok/protection-circuits/tree/master/掉电保护 简易自动切换电源轨)。
 
 - 电源测量小贴士，10 个设计阶段：[10_Steps_Power_Supply_48C-60180-cn.pdf (tek.com)](https://download.tek.com/document/10_Steps_Power_Supply_48C-60180-cn.pdf)，文档离线在`\额外文档\10_Steps_Power_Supply_48C-60180-cn.pdf`里。泰克官方。
 
 - 电源噪声：[EEVblog #594 - 怎样测量电源纹波和噪声_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV15t411F76U)、[EEVBlog #1116 - 怎样消除电源纹波_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Gt411u7eR)。这篇文章 [【实用】看完这篇，轻松掌握开关电源纹波测量和抑制方法 (qq.com)](https://mp.weixin.qq.com/s?__biz=MzI4NTQ4NTA3NA==&mid=2247486962&idx=1&sn=48001cbfdaa8e92e939abe2c932cb1ec&chksm=ebea3c8fdc9db599c9e6b0ba26274dae8adc999f5bed574fd9ccb50e8f2234ffcbe7c20141fb&scene=0&ascene=7&devicetype=android-23&version=26060638&nettype=3gnet&abtest_cookie=BAABAAoACwASABMABAAjlx4AWZkeAGKZHgBtmR4AAAA%3D&lang=zh_CN&pass_ticket=BK2iBKubCk8sK6qJcWVmP87gLgblu8%2Bkqe1bucAW6oix4OJh3N5tw4OjP9nBjIVB&wx_header=1) 就是对前面两个视频的总结。
+
+  去耦、旁路电容的作用分析：[只知道芯片旁边加一个电容是不够的！一个简单的小实验，让你马上明白“去耦电容”和“旁路电容”的工作原理_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1sR4y1Q7up/?vd_source=c633af9518bed5572b1614612e2be3df)。
 
 - 阻尼震荡与振铃问题：[Buck的振铃实验与分析 (qq.com)](https://mp.weixin.qq.com/s/xj0gmkcpq5TplHRwkMHrCA)、[开关电源的阻尼振荡 (qq.com)](https://mp.weixin.qq.com/s/0n8xpQxZ8uDzwqaKPTruwg)。
 
@@ -1611,10 +1626,10 @@ EMC（电磁兼容性）下分 EMI（电磁干扰，因发射/排放（Emission�
 
 EMC 主要用到的器件有：TVS 瞬态抑制管（和 GDT 气体放电管）、ESD 防护器件、Y/X 电容、MLCC（片式多层陶瓷电容）、共模电感、磁珠等；还有 RC 或 RCD 尖峰吸收电路（常见于 AC-DC、全桥驱动 的 MOS 管 D S 极间 等  du/dt 比较大（电压变化剧烈）的地方，di/dt 比较大（电流变化剧烈）的地方可以加 电感 来缓和）。对于 各种电压的 AC、DC 电源接口，以及各种通讯接口，均有 标准/常用 的 EMC 电路供参考。
 
-更多内容参见 参考上文的 “保护机制” 小节。更多内容参见 可以参考在 “保护电路” Github 仓库里面总结比较丰富的 EMC 有关的教材资料、**EMC 标准电路**和，以及 ESD 器件如 TVS管、共模电感、磁珠等的介绍和选型。详见如下：
+更多内容参见 参考上文的 “保护机制” 小节。更多内容参见 可以参考在 “保护电路” Github 仓库里面总结比较丰富的 EMC 有关的教材资料、**EMC 标准电路**和，以及 ESD 器件如 TVS管、共模电感、磁珠等的介绍和选型。详见如下：github + gitee 链接
 
-- [protection-circuits/EMC 理论和设计要点 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/EMC 理论和设计要点)。
-- [protection-circuits/TVS管 ESD器件选型 接口保护选型 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/TVS管 ESD器件选型 接口保护选型)。
+- [protection-circuits/EMC 理论和设计要点 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/EMC 理论和设计要点)。[EMC 理论和设计要点 · 瞰百/protection-circuits - 码云 - 开源中国 (gitee.com)](https://gitee.com/staok/protection-circuits/tree/master/EMC 理论和设计要点).
+- [protection-circuits/TVS管 ESD器件选型 接口保护选型 at master · Staok/protection-circuits (github.com)](https://github.com/Staok/protection-circuits/tree/master/TVS管 ESD器件选型 接口保护选型)。[TVS管 ESD器件选型 接口保护选型 · 瞰百/protection-circuits - 码云 - 开源中国 (gitee.com)](https://gitee.com/staok/protection-circuits/tree/master/TVS管 ESD器件选型 接口保护选型)。
 
 很有价值的文章：
 
@@ -1922,6 +1937,8 @@ PCB 可制造性分析工具，PCB画好后、打板前的自动化检查工具�
 AD10 的教程：[Altium Designer（AD）软件导出BOM文件操作步骤-百度经验 (baidu.com)](https://jingyan.baidu.com/article/0eb457e501efda42f0a9056a.html)；
 
 AD20 的教程（推荐使用，还包含自定义 BOM 表模板）：[AD20如何自定义BOM模板?Altium Designer20 实用技巧系列教程（五）_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1FZ4y1M71U)，其中 BOM 模板文件在 `./PCB LOGO-画法集合-PCB工具-规则文件/AD20 BOM模板/` 里面，这个模板导出的 BOM 表比较常用、整齐，还包含描述、封装、单位价格（可以在导出 Excel 表格后再填入单价，表中的总价格会自动计算；表格最底部有一栏 PCB ，可以填入价格）等，比较实用。注，视频中的模板的位置，在不同版本 AD20 不同，如果按照视频找不到，那么就应该在 `/Altium/AD20/Documents/Templates/` 目录下。
+
+BOM 对比工具。在 `PCB LOGO-画法集合-PCB工具-规则文件\BOM对比工具-省时专业` 路径里面 提供 BOM 对比工具，可以快速对比 两个 excel BOM 表 里面 器件 的差异。
 
 ## 6 AD 生成器件库和Gerber 和 钻孔文件
 
