@@ -334,6 +334,37 @@ p.s 免得我这个文章误人子弟，我要反复提醒，本文只非硬件�
 >
 > - 大陆：Gausstek丰晶、GLE格莱尔、FH风华、CODACA科达嘉、Sunlord顺络、紫泰荆、肇庆英达
 
+### 二极管
+
+分类 / 各个类别的区分：
+
+- [二极管整理分类_sternlycore的博客-CSDN博客_二极管分类](https://blog.csdn.net/sternlycore/article/details/84789805) 好文。
+- [二极管有哪些种类 (baidu.com)](https://baijiahao.baidu.com/s?id=1649735895423559102&wfr=spider&for=pc)。
+- [二极管的分类及用途介绍-电子发烧友网 (elecfans.com)](https://www.elecfans.com/d/1164294.html)。
+
+常用到的：
+
+- 肖特基二极管 SBD。
+- 快恢复二极管 FRD。
+- 稳压二极管 / 齐纳二极管，[关于稳压二极管的坑，你一定要知道 (qq.com)](https://mp.weixin.qq.com/s/8bCeEsjCYYnyrIuKBPEGDw)。
+- TVS & ESD .etc，瞬态抑制、保护类的 器件见 下面 “保护相关” 一节。
+
+二极管的主要参数：
+
+- 额定整流电流 IF。
+
+  最大整流电流（平均值）IOM，在半波整流连续工作的情况下，允许的最大半波电流的平均值。
+
+  最大浪涌电流 IFSM，允许流过的过量的 瞬间的 正向电流。
+
+- 正向电压降 VF。
+
+- 最高反向工作电压 VRM，反向击穿电压 VB，通常 VRM 为 VP 的三分之二或略小一些。
+
+- 反向漏电流 IR，在规定的反向电压条件下流过二极管的反向电流值。
+
+- 最高工作频率 FM（二极管具有单向导电性的最高交流信号的频率） / 结电容 CJ / 反向恢复时间 Trr。
+
 ### 功率开关管
 
 - 较全面的一文 [硬件-BJT MOSFET - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/254988239)。
@@ -396,7 +427,16 @@ p.s 免得我这个文章误人子弟，我要反复提醒，本文只非硬件�
 
 **关于具体的光耦的选择和应用**
 
+- [简记_光耦的主要参数及应用_土豆19891021的博客-CSDN博客_光耦的主要参数](https://blog.csdn.net/zhuang19891021/article/details/121915307) 好文。
+
+- [光耦的主要参数及分类都有哪些？ (baidu.com)](https://baijiahao.baidu.com/s?id=1749555966578154961&wfr=spider&for=pc)。
+
+- [详解光耦的重要参数——CTR值 - 百度文库 (baidu.com)](https://wenku.baidu.com/view/e404b763e75c3b3567ec102de2bd960590c6d9c5.html?_wkts_=1669693706891)。
+
+  
+
 - [光耦参数的理解 - 百度文库 (baidu.com)](https://wenku.baidu.com/view/743b16d3360cba1aa811da54.html)。
+
 - [几种常用的光耦反馈电路应用 - 百度文库 (baidu.com)](https://wenku.baidu.com/view/4c0d365fd5bbfd0a7856736d.html)。
 
 **自恢复保险丝**
@@ -509,6 +549,15 @@ p.s 免得我这个文章误人子弟，我要反复提醒，本文只非硬件�
 2. 电子器件商城。如立创商城自己维护的库，在[立创商城](https://www.szlcsc.com/)搜索器件后可以得到 立创 EDA 的器件原理图和封装，导出到 Altium 即可，具体步骤参考[立创EDA元件转换为AD库封装(Altium Designer)_Mark_md的博客-CSDN博客](https://blog.csdn.net/Mark_md/article/details/116041756)，[如何将嘉立创的原理图封装导入到AD20?](https://www.bilibili.com/video/BV1of4y1S7oi)，需要注册登录。注：网页端的 “立创 EDA” 导出器件的 AD 格式为 SCH 和 PCB 的文件格式（SchDoc、PcbDoc）而非库文件格式，PCB 文件里面的封装可以直接复制到自己新建的 PCB 库里面，但是 SCH 文件不能复制到自己新建的 SCH 库里面，对于 SCH，可以点击 Design->Make Sch Library 即可生成 SCH 库文件，打开新生成的 SCH 库文件，里面的器件的每个 端口 均可编辑且可以复制到 自己的 SCH 库里面为画原理图而调用；若立创 EDA 导出的原理图文件内包含该器件的多个 Part，这时点击 Make Sch Library 只能生成其中一个 Part 的原理图库，但一样的，只需分别将每个 Part 都 “Make Sch Library” 一次，然后分别复制到自己新建的原理图库的器件的各个 Part 页里面即可（文字描述有些局限，意会吧）。
 
 3. 在 Ultra Librarian 搜索并下载封装 [Free Altium PCB Library Online for Footprints & 3D Models | Ultra Librarian](https://www.ultralibrarian.com/solutions/cad-vendors/altium)，需要注册。如果下载到的封装数据是 CAD File（.bxl）类型的，那么通过 UltraLibrarian 软件 生成 AD 封装步骤参考[使用ULIB+Altium Designer绘制元件原理图及封装_dodwind的博客-CSDN博客](https://blog.csdn.net/dodwind/article/details/87954700)， [利用UltraLibrarian生成Altium designer原理图、PCB封装_fpga_start博客-CSDN博客](https://blog.csdn.net/m0_58064525/article/details/117607455)，[Ultra Librarian下载与安装使用教程_chengoes-CSDN博客](https://blog.csdn.net/chengoes/article/details/115440856)，[UltraLibrarian 软件下载链接](http://webench.ti.com/cad/ULib.zip)。
+
+4. 最新发现一方法：DigiPCBA
+
+   - [这也许是最全、最完整的封装库资源。具有器件封装库及器件参数信息。 (qq.com)](https://mp.weixin.qq.com/s/ve8RIbMXAOXlOc-QJiwszg)。
+   - 官方 [DigiPCBA是将 PCB 设计、MCAD、数据管理和团队合作相结合的云端电子产品设计平台。| DigiPCBA](https://digipcba.com/)。
+   - [如何看待DigiPCBA这个现在特别火的EDA云平台？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/451865547)。
+   - [【DigiPCBA】使用DigiPCBA创建和复用PCB封装-软服之家 (ruanfujia.com)](https://www.ruanfujia.com/10562346/)。
+   - 是一个硬件协作服务提供的平台 [解救PM于水火的竟是一个免费的平台——DigiPCBA-软服之家 (ruanfujia.com)](https://www.ruanfujia.com/10514085/)。
+
 
 法五：以上方法都没有，是特殊的器件，可以自制。对于原理图，一般元件的引脚和其划分不会特别复杂，应该很快就能画好；对于PCB 封装，常见的可用 AD 的 IPC 自动创建常用封装工具，先选择封装类型，再根据手册设置各种长宽参数，自动生成PCB封装以供使用，不常见的那只能最后的最后才自己画啦，按照芯片手册提供的封装规格，尺寸的单位看准了。
 
@@ -926,13 +975,15 @@ up 北冥有鱼qzs 的 总结：[【汇总】都有哪些免费下载PCB封装�
   
   - ...
 
-- PCB 中的：
+- PCB 中的：（注意，bug 记录会写在最前）
+  
+  - **AD 20 遇到 bug 记录**：PCB 开始不先前先隐藏一些线（比如 gnd 等），然后走线，然后再在左边 “PCB” 面板 “All Net” 里面选择 显示全部线 有可能显示的线 还是原来 位置的 没有更新，这时 选择 “All Net” 之后 下面一栏会显示所有线，在下面全选所有线，右键 里面 ”Connections“ 先 选择全部 关闭显示，再开启显示，则就正常了。
   
   - **AD 20 遇到 bug 记录**：加泪滴时候，teardrop style 选择 line，选择另外一个 “曲线” 类型泪滴则会有毛刺泪滴！很恶心！
   
   - 更新 PCB 后会生成一堆 Room，通过 寻找 相同元件 来选中全部 Room 来一同删除而不用一个一个删。
   
-  - 切换 PCB 网格大小和网格类型：Ctrl+g；推荐在摆元件的时候 移动网格 改为 3mil，走线的时候改为 1mil。
+  - 切换 PCB 网格大小和网格类型：Ctrl+g；推荐在摆元件的时候 移动网格 改为 3 or 5mil，走线的时候改为 1mil。
   
   - 隐藏覆铜：按 L 按键，在视图选项（View Options）中选择关闭覆铜（Polygons）显示；在视图选项（View Options）中还可以关闭 3D 模型显示，等更多选择。
   
@@ -944,10 +995,10 @@ up 北冥有鱼qzs 的 总结：[【汇总】都有哪些免费下载PCB封装�
   
   - 选择一整条连接的线：选择多条连接线的其中一段再按 tab 即可，这个对于任何线都有效；Ctrl + h 然后单击一条走线可以选择整条线上的所有，这个只对 wire 走线有效。
   
-  - 隐藏线或线类：点右下角的 Panels 里面，打开 PCB 面板，选择线或网络，右击选择 “Connections（连接）” 里面的隐藏即可。在这里也可以对线、线组或差分线对设置不同的颜色，来明显区分显示。
-  
-  - 覆铜：选择好网络、选择移除死铜、设定移除小于比如 10mil 的铜片和选择 "Pour Over Same Net .."；移动覆铜后，要右键选 "Polygon Actions" 的 "Repour All"。覆铜的属性栏里面的 Actions 里面有重新覆铜、设置网络（再手动点一根要连接的网络的线）、前置/后置和修改（手动画线微调边缘）等。
+  - 隐藏线或线类：点右下角的 Panels 里面，打开 名为 “PCB” 的面板，选择线或网络，右击选择 “Connections（连接）” 里面的隐藏即可。在这里也可以对线、线组或差分线对设置不同的颜色（打对勾就显示），来明显区分显示。
 
+  - 覆铜：选择好网络、选择移除死铜、设定移除小于比如 10mil 的铜片和选择 "Pour Over Same Net .."；移动覆铜后，要右键选 "Polygon Actions" 的 "Repour All"。覆铜的属性栏里面的 Actions 里面有重新覆铜、设置网络（再手动点一根要连接的网络的线）、前置/后置和修改（手动画线微调边缘）等。
+  
   - 挖掉一块覆铜：选 Polygon Pour Cutout 工具，在已经覆铜的区域画个框，然后重新覆铜 "Repour All"。
   
   - 批量放过地孔：给覆铜添加或者围绕某个线添加，选 Tools 的 Via Stitching/Shielding，在里面设置孔连接的网络、孔分布和孔大小等信息，可以选择给整个板面均匀加接地孔（孔间距可以打一些防止孔过多了），也可以选择给信号线的周围围绕着加接地孔，比较方便。
@@ -1920,8 +1971,14 @@ EMC 主要用到的器件有：TVS 瞬态抑制管（和 GDT 气体放电管）�
 
 PCB 可制造性分析工具，PCB画好后、打板前的自动化检查工具。
 
-- [华秋 DFM](https://dfm.elecfans.com/)：一键分析导入的 PCB 文件，检查项有板子尺寸、孔、线、间距、孤铜等等，排除生产难点、设计缺陷，给出优化建议，结合各种生产因素，自动计算或反算阻抗等等，比较有用。
+- [华秋 DFM](https://dfm.elecfans.com/)：一键分析导入的 PCB 文件，检查项有板子尺寸、孔、线、间距、孤铜等等，排除生产难点、设计缺陷，给出优化建议，结合各种生产因素，自动计算或反算阻抗等等，还有 BOM 管理、对比 等工具，比较有用。
+
+  [PCB反复评审难题，终极解决密码出现了？（资料+福利） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/585943085)。
+
+  [你被 BOM “坑”过吗？珍藏的BOM检查方法你一定要学！ - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/578329617)。
+
 - [捷配DFM](https://www.jiepei.com/dfm.html) PCB检查工具。
+
 - etc.
 
 ### TI-设计和仿真工具
